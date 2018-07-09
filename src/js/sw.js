@@ -90,11 +90,10 @@ self.addEventListener('install', function(e) {
     caches.open('airhorner').then(function(cache) {
       return cache.addAll([
         '/',
-        '/index.html',
         '/index.html?homescreen=1',
-        '/?homescreen=1',
         '/bundle.css',
-        '/bundle.js'
+        '/bundle.js',
+        '/images'
       ]);
     })
   );

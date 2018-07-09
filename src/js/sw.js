@@ -95,7 +95,7 @@ self.addEventListener('install', function(e) {
         '/?homescreen=1',
         '/bundle.css',
         '/bundle.js',
-        '/images'
+        '/images/*'
       ]);
     })
   );

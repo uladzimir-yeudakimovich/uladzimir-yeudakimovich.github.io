@@ -1,0 +1,690 @@
+@color-header: #3a3842;
+@color-button: #0000FF;
+@color-button-hover: rgb(147, 147, 243);
+@gradient: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
+.font-face(Helvetica){
+  @font-face{
+    font-family: Helvetica-Bold;
+    src:url('../fonts/helvetica-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+.font-face(Georgia){
+  @font-face{
+    font-family: Georgia;
+    src:url('../fonts/Georgia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+@fontBold: "Helvetica", serif;
+@fontRegular: "Georgia", serif;
+
+body {
+  margin: 0;
+                                          /*HEADER*/
+  .language-en {
+    width: 100%;
+    height: 100%;
+  }
+  .language-ru {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .languages {
+    position: fixed;
+    left: 74%;
+    top: 5%;
+    z-index: 5;
+    .btn {
+      padding: 3px 5px;
+      font-family: @fontBold;
+      color: white;
+      background-color: @color-button;
+      cursor: pointer;
+    }
+    .btn:hover {
+      color: @color-button;
+      background-color: white;
+    }
+  }
+  header {
+    background-color: @color-header;
+    color: white;
+    margin: 0 auto;
+    .information {
+      font-family: @fontBold;
+      p {
+        font-family: @fontRegular;
+        text-align: justify;
+      }
+    }
+    .mobile {
+      display: none;
+      font-family: @fontRegular;
+      text-align: justify;
+    }
+  }
+  main {
+                                        /* MANE */
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: @fontBold;
+    }
+    .slides-b4, .slides-b3, .slides-game, .slides-site, .slides-react-app, .slides-match,
+    .slides-restaurant, .slides-social, .slides-currency, .slides-chat {
+      position: relative;
+      list-style-type: none;
+      border: 4px double black;
+    }
+    .slide-b4, .slide-b3, .slide-game, .slide-site, .slide-react-app, .slide-match,
+    .slide-restaurant, .slide-social, .slide-currency, .slide-chat {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 1;
+      -webkit-transition: opacity 1s;
+      -moz-transition: opacity 1s;
+      -o-transition: opacity 1s;
+      transition: opacity 1s;
+    }
+    .showing-b4, .showing-b3, .showing-game, .showing-site, .showing-react-app, .showing-match,
+    .showing-restaurant, .showing-social, .showing-currency, .showing-chat {
+      opacity: 1;
+      z-index: 2;
+    }
+                                      /*BOOTSTRAP 4*/
+    .slide-b4:nth-of-type(1) {background: url(../images/bootstrap4/b4_laptop1.jpg) no-repeat;}
+    .slide-b4:nth-of-type(2) {background: url(../images/bootstrap4/b4_laptop2.jpg) no-repeat;}
+    .slide-b4:nth-of-type(3) {background: url(../images/bootstrap4/b4_laptop3.jpg) no-repeat;}
+    .slide-b4:nth-of-type(4) {background: url(../images/bootstrap4/b4_laptop4.jpg) no-repeat;}
+    .slide-b4:nth-of-type(5) {background: url(../images/bootstrap4/b4_laptop5.jpg) no-repeat;}
+                                      /*BOOTSTRAP 3*/
+    .slide-b3:nth-of-type(1) {background: url(../images/bootstrap3/b3_laptop1.jpg) no-repeat;}
+    .slide-b3:nth-of-type(2) {background: url(../images/bootstrap3/b3_laptop2.jpg) no-repeat;}
+    .slide-b3:nth-of-type(3) {background: url(../images/bootstrap3/b3_laptop3.jpg) no-repeat;}
+    .slide-b3:nth-of-type(4) {background: url(../images/bootstrap3/b3_laptop4.jpg) no-repeat;}
+    .slide-b3:nth-of-type(5) {background: url(../images/bootstrap3/b3_laptop5.jpg) no-repeat;}
+                                      /*CHAT*/
+    .slide-chat:nth-of-type(1) {background: url(../images/chat/chat_laptop1.jpg) no-repeat;}
+    .slide-chat:nth-of-type(2) {background: url(../images/chat/chat_laptop2.jpg) no-repeat;}
+    .slide-chat:nth-of-type(3) {background: url(../images/chat/chat_laptop3.jpg) no-repeat;}
+    .slide-chat:nth-of-type(4) {background: url(../images/chat/chat_laptop4.jpg) no-repeat;}
+    .slide-chat:nth-of-type(5) {background: url(../images/chat/chat_laptop5.jpg) no-repeat;}
+                                      /* GAME */
+    .slide-game:nth-of-type(1) {background: url(../images/game/game_laptop1.jpg) no-repeat;}
+    .slide-game:nth-of-type(2) {background: url(../images/game/game_laptop2.jpg) no-repeat;}
+    .slide-game:nth-of-type(3) {background: url(../images/game/game_laptop3.jpg) no-repeat;}
+    .slide-game:nth-of-type(4) {background: url(../images/game/game_laptop4.jpg) no-repeat;}
+    .slide-game:nth-of-type(5) {background: url(../images/game/game_laptop5.jpg) no-repeat;}
+                                      /* SOCIAL-NETWORK */
+    .slide-social:nth-of-type(1) {background: url(../images/social/social_laptop1.jpg) no-repeat;}
+    .slide-social:nth-of-type(2) {background: url(../images/social/social_laptop2.jpg) no-repeat;}
+    .slide-social:nth-of-type(3) {background: url(../images/social/social_laptop3.jpg) no-repeat;}
+    .slide-social:nth-of-type(4) {background: url(../images/social/social_laptop4.jpg) no-repeat;}
+    .slide-social:nth-of-type(5) {background: url(../images/social/social_laptop5.jpg) no-repeat;}
+                                      /*REACT APP*/
+    .slide-react-app:nth-of-type(1) {background: url(../images/react/app_laptop1.jpg) no-repeat;}
+    .slide-react-app:nth-of-type(2) {background: url(../images/react/app_laptop2.jpg) no-repeat;}
+    .slide-react-app:nth-of-type(3) {background: url(../images/react/app_laptop3.jpg) no-repeat;}
+    .slide-react-app:nth-of-type(4) {background: url(../images/react/app_laptop4.jpg) no-repeat;}
+    .slide-react-app:nth-of-type(5) {background: url(../images/react/app_laptop5.jpg) no-repeat;}
+                                      /*MATCH-MATCH-GAME*/
+    .slide-match:nth-of-type(1) {background: url(../images/match/match_laptop1.jpg) no-repeat;}
+    .slide-match:nth-of-type(2) {background: url(../images/match/match_laptop2.jpg) no-repeat;}
+    .slide-match:nth-of-type(3) {background: url(../images/match/match_laptop3.jpg) no-repeat;}
+    .slide-match:nth-of-type(4) {background: url(../images/match/match_laptop4.jpg) no-repeat;}
+    .slide-match:nth-of-type(5) {background: url(../images/match/match_laptop5.jpg) no-repeat;}
+                                      /* RESTAURANT */
+    .slide-restaurant:nth-of-type(1) {background: url(../images/restaurant/restaurant_laptop1.jpg) no-repeat;}
+    .slide-restaurant:nth-of-type(2) {background: url(../images/restaurant/restaurant_laptop2.jpg) no-repeat;}
+    .slide-restaurant:nth-of-type(3) {background: url(../images/restaurant/restaurant_laptop3.jpg) no-repeat;}
+    .slide-restaurant:nth-of-type(4) {background: url(../images/restaurant/restaurant_laptop4.jpg) no-repeat;}
+    .slide-restaurant:nth-of-type(5) {background: url(../images/restaurant/restaurant_laptop5.jpg) no-repeat;}
+                                      /* SITE */
+    .slide-site:nth-of-type(1) {background: url(../images/site/site_laptop1.jpg) no-repeat;}
+    .slide-site:nth-of-type(2) {background: url(../images/site/site_laptop2.jpg) no-repeat;}
+    .slide-site:nth-of-type(3) {background: url(../images/site/site_laptop3.jpg) no-repeat;}
+    .slide-site:nth-of-type(4) {background: url(../images/site/site_laptop4.jpg) no-repeat;}
+    .slide-site:nth-of-type(5) {background: url(../images/site/site_laptop5.jpg) no-repeat;}
+                                      /*CURRENCY*/
+    .slide-currency:nth-of-type(1) {background: url(../images/currency/currency_laptop1.jpg) no-repeat;}
+    .slide-currency:nth-of-type(2) {background: url(../images/currency/currency_laptop2.jpg) no-repeat;}
+    .slide-currency:nth-of-type(3) {background: url(../images/currency/currency_laptop3.jpg) no-repeat;}
+    .slide-currency:nth-of-type(4) {background: url(../images/currency/currency_laptop4.jpg) no-repeat;}
+    .slide-currency:nth-of-type(5) {background: url(../images/currency/currency_laptop5.jpg) no-repeat;}
+    .controls-left, .controls-right {
+      position: absolute;
+      width: 130px;
+      left: 65%;
+      margin-top: 4px;
+      z-index: 2;
+    }
+    .controls-right {left: 25%;}
+    .controls-left>button, .controls-right>button {
+      padding: 3px 5px;
+      font-family: @fontBold;
+      color: white;
+      background-color: @color-button;
+      cursor: pointer;
+    }
+    .controls-left>button:hover, .controls-right>button:hover {
+      color: @color-button;
+      background-color: white;
+    }
+    .description {
+      text-align: center;
+      font-family: @fontBold;
+      h3 {font-size: 24px;}
+      a {text-decoration: none;}
+      a:hover {color: @color-button;}
+      p {
+        opacity: 0.8;
+        font-family: @fontRegular;
+        line-height: 24px;
+        text-align: justify;
+      }
+    }
+  }
+                                        /*FOOTER*/
+  footer {
+    background-image: @gradient;
+    .contacts
+      h1 {font-family: @fontBold;}
+      p, h4 {
+        font-family: @fontRegular;
+        line-height: 24px;
+        text-align: justify;
+      }
+      ul {
+        padding: 0;
+        li {
+          list-style-type: none;
+          span {
+            display: inline-block;
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            opacity: 0.1;
+            background: #000;
+            border-radius: 2px;
+          }
+          a {
+            color: @color-button;
+            text-decoration: none;
+            font-family: @fontRegular;
+            line-height: 32px;
+            padding: 10px 12px;
+          }
+          a:hover {color: @color-button-hover;}
+          a:focus {color: @color-header;}
+        }
+      }
+    }
+    .forms {
+      input {
+        width: 80%;
+        height: 48px;
+        padding: 0 5%;
+        margin: 12px 0 12px 5%;
+        background: white;
+        border-radius: 4px;
+      }
+      input[type=text], input[type=email] {border: 1px solid white;}
+      input[name="later"] {height: 192px;}
+      input[type=text]:hover, input[type=email]:hover {border: 1px solid black;}
+      input[type=file] {
+        width: 120px;
+        height: 0;
+        padding: 0;
+        margin: 0;
+	      opacity: 0;
+	      overflow: hidden;
+        z-index: -1;
+        cursor: pointer;
+      }
+      label {
+        margin-left: -120px;
+        padding: 0 5%;
+        color: @color-button;
+      }
+      label:hover {color: @color-button-hover;}
+      input[type=submit] {
+        width: 90%;
+        background-color: @color-button;
+        color: white;
+        font-family: @fontBold;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      input[type=submit]:hover {background-color: @color-button-hover;}
+  }
+}
+                          /*------------------------------------*\
+                                      #DESKTOP
+                          \*------------------------------------*/
+@media (min-width: 1440px) {
+                                      /*HEADER*/
+  header {
+    height: 672px;
+    min-width: 1440px;
+    .information {
+      width:60%;
+      min-width: 888px;
+      float: right;
+      h3 {
+        width: 288px;
+        font-size: 24px;
+        line-height: 29px;
+        padding: 65px 0 0 95px;
+      }
+      h1 {
+        width: 564px;
+        font-size: 40px;
+        line-height: 48px;
+        padding: 11px 0 0 95px;
+      }
+      p {
+        width: 80%;
+        min-width: 464px;
+        padding: 30px 0 0 95px;
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+    .logo {
+      background: url(../images/logo_desktop.jpg) no-repeat;
+      height: 672px;
+      width: 552px;
+      margin: 0;
+      float: left;
+    }
+  }
+                                        /*MAIN*/
+  main {
+    h1 {width: 100%;}
+    .my-works {
+      height: 400px;
+      margin: 63px 17% 80px;
+      .slides-b3, .slides-game, .slides-react-app, .slides-restaurant, .slides-currency {
+        height: 384px;
+        width: 504px;
+        margin: 0 130px 0 0;
+        float: left;
+      }
+      .slides-b4, .slides-site, .slides-match, .slides-social, .slides-chat {
+        height: 384px;
+        width: 504px;
+        margin: 0 0 0 130px;
+        float: right;
+      }
+    }
+  }
+                                        /*FOOTER*/
+  footer {
+    display: flex;
+    .contacts {
+      float: left;
+      margin-left: 40px;
+      h1 {font-size: 40px;}
+      p {width: 400px;}
+    }
+    .forms {
+      width: 60%;
+      float: right;
+      padding-top: 30px;
+    }
+  }
+}
+                          /*------------------------------------*\
+                                        #LAPTOP
+                          \*------------------------------------*/
+@media  (min-width: 1024px) and (max-width: 1439px) {
+                                        /*HEADER*/
+  header {
+    height: 768px;
+    .information {
+      width:50%;
+      float: right;
+      h3 {
+        font-size: 24px;
+        padding: 65px 0 0 25px;
+      }
+      h1 {
+        font-size: 40px;
+        padding: 11px 0 0 25px;
+      }
+      p {
+        padding: 30px 25px 0;
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+    .logo {
+      background: url(../images/logo_laptop.jpg) no-repeat;
+      height: 768px;
+      width: 50%;
+      margin: 0;
+      float: left;
+    }
+  }
+                                        /*MAIN*/
+  main {
+    .my-works {
+      height: 400px;
+      margin: 63px 7% 80px;
+      .slides-b3, .slides-game, .slides-react-app, .slides-restaurant, .slides-currency {
+        height: 384px;
+        width: 504px;
+        margin: 0 130px 0 0;
+        float: left;
+      }
+      .slides-b4, .slides-site, .slides-match, .slides-social, .slides-chat {
+        height: 384px;
+        width: 504px;
+        margin: 0 0 0 130px;
+        float: right;
+      }
+      .controls-left {left: 67%;}
+      .controls-right {left: 23%;}
+    }
+  }
+                                        /*FOOTER*/
+  footer {
+    display: flex;
+    .contacts {
+      margin-left: 40px;
+      float: left;
+      h1 {
+        width: 500px;
+        font-size: 40px;
+      }
+      p, h4 {width: 320px;}
+    }
+    .forms {
+      width: 60%;
+      float: right;
+      margin: 110px 0 0 -200px;
+    }
+  }
+}
+                          /*------------------------------------*\
+                                        #TABLET
+                          \*------------------------------------*/
+@media (min-width: 768px) and (max-width: 1023px) {
+                                        /*HEADER*/
+  header {
+    margin-top: -20px !important;
+    .information {
+      h3 {
+        padding-top: 40px;
+        display: flex;
+        justify-content: center;
+       }
+      h1 {
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      p {display: none;}
+    }
+    .logo {
+      background: url(../images/logo_tablet.jpg) no-repeat;
+      height: 384px;
+      width: 384px;
+      margin: 0 auto;
+      border-radius: 192px;
+    }
+    .mobile {
+      display: block !important;
+      margin: 20px 10%;
+      line-height: 24px;
+    }
+  }
+                                        /*MAIN*/
+  main {
+    .my-works {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+      align-content: space-around;
+      .slides-b4, .slides-b3, .slides-game, .slides-site, .slides-react-app, .slides-match,
+      .slides-restaurant, .slides-social, .slides-currency, .slides-chat {
+        height: 496px;
+        width: 664px;
+      }
+      .controls-left, .controls-right {
+        position: inherit;
+        width: 100%;
+        text-align: center;
+        margin: 0 0 -15px;
+      }
+      .description>p {width: 704px;}
+                                      /*BOOTSTRAP 4*/
+    .slide-b4:nth-of-type(1) {background: url(../images/bootstrap4/b4_tablet1.jpg) no-repeat;}
+    .slide-b4:nth-of-type(2) {background: url(../images/bootstrap4/b4_tablet2.jpg) no-repeat;}
+    .slide-b4:nth-of-type(3) {background: url(../images/bootstrap4/b4_tablet3.jpg) no-repeat;}
+    .slide-b4:nth-of-type(4) {background: url(../images/bootstrap4/b4_tablet4.jpg) no-repeat;}
+    .slide-b4:nth-of-type(5) {background: url(../images/bootstrap4/b4_tablet5.jpg) no-repeat;}
+                                      /*BOOTSTRAP 3*/
+    .slide-b3:nth-of-type(1) {background: url(../images/bootstrap3/b3_tablet1.jpg) no-repeat;}
+    .slide-b3:nth-of-type(2) {background: url(../images/bootstrap3/b3_tablet2.jpg) no-repeat;}
+    .slide-b3:nth-of-type(3) {background: url(../images/bootstrap3/b3_tablet3.jpg) no-repeat;}
+    .slide-b3:nth-of-type(4) {background: url(../images/bootstrap3/b3_tablet4.jpg) no-repeat;}
+    .slide-b3:nth-of-type(5) {background: url(../images/bootstrap3/b3_tablet5.jpg) no-repeat;}
+                                          /*CHAT*/
+    .slide-chat:nth-of-type(1) {background: url(../images/chat/chat_tablet1.jpg) no-repeat;}
+    .slide-chat:nth-of-type(2) {background: url(../images/chat/chat_tablet2.jpg) no-repeat;}
+    .slide-chat:nth-of-type(3) {background: url(../images/chat/chat_tablet3.jpg) no-repeat;}
+    .slide-chat:nth-of-type(4) {background: url(../images/chat/chat_tablet4.jpg) no-repeat;}
+    .slide-chat:nth-of-type(5) {background: url(../images/chat/chat_tablet5.jpg) no-repeat;}
+                                          /*GAME*/
+    .slide-game:nth-of-type(1) {background: url(../images/game/game_tablet1.jpg) no-repeat;}
+    .slide-game:nth-of-type(2) {background: url(../images/game/game_tablet2.jpg) no-repeat;}
+    .slide-game:nth-of-type(3) {background: url(../images/game/game_tablet3.jpg) no-repeat;}
+    .slide-game:nth-of-type(4) {background: url(../images/game/game_tablet4.jpg) no-repeat;}
+    .slide-game:nth-of-type(5) {background: url(../images/game/game_tablet5.jpg) no-repeat;}
+                                          /* SOCIAL-NETWORK */
+    .slide-social:nth-of-type(1) {background: url(../images/social/social_tablet1.jpg) no-repeat;}
+    .slide-social:nth-of-type(2) {background: url(../images/social/social_tablet2.jpg) no-repeat;}
+    .slide-social:nth-of-type(3) {background: url(../images/social/social_tablet3.jpg) no-repeat;}
+    .slide-social:nth-of-type(4) {background: url(../images/social/social_tablet4.jpg) no-repeat;}
+    .slide-social:nth-of-type(5) {background: url(../images/social/social_tablet5.jpg) no-repeat;}
+                                          /*APP*/
+    .slide-react-app:nth-of-type(1) {background: url(../images/react/app_tablet1.jpg) no-repeat;}
+    .slide-react-app:nth-of-type(2) {background: url(../images/react/app_tablet2.jpg) no-repeat;}
+    .slide-react-app:nth-of-type(3) {background: url(../images/react/app_tablet3.jpg) no-repeat;}
+    .slide-react-app:nth-of-type(4) {background: url(../images/react/app_tablet4.jpg) no-repeat;}
+    .slide-react-app:nth-of-type(5) {background: url(../images/react/app_tablet5.jpg) no-repeat;}
+                                          /*MATCH-MATCH-GAME*/
+    .slide-match:nth-of-type(1) {background: url(../images/match/match_tablet1.jpg) no-repeat;}
+    .slide-match:nth-of-type(2) {background: url(../images/match/match_tablet2.jpg) no-repeat;}
+    .slide-match:nth-of-type(3) {background: url(../images/match/match_tablet3.jpg) no-repeat;}
+    .slide-match:nth-of-type(4) {background: url(../images/match/match_tablet4.jpg) no-repeat;}
+    .slide-match:nth-of-type(5) {background: url(../images/match/match_tablet5.jpg) no-repeat;}
+                                          /* RESTAURANT */
+    .slide-restaurant:nth-of-type(1) {background: url(../images/restaurant/restaurant_tablet1.jpg) no-repeat;}
+    .slide-restaurant:nth-of-type(2) {background: url(../images/restaurant/restaurant_tablet2.jpg) no-repeat;}
+    .slide-restaurant:nth-of-type(3) {background: url(../images/restaurant/restaurant_tablet3.jpg) no-repeat;}
+    .slide-restaurant:nth-of-type(4) {background: url(../images/restaurant/restaurant_tablet4.jpg) no-repeat;}
+    .slide-restaurant:nth-of-type(5) {background: url(../images/restaurant/restaurant_tablet5.jpg) no-repeat;}
+                                          /*SITE*/
+    .slide-site:nth-of-type(1) {background: url(../images/site/site_tablet1.jpg) no-repeat;}
+    .slide-site:nth-of-type(2) {background: url(../images/site/site_tablet2.jpg) no-repeat;}
+    .slide-site:nth-of-type(3) {background: url(../images/site/site_tablet3.jpg) no-repeat;}
+    .slide-site:nth-of-type(4) {background: url(../images/site/site_tablet4.jpg) no-repeat;}
+    .slide-site:nth-of-type(5) {background: url(../images/site/site_tablet5.jpg) no-repeat;}
+                                          /*CURRENCY*/
+    .slide-currency:nth-of-type(1) {background: url(../images/currency/currency_tablet1.jpg) no-repeat;}
+    .slide-currency:nth-of-type(2) {background: url(../images/currency/currency_tablet2.jpg) no-repeat;}
+    .slide-currency:nth-of-type(3) {background: url(../images/currency/currency_tablet3.jpg) no-repeat;}
+    .slide-currency:nth-of-type(4) {background: url(../images/currency/currency_tablet4.jpg) no-repeat;}
+    .slide-currency:nth-of-type(5) {background: url(../images/currency/currency_tablet5.jpg) no-repeat;}
+    }
+  }
+                                          /*FOOTER*/
+  footer {
+    .contacts {
+      margin: 0 5%;
+      h1 {
+        padding-top: 40px;
+        font-size: 40px;
+      }
+      p {width: 50%;}
+      h4 {display: none;}
+      ul {
+        float: right;
+        margin-top: -160px;
+      }
+    }
+  }
+}
+                          /*------------------------------------*\
+                                          #PHONE
+                          \*------------------------------------*/
+@media (min-width: 336px) and (max-width: 767px) {
+                                          /*HEADER*/
+  .languages {
+    top: 1% !important;
+    left: 80% !important;
+  }
+  header {
+    margin-top: -20px !important;
+    .phone {
+      font-size: 1.2em;
+      left:10%;
+    }
+    .information {
+      h3 {
+        font-size: 16px;
+        padding-top: 23px;
+        display: flex;
+        justify-content: center;
+      }
+      h1 {
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+      }
+      p {display: none;}
+    }
+    .logo {
+      background: url(../images/logo_phone.jpg) no-repeat;
+      height: 144px;
+      width: 144px;
+      margin: 0 auto;
+      border-radius: 72px;
+    }
+    .mobile {
+      display: block !important;
+      margin: 20px 5%;
+      line-height: 24px;
+    }
+  }
+                                          /*MAIN*/
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .my-works {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+      align-items: center;
+      .slides-b4, .slides-b3, .slides-game, .slides-site, .slides-react-app, .slides-match,
+      .slides-restaurant, .slides-social, .slides-currency, .slides-chat {
+        height: 216px;
+        width: 304px;
+        padding: 0;
+        margin: 0;
+      }
+      .controls-left, .controls-right {
+        position: inherit;
+        width: 100%;
+        text-align: center;
+      }
+      .description {
+        width: 304px;
+        p {margin: 16px 0 40px;}
+      }
+    }
+                                      /*BOOTSTRAP 4*/
+    .slide-b4:nth-of-type(1) {background: url(../images/bootstrap4/b4_phone1.jpg) no-repeat !important;}
+    .slide-b4:nth-of-type(2) {background: url(../images/bootstrap4/b4_phone2.jpg) no-repeat !important;}
+    .slide-b4:nth-of-type(3) {background: url(../images/bootstrap4/b4_phone3.jpg) no-repeat !important;}
+    .slide-b4:nth-of-type(4) {background: url(../images/bootstrap4/b4_phone4.jpg) no-repeat !important;}
+    .slide-b4:nth-of-type(5) {background: url(../images/bootstrap4/b4_phone5.jpg) no-repeat !important;}
+                                      /*BOOTSTRAP 3*/
+    .slide-b3:nth-of-type(1) {background: url(../images/bootstrap3/b3_phone1.jpg) no-repeat !important;}
+    .slide-b3:nth-of-type(2) {background: url(../images/bootstrap3/b3_phone2.jpg) no-repeat !important;}
+    .slide-b3:nth-of-type(3) {background: url(../images/bootstrap3/b3_phone3.jpg) no-repeat !important;}
+    .slide-b3:nth-of-type(4) {background: url(../images/bootstrap3/b3_phone4.jpg) no-repeat !important;}
+    .slide-b3:nth-of-type(5) {background: url(../images/bootstrap3/b3_phone5.jpg) no-repeat !important;}
+                                          /*CHAT*/
+    .slide-chat:nth-of-type(1) {background: url(../images/chat/chat_phone1.jpg) no-repeat !important;}
+    .slide-chat:nth-of-type(2) {background: url(../images/chat/chat_phone2.jpg) no-repeat !important;}
+    .slide-chat:nth-of-type(3) {background: url(../images/chat/chat_phone3.jpg) no-repeat !important;}
+    .slide-chat:nth-of-type(4) {background: url(../images/chat/chat_phone4.jpg) no-repeat !important;}
+    .slide-chat:nth-of-type(5) {background: url(../images/chat/chat_phone5.jpg) no-repeat !important;}
+                                          /*GAME*/
+    .slide-game:nth-of-type(1) {background: url(../images/game/game_phone1.jpg) no-repeat !important;}
+    .slide-game:nth-of-type(2) {background: url(../images/game/game_phone2.jpg) no-repeat !important;}
+    .slide-game:nth-of-type(3) {background: url(../images/game/game_phone3.jpg) no-repeat !important;}
+    .slide-game:nth-of-type(4) {background: url(../images/game/game_phone4.jpg) no-repeat !important;}
+    .slide-game:nth-of-type(5) {background: url(../images/game/game_phone5.jpg) no-repeat !important;}
+                                          /* SOCIAL-NETWORK */
+    .slide-social:nth-of-type(1) {background: url(../images/social/social_phone1.jpg) no-repeat !important;}
+    .slide-social:nth-of-type(2) {background: url(../images/social/social_phone2.jpg) no-repeat !important;}
+    .slide-social:nth-of-type(3) {background: url(../images/social/social_phone3.jpg) no-repeat !important;}
+    .slide-social:nth-of-type(4) {background: url(../images/social/social_phone4.jpg) no-repeat !important;}
+    .slide-social:nth-of-type(5) {background: url(../images/social/social_phone5.jpg) no-repeat !important;}
+                                          /*APP*/
+    .slide-react-app:nth-of-type(1) {background: url(../images/react/app_phone1.jpg) no-repeat !important;}
+    .slide-react-app:nth-of-type(2) {background: url(../images/react/app_phone2.jpg) no-repeat !important;}
+    .slide-react-app:nth-of-type(3) {background: url(../images/react/app_phone3.jpg) no-repeat !important;}
+    .slide-react-app:nth-of-type(4) {background: url(../images/react/app_phone4.jpg) no-repeat !important;}
+    .slide-react-app:nth-of-type(5) {background: url(../images/react/app_phone5.jpg) no-repeat !important;}
+                                          /*MATCH-MATCH-GAME*/
+    .slide-match:nth-of-type(1) {background: url(../images/match/match_phone1.jpg) no-repeat !important;}
+    .slide-match:nth-of-type(2) {background: url(../images/match/match_phone2.jpg) no-repeat !important;}
+    .slide-match:nth-of-type(3) {background: url(../images/match/match_phone3.jpg) no-repeat !important;}
+    .slide-match:nth-of-type(4) {background: url(../images/match/match_phone4.jpg) no-repeat !important;}
+    .slide-match:nth-of-type(5) {background: url(../images/match/match_phone5.jpg) no-repeat !important;}
+                                          /* RESTAURANT */
+    .slide-restaurant:nth-of-type(1) {background: url(../images/restaurant/restaurant_phone1.jpg) no-repeat !important;}
+    .slide-restaurant:nth-of-type(2) {background: url(../images/restaurant/restaurant_phone2.jpg) no-repeat !important;}
+    .slide-restaurant:nth-of-type(3) {background: url(../images/restaurant/restaurant_phone3.jpg) no-repeat !important;}
+    .slide-restaurant:nth-of-type(4) {background: url(../images/restaurant/restaurant_phone4.jpg) no-repeat !important;}
+    .slide-restaurant:nth-of-type(5) {background: url(../images/restaurant/restaurant_phone5.jpg) no-repeat !important;}
+                                          /*SITE*/
+    .slide-site:nth-of-type(1) {background: url(../images/site/site_phone1.jpg) no-repeat !important;}
+    .slide-site:nth-of-type(2) {background: url(../images/site/site_phone2.jpg) no-repeat !important;}
+    .slide-site:nth-of-type(3) {background: url(../images/site/site_phone3.jpg) no-repeat !important;}
+    .slide-site:nth-of-type(4) {background: url(../images/site/site_phone4.jpg) no-repeat !important;}
+    .slide-site:nth-of-type(5) {background: url(../images/site/site_phone5.jpg) no-repeat !important;}
+                                          /*CURRENCY*/
+    .slide-currency:nth-of-type(1) {background: url(../images/currency/currency_phone1.jpg) no-repeat !important;}
+    .slide-currency:nth-of-type(2) {background: url(../images/currency/currency_phone2.jpg) no-repeat !important;}
+    .slide-currency:nth-of-type(3) {background: url(../images/currency/currency_phone3.jpg) no-repeat !important;}
+    .slide-currency:nth-of-type(4) {background: url(../images/currency/currency_phone4.jpg) no-repeat !important;}
+    .slide-currency:nth-of-type(5) {background: url(../images/currency/currency_phone5.jpg) no-repeat !important;}
+  }
+                                          /*FOOTER*/
+  footer {
+    margin-top: 20px;
+    .contacts {
+      margin: 20px 5% 0;
+      h1 {padding-top: 20px;}
+      h4 {display: none;}
+    }
+  }
+}

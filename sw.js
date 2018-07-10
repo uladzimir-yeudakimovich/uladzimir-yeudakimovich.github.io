@@ -166,8 +166,10 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.open('mysite-dynamic').then(function(cache) {
-      return fetch(event.request).then(res => {
-        if (!res.url) return res;
+      return fetch(event.request).then(function (response) {
+        return response || fetch(event.request).then(function(response) {
+          cache.put(event.request, response.clone());
+          return response;
       });
     })
   );

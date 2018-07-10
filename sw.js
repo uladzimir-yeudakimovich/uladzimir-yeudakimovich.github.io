@@ -168,8 +168,7 @@ self.addEventListener('fetch', function(event) {
     caches.open('mysite-dynamic').then(function(cache) {
       return fetch(event.request).then(function (response) {
         return response || fetch(event.request).then(function(response) {
-          cache.put(event.request, response.clone());
-          return response;
+          return response || fetch(event.request);
       });
     })
   );

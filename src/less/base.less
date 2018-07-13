@@ -229,17 +229,21 @@ body {
       }
     }
     .forms {
-      input {
+      input, textarea {
         width: 80%;
         height: 48px;
         padding: 0 5%;
         margin: 12px 0 12px 5%;
         background: white;
         border-radius: 4px;
+        border: 1px solid white;
+        border: 1px solid black;
       }
-      input[type=text], input[type=email] {border: 1px solid white;}
-      input[name="later"] {height: 192px;}
-      input[type=text]:hover, input[type=email]:hover {border: 1px solid black;}
+      textarea {
+        height: 192px;
+        padding: 7px 5%;
+        font-size: 16px;
+      }
       input[type=file] {
         width: 120px;
         height: 0;

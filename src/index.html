@@ -549,10 +549,10 @@
           </ul>
         </section>
         <form class="forms">
-          <input type="text" placeholder="Enter name" required pattern="[A-Za-zА-Яа-яЁё]+$">
-          <input type="email" placeholder="Enter email" required>
-          <textarea name="message" maxlength="600" placeholder="Enter message" required></textarea>
-          <input type="file" accept=".pdf, .doc, .png, .jpg, .jpeg" multiple>
+          <input type="text" aria-label="name" placeholder="Enter name" required pattern="[A-Za-zА-Яа-яЁё]+$">
+          <input type="email" aria-label="email" placeholder="Enter email" required>
+          <textarea name="message" aria-label="message" maxlength="600" placeholder="Enter message" required></textarea>
+          <input type="file" aria-label="file" accept=".pdf, .doc, .png, .jpg, .jpeg" multiple>
           <label><span>Attach file</span></label>
           <input type="submit" value="Submit" formmethod="post">
         </form>
@@ -575,10 +575,10 @@
           </ul>
         </section>
         <form class="forms">
-          <input type="text" placeholder="Введите имя" required pattern="[A-Za-zА-Яа-яЁё]+$">
-          <input type="email" placeholder="Введите адрес электронной почты" required>
-          <textarea name="message" maxlength="600" placeholder="Введите сообщение" required></textarea>
-          <input type="file" accept=".pdf, .doc, .png, .jpg, .jpeg" multiple>
+          <input type="text" aria-label="имя" placeholder="Введите имя" required pattern="[A-Za-zА-Яа-яЁё]+$">
+          <input type="email" aria-label="адрес" placeholder="Введите адрес электронной почты" required>
+          <textarea name="message" aria-label="сообщение" maxlength="600" placeholder="Введите сообщение" required></textarea>
+          <input type="file" aria-label="файл" accept=".pdf, .doc, .png, .jpg, .jpeg" multiple>
           <label><span>Прикрепить файл</span></label>
           <input type="submit" value="Отправить" formmethod="post">
         </form>

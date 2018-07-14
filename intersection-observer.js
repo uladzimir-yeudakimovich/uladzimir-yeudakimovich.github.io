@@ -1,19 +1,32 @@
-var observer = new IntersectionObserver(changes => {
-  for (const change of changes) {
-    console.log(change.time);               // Timestamp when the change occurred
-    console.log(change.rootBounds);         // Unclipped area of root
-    console.log(change.boundingClientRect); // target.boundingClientRect()
-    console.log(change.intersectionRect);   // boundingClientRect, clipped by its containing block ancestors, and intersected with rootBounds
-    console.log(change.intersectionRatio);  // Ratio of intersectionRect area to boundingClientRect area
-    console.log(change.target);             // the Element target
+var io = new IntersectionObserver(
+  entries => {
+    console.log(entries);
+  },
+  {
+    /* Using default options. Details below */
   }
-}, {});
+);
+// Start observing an element
+// io.observe(element);
 
-// Watch for intersection events on a specific target Element.
-observer.observe(target);
+// Stop observing an element
+// io.unobserve(element);
 
-// Stop watching for intersection events on a specific target Element.
-observer.unobserve(target);
+// Disable entire IntersectionObserver
+// io.disconnect();
 
-// Stop observing threshold events on all target elements.
-observer.disconnect();
+new IntersectionObserver(entries => {/* … */}, {
+  // The root to use for intersection.
+  // If not provided, use the top-level document’s viewport.
+  root: null,
+  // Same as margin, can be 1, 2, 3 or 4 components, possibly negative lengths.
+  // If an explicit root element is specified, components may be percentages of the
+  // root element size.  If no explicit root element is specified, using a percentage
+  // is an error.
+  rootMargin: "0px",
+  // Threshold(s) at which to trigger callback, specified as a ratio, or list of
+  // ratios, of (visible area / total area) of the observed element (hence all
+  // entries must be in the range [0, 1]).  Callback will be invoked when the visible
+  // ratio of the observed element crosses a threshold in the list.
+  threshold: [0],
+});

@@ -1,8 +1,4 @@
-var targetNode1 = document.getElementById('language-en-main');
-var targetNode2 = document.getElementById('language-ru-header');
-var targetNode3 = document.getElementById('language-ru-main');
-var targetNode4 = document.getElementById('language-en-footer');
-var targetNode5 = document.getElementById('language-ru-footer');
+var targetNode = document.getElementById('language-ru-main');
 
 // Options for the observer (which mutations to observe)
 var config = { attributes: true, childList: true, subtree: true };
@@ -23,11 +19,7 @@ var callback = function(mutationsList) {
 var observer = new MutationObserver(callback);
 
 // Start observing the target node for configured mutations
-observer.observe(targetNode1, config);
-observer.observe(targetNode2, config);
-observer.observe(targetNode3, config);
-observer.observe(targetNode4, config);
-observer.observe(targetNode5, config);
+observer.observe(targetNode, config);
 
 // Later, you can stop observing
 observer.disconnect();

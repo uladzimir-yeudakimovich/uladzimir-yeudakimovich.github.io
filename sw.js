@@ -1,7 +1,6 @@
-self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll([
+var cacheName = 'WWW-EXAMPLE-COM-V1';
+
+var filesToCache = [
         '/',
         '/bundle.js',
         '/index.html',
@@ -159,38 +158,58 @@ self.addEventListener('install', function(event) {
         '/images/social_tablet3.jpg',
         '/images/social_tablet4.jpg',
         '/images/social_tablet5.jpg'
-      ]);
-    })
-  );
- });
+]
 
- self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request).then(function(resp) {
-      return resp || fetch(event.request).then(function(response) {
-        let responseClone = response.clone();
-        caches.open('v1').then(function(cache) {
-          cache.put(event.request, responseClone);
-        });
-
-        return response;
-      });
-    }).catch(function() {
-      return caches.match('/images/icons/android-icon-512x512.png');
-    })
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+      caches.open(cacheName)
+      .then(function(cache) {
+          console.info('[sw.js] cached all files');
+          return cache.addAll(filesToCache);
+      })
   );
 });
 
-self.addEventListener('activate', function(event) {
-  var cacheWhitelist = ['v2'];
 
-  event.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (cacheWhitelist.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+      caches.match(event.request)
+      .then(function(response) {
+          if(response){
+              return response
+          }
+          else{
+              // clone request stream
+              // as stream once consumed, can not be used again
+              var reqCopy = event.request.clone();
+
+              return fetch(reqCopy, {credentials: 'include'}) // reqCopy stream consumed
+              .then(function(response) {
+                  // bad response
+                  // response.type !== 'basic' means third party origin request
+                  if(!response || response.status !== 200 || response.type !== 'basic') {
+                      return response; // response stream consumed
+                  }
+
+                  // clone response stream
+                  // as stream once consumed, can not be used again
+                  var resCopy = response.clone();
+
+
+                  // ================== IN BACKGROUND ===================== //
+
+                  // add response to cache and return response
+                  caches.open(cacheName)
+                  .then(function(cache) {
+                      return cache.put(reqCopy, resCopy); // reqCopy, resCopy streams consumed
+                  });
+
+                  // ====================================================== //
+
+
+                  return response; // response stream consumed
+              })
+          }
+      })
   );
 });

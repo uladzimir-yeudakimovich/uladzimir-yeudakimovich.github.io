@@ -1,10 +1,9 @@
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open(cacheName).then(function(cache) {
       return cache.addAll([
         '/',
         '/bundle.js',
-        '/index.html',
         '/images/logo_phone.jpg',
         '/images/logo_laptop.jpg',
         '/images/logo_desktop.jpg',
@@ -164,33 +163,38 @@ self.addEventListener('install', function(event) {
   );
  });
 
- self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', function(event) {
   event.respondWith(
-    caches.match(event.request).then(function(resp) {
-      return resp || fetch(event.request).then(function(response) {
-        let responseClone = response.clone();
-        caches.open('v1').then(function(cache) {
-          cache.put(event.request, responseClone);
-        });
-
+    // Try the cache
+    caches.match(event.request).then(function(response) {
+      if (response) {
         return response;
+      }
+      return fetch(event.request).then(function(response) {
+        if (response.status === 404) {
+          return caches.match('pages/404.html');
+        }
+        return response
       });
     }).catch(function() {
-      return caches.match('/images/icons/android-icon-512x512.png');
+      // If both fail, show a generic fallback:
+      return caches.match('/offline.html');
     })
   );
 });
 
 self.addEventListener('activate', function(event) {
-  var cacheWhitelist = ['v2'];
-
   event.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (cacheWhitelist.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          // Return true if you want to remove this cache,
+          // but remember that caches are shared across
+          // the whole origin
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
     })
   );
 });

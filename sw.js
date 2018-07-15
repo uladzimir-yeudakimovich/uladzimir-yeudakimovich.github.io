@@ -4,7 +4,6 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
         '/',
         '/bundle.js',
-        '/index.html',
         '/images/logo_phone.jpg',
         '/images/logo_laptop.jpg',
         '/images/logo_desktop.jpg',
@@ -167,10 +166,13 @@ self.addEventListener('install', function(event) {
  self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(resp) {
-      return resp || fetch(event.request).then(function(response) {
-        let responseClone = response.clone();
+      return resp || fetch(event.request.clone(), {credentials: 'include'}).then(function(response) {
+        if(!response || response.status !== 200 || response.type !== 'basic') {
+          return response;
+        }
+        event.request.clone() = response.clone();
         caches.open('v1').then(function(cache) {
-          cache.put(event.request, responseClone);
+          return cache.put(event.request.clone(), response.clone());
         });
 
         return response;

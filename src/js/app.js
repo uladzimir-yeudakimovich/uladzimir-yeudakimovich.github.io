@@ -19,6 +19,19 @@ document.getElementById('btn2').addEventListener("click", function() {
   document.getElementById('language-en-footer').style.display='block';
 });
 
+let angular = new Slide(
+  '.slides-angular .slide-angular',
+  'slide-angular',
+  'slide-angular showing-angular',
+  'previousAngularEn',
+  'previousAngularRu',
+  'pauseAngularEn',
+  'pauseAngularRu',
+  'nextAngularEn',
+  'nextAngularRu'
+);
+setTimeout(() => angular.build(), 1);
+
 let bootstrap4 = new Slide(
   '.slides-b4 .slide-b4',
   'slide-b4',

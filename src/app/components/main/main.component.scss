@@ -1,0 +1,27 @@
+main {
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .my-works-right {
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .my-works {margin-top: 20px;}
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  .description {
+    h3 {
+      margin-bottom: 30px;
+    }
+    a {text-decoration: none;}
+    p {
+      opacity: 0.8;
+      text-align: justify;
+    }
+  }
+}

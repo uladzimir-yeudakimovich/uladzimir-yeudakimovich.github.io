@@ -1,0 +1,70 @@
+<footer>
+  <div class="container show-modal" *ngIf="this.show === false">
+    <div class="row item">
+      <div class="col-md-3"><h5>{{this.showMessage[0].name}}</h5></div>
+      <div class="col-md-3"><h5>{{this.showMessage[0].email}}</h5></div>
+      <div class="col-md-6">
+        <textarea class="form-control" rows="10" placeholder="{{this.showMessage[0].message}}" [(ngModel)]="this.showMessage[0].message"></textarea>
+      </div>
+    </div>
+    <div class="row item" style="margin-top: 30px;">
+      <div class="col-md-10"></div>
+      <div class="col-md-2">
+        <button class="btn btn-danger" (click)="updateMessage()">Update</button>
+        <button class="btn btn-primary" (click)="closeMessage()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container message">
+    <div class="row item">
+      <div class="col-md-3"><h5>Name</h5></div>
+      <div class="col-md-3"><h5>Email</h5></div>
+      <div class="col-md-6"><h5>Messages</h5></div>
+    </div>
+    <div class="row item" *ngFor="let later of this.messages">
+      <div class="col-md-3"><p>{{later.name}}</p></div>
+      <div class="col-md-3"><p>{{later.email}}</p></div>
+      <div class="col-md-6">
+          <p style="margin: 10px 0 -10px;">{{later.message}}</p>
+          <p style="margin-top: -10px;"><i>{{later.message | translate}}</i></p>
+        </div>
+    </div>
+    <div *ngIf="this.localMessages.length !== 0">
+      <div class="row item" *ngFor="let later of this.localMessages" (click)="this.showDetails(this.localMessages.indexOf(later))">
+        <div class="col-md-3"><p>{{later.name}}</p></div>
+        <div class="col-md-3"><p>{{later.email}}</p></div>
+        <div class="col-md-5">
+          <p style="margin: 10px 0 -10px;">{{later.message}}</p>
+          <p style="margin-top: -10px;"><i>{{later.message | translate}}</i></p>
+        </div>
+        <div>
+          <span class="col-md-1 delete" (click)="delete($event)" id="{{this.localMessages.indexOf(later)}}">&times;</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <section class="col-md-6 contacts">
+        <h1>Contact Information</h1>
+        <p>I'm open to new projects.  You can send me for evaluation an approximate
+          technical assignment or simply a description of the project in your own words.</p>
+        <h4>Links to my social networks:</h4>
+        <ul>
+          <li><span></span><a href="https://www.linkedin.com/in/uladzimir-yeudakimovich" target="_blank">Linkedin</a></li>
+          <li><span></span><a href="https://github.com/uladzimir-yeudakimovich" target="_blank">Github</a></li>
+          <li><span></span><a href="https://www.codewars.com/users/uladzimir.yeudakimovich" target="_blank">CodeWars</a></li>
+          <li><span></span><a href="https://www.facebook.com/uladzimir.yeudakimovich" target="_blank">Facebook</a></li>
+          <li><span></span><a href="https://instagram.com/uladzimir.yeudakimovich" target="_blank">Instagram</a></li>
+        </ul>
+      </section>
+      <form class="col-md-6">
+        <input name="text" id="laterName" placeholder="Enter name *" [(ngModel)]="later.name">
+        <input name="email" id="laterEmail" placeholder="Enter email *" [(ngModel)]="later.email">
+        <textarea name="message" id="laterMessage" placeholder="Enter message *" [(ngModel)]="later.message"></textarea>
+        <button type="submit" class="btn btn-primary btn-block" (click)="setMessage()">Submit</button>
+      </form>
+    </div>
+  </div>
+</footer> 

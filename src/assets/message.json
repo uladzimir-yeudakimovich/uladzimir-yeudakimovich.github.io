@@ -1,0 +1,14 @@
+{
+    "mess": [
+        {
+            "email": "anna@gmail.com",
+            "message": "Super work!!!",
+            "name" : "Anna"
+        },
+        {
+            "email": "aleksandr@gmail.com",
+            "message": "How much is this application?",
+            "name" : "Aleksandr"
+        }
+    ]
+}

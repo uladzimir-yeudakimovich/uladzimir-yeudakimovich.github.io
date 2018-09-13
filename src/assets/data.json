@@ -12,6 +12,7 @@
   "main": [
     {
       "name": "Messenger.",
+      "link": "",
       "description": "Full-stack development. Used technologies HTML5, CSS3, JavaScript, Node.JS, WebSockets, MySQL. It was used the express framework during the development of the server part. Communication in the MESSAGE is in the browser. Data is transferred to the server via WebSocket. The server is processed and written to the MySQL database.",
       "images" : [
         "src/assets/images/chat/chat_laptop1.jpg",
@@ -101,6 +102,7 @@
     },
     {
       "name": "Application for banks.",
+      "link": "",
       "description": "The development language is JavaScript. It was written using the National Bank API. For constructing graphs, we use canvas. Application for determining the exchange rate of different currencies and plotting the dynamics of changes over a certain period of time.",
       "images" : [
         "src/assets/images/currency/currency_laptop1.jpg",

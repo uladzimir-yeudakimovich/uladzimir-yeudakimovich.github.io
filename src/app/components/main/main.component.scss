@@ -18,7 +18,11 @@ main {
     h3 {
       margin-bottom: 30px;
     }
-    a {text-decoration: none;}
+    a {
+      text-decoration: none;
+      color: #0000FF;
+    }
+    a:hover {color: rgb(64, 64, 221)}
     p {
       opacity: 0.8;
       text-align: justify;

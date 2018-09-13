@@ -52,17 +52,17 @@
           technical assignment or simply a description of the project in your own words.</p>
         <h4>Links to my social networks:</h4>
         <ul>
-          <li><span></span><a href="https://www.linkedin.com/in/uladzimir-yeudakimovich" target="_blank">Linkedin</a></li>
-          <li><span></span><a href="https://github.com/uladzimir-yeudakimovich" target="_blank">Github</a></li>
-          <li><span></span><a href="https://www.codewars.com/users/uladzimir.yeudakimovich" target="_blank">CodeWars</a></li>
-          <li><span></span><a href="https://www.facebook.com/uladzimir.yeudakimovich" target="_blank">Facebook</a></li>
-          <li><span></span><a href="https://instagram.com/uladzimir.yeudakimovich" target="_blank">Instagram</a></li>
+          <li><span></span><a href="https://www.linkedin.com/in/uladzimir-yeudakimovich" target="_blank" rel="noopener">Linkedin</a></li>
+          <li><span></span><a href="https://github.com/uladzimir-yeudakimovich" target="_blank" rel="noopener">Github</a></li>
+          <li><span></span><a href="https://www.codewars.com/users/uladzimir.yeudakimovich" target="_blank" rel="noopener">CodeWars</a></li>
+          <li><span></span><a href="https://www.facebook.com/uladzimir.yeudakimovich" target="_blank" rel="noopener">Facebook</a></li>
+          <li><span></span><a href="https://instagram.com/uladzimir.yeudakimovich" target="_blank" rel="noopener">Instagram</a></li>
         </ul>
       </section>
       <form class="col-md-6">
-        <input name="text" id="laterName" placeholder="Enter name *" [(ngModel)]="later.name">
-        <input name="email" id="laterEmail" placeholder="Enter email *" [(ngModel)]="later.email">
-        <textarea name="message" id="laterMessage" placeholder="Enter message *" [(ngModel)]="later.message"></textarea>
+        <input name="text" aria-label="name" id="laterName" placeholder="Enter name *" [(ngModel)]="later.name">
+        <input name="email" aria-label="email" id="laterEmail" placeholder="Enter email *" [(ngModel)]="later.email">
+        <textarea name="message" aria-label="message" id="laterMessage" placeholder="Enter message *" [(ngModel)]="later.message"></textarea>
         <button type="submit" class="btn btn-primary btn-block" (click)="setMessage()">Submit</button>
       </form>
     </div>

@@ -2,7 +2,7 @@ const cacheName = 'V1';
 
 const filesToCache = [
   '/',
-  '/main.d0ab7714889b0e3e1a2d.js',
+  '/main.js',
   '/polyfills.2f4a59095805af02bd79.js',
   '/runtime.a66f828dca56eeb90e02.js',
   '/styles.34c57ab7888ec1573f9c.css',

@@ -32,6 +32,12 @@ footer {
     p {
       text-align: justify;
       padding: 30px 40px 30px 0;
+      a {
+        text-decoration: none;
+        color: #0000FF;
+        padding: 10px 12px;
+      }
+      a:hover {color: rgb(64, 64, 221)}
     }
     h4 {
       padding: 0 0 20px 20px;

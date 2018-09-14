@@ -1,7 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { DataService } from '../../services/data.service';
-import { LanguageService } from '../../services/language.service';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main',
@@ -14,9 +12,7 @@ export class MainComponent implements OnInit {
 
   @Output() valueChange = new EventEmitter();
 
-  constructor(public dataService: DataService, public translate: TranslateService,  public languageService: LanguageService) {
-    translate.setDefaultLang('ru');
-  }
+  constructor(public dataService: DataService) {}
 
   ngOnInit() {
     this.dataService.getData().subscribe(dataFromServer => { 
@@ -24,7 +20,5 @@ export class MainComponent implements OnInit {
         this.data.push(dataFromServer['main'][key]);
       }
     });
-    this.english = this.languageService.getLanguage();
-    console.log(this.english);
   }
 }

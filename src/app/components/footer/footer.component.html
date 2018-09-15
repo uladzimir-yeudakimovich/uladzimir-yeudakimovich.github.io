@@ -22,14 +22,17 @@
       <div class="col-md-3"><h5>Email</h5></div>
       <div class="col-md-6"><h5>Messages</h5></div>
     </div>
-    <div class="row item" *ngFor="let later of this.messages">
-      <div class="col-md-3"><p>{{later.name}}</p></div>
-      <div class="col-md-3"><p>{{later.email}}</p></div>
-      <div class="col-md-6">
+    <div *ngIf="this.messages.length !== 0">
+      <div class="row item" *ngFor="let later of this.messages">
+        <div class="col-md-3"><p>{{later.name}}</p></div>
+        <div class="col-md-3"><p>{{later.email}}</p></div>
+        <div class="col-md-6">
           <p style="margin: 10px 0 -10px;">{{later.message}}</p>
           <p style="margin-top: -10px;"><i>{{later.message | translate}}</i></p>
         </div>
+      </div>
     </div>
+    
     <div *ngIf="this.localMessages.length !== 0">
       <div class="row item" *ngFor="let later of this.localMessages" (click)="this.showDetails(this.localMessages.indexOf(later))">
         <div class="col-md-3"><p>{{later.name}}</p></div>
@@ -47,13 +50,13 @@
   <div class="container">
     <div class="row">
       <section class="col-md-6 contacts">
-        <h1>Contact Information</h1>
+        <h3>Contact Information</h3>
         <p>I'm open to new projects.  You can send me for evaluation an approximate
           technical assignment or simply a description of the project in your own words.<br>
           <a href="tel:+375333344201">&#9990; +375 33 3344201</a><br>
           <a href="mailto:uladzimir.yeudakimovich@gmail.com">&#9993; uladzimir.yeudakimovich@gmail.com</a><br>
-          <a href="src/assets/CV_Евдокимович Владимир.docx" download>Download CV on russian</a><br>
-          <a href="src/assets/CV_Uladzimir Yeudakimovich.docx" download>Download CV on english</a>
+          <a href="src/assets/CV_Евдокимович Владимир.docx" download>&#8659; CV in russian</a><br>
+          <a href="src/assets/CV_Uladzimir Yeudakimovich.docx" download>&#8659; CV in english</a>
         </p>
         <h4>Links to my social networks:</h4>
         <ul>

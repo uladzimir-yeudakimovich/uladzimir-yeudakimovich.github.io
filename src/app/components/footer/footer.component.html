@@ -52,22 +52,22 @@
   </div>
 
   <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="this.data[0] !== undefined">
       <section class="col-md-6 contacts">
-        <h3>Contact Information</h3>
-        <p>&nbsp;I'm open to new projects.  You can send me for evaluation an approximate technical assignment or simply a description of the project in your own words.</p>
+        <h3>{{this.data[0].name}}</h3>
+        <p>&nbsp;{{this.data[0].description}}</p>
         <ul>
-          <li><i class="fa fa-phone-square"></i><a href="tel:+375333344201">+375 33 3344201</a></li>
-          <li><i class="fa fa-envelope"></i>&nbsp;<a href="mailto:uladzimir.yeudakimovich@gmail.com" style="margin-left: -4px;">uladzimir.yeudakimovich@gmail.com</a></li>
-          <li><i class="fa fa-cloud-download"></i><a href="src/assets/CV_Евдокимович Владимир.docx" download>CV in russian</a></li>
-          <li><i class="fa fa-cloud-download"></i><a href="src/assets/CV_Uladzimir Yeudakimovich.docx" download>CV in english</a></li>
+          <li><i class="fa fa-phone-square"></i><a href="tel:+375333344201">{{this.data[0].phone}}</a></li>
+          <li><i class="fa fa-envelope"></i>&nbsp;<a href="mailto:uladzimir.yeudakimovich@gmail.com" style="margin-left: -4px;">{{this.data[0].email}}</a></li>
+          <li><i class="fa fa-cloud-download"></i><a href="{{this.data[0].cvRussianLink}}" download>{{this.data[0].cvRussian}}</a></li>
+          <li><i class="fa fa-cloud-download"></i><a href="{{this.data[0].cvRussianLink}}" download>{{this.data[0].cvEnglish}}</a></li>
         </ul>
-        <h4>Links to my social networks:</h4>
+        <h4>{{this.data[0].subname}}</h4>
         <ul>
-          <li><i class="fa fa-linkedin-square"></i><a href="https://www.linkedin.com/in/uladzimir-yeudakimovich" target="_blank" rel="noopener">Linkedin</a></li>
-          <li><i class="fa fa-github-square"></i><a href="https://github.com/uladzimir-yeudakimovich" target="_blank" rel="noopener">Github</a></li>
-          <li><i class="codewars"></i><a href="https://www.codewars.com/users/uladzimir.yeudakimovich" target="_blank" rel="noopener">CodeWars</a></li>
-          <li><i class="fa fa-graduation-cap"></i><a href="https://www.duolingo.com/91YN1" target="_blank" rel="noopener" style="margin-left: -5px;">Duolingo</a></li>
+          <li><i class="fa fa-linkedin-square"></i><a href="{{this.data[0].linkedinLink}}" target="_blank" rel="noopener">{{this.data[0].linkedin}}</a></li>
+          <li><i class="fa fa-github-square"></i><a href="{{this.data[0].githubLink}}" target="_blank" rel="noopener">{{this.data[0].github}}</a></li>
+          <li><i class="codewars"></i><a href="{{this.data[0].codewarsLink}}" target="_blank" rel="noopener">{{this.data[0].codewars}}</a></li>
+          <li><i class="fa fa-graduation-cap"></i><a href="{{this.data[0].duolingoLink}}" target="_blank" rel="noopener" style="margin-left: -5px;">{{this.data[0].duolingo}}</a></li>
         </ul>
       </section>
       <form class="col-md-6">

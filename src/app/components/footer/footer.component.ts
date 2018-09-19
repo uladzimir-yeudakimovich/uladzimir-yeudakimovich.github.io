@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from '../../services/message.service';
+import { DataService } from '../../services/data.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -8,6 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  public data = [];
   public messages = [];
   public localMessages =[];
   public model = [];
@@ -20,13 +22,22 @@ export class FooterComponent implements OnInit {
   public showMessage = [];
   public copyMessage: string;
 
-  constructor(public messageService: MessageService, translate: TranslateService) {
+  constructor(public messageService: MessageService, public dataService: DataService, translate: TranslateService) {
     translate.setDefaultLang('ru');
   }
   
   ngOnInit(): void {
     this.getMessages();
     this.getLocalMessages();         /*if you want to clean the localStorage, will comment out this line and push new message without validation*/
+    this.getData();
+  }
+
+  getData() {
+    return this.dataService.getData().subscribe(dataFromServer => { 
+      for (const key in dataFromServer['footer']) {
+        this.data.push(dataFromServer['footer'][key]);
+      }
+    });
   }
 
   getMessages() {

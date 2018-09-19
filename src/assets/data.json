@@ -75,5 +75,26 @@
         "src/assets/images/restaurant/restaurant5.jpg"
       ]
     }
+  ],
+  "footer": [
+    {
+      "name": "Contact Information",
+      "description": "I'm open to new projects. You can send me for evaluation an approximate technical assignment or simply a description of the project in your own words.",
+      "phone": "+375 33 3344201",
+      "email": "uladzimir.yeudakimovich@gmail.com",
+      "cvRussianLink": "src/assets/CV_Евдокимович Владимир.docx",
+      "cvRussian": "CV in russian",
+      "cvEnglishLink": "src/assets/CV_Uladzimir Yeudakimovich.docx",
+      "cvEnglish": "CV in english",
+      "subname": "Links to my social networks:",
+      "linkedinLink": "https://www.linkedin.com/in/uladzimir-yeudakimovich",
+      "linkedin": "Linkedin",
+      "githubLink": "https://github.com/uladzimir-yeudakimovich",
+      "github": "Github",
+      "codewarsLink": "https://www.codewars.com/users/uladzimir.yeudakimovich",
+      "codewars": "CodeWars",
+      "duolingoLink": "https://www.duolingo.com/91YN1",
+      "duolingo": "Duolingo"
+    }
   ]
 }

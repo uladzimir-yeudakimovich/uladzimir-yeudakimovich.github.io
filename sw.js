@@ -3,8 +3,8 @@ const cacheName = 'V1';
 const filesToCache = [
   '/',
   '/main.js',
-  '/polyfills.2f4a59095805af02bd79.js',
-  '/runtime.a66f828dca56eeb90e02.js',
+  '/polyfills.js',
+  '/runtime.js',
   '/src/assets/images/logo_phone.jpg',
   '/src/assets/images/logo_laptop.jpg',
   '/src/assets/images/logo_tablet.jpg',

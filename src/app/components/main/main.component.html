@@ -10,23 +10,25 @@
           </div>
           <p>&nbsp;{{slide.description}}</p>
         </article>
-        <ngb-carousel  class="col-xl-6" *ngIf="data">
-          <ng-template ngbSlide>
-            <img class="d-block w-100 img-fluid" src="{{slide.images[0]}}" alt="Random first slide">
-          </ng-template>
-          <ng-template ngbSlide>
-            <img class="d-block w-100 img-fluid" src="{{slide.images[1]}}" alt="Random second slide">
-          </ng-template>
-          <ng-template ngbSlide>
-            <img class="d-block w-100 img-fluid" src="{{slide.images[2]}}" alt="Random third slide">
-          </ng-template>
-          <ng-template ngbSlide>
-            <img class="d-block w-100 img-fluid" src="{{slide.images[3]}}" alt="Random fourth slide">
-          </ng-template>
-          <ng-template ngbSlide>
-            <img class="d-block w-100 img-fluid" src="{{slide.images[4]}}" alt="Random fifth slide">
-          </ng-template>
-        </ngb-carousel>
+        <div class="container" class="col-xl-6" *ngIf="data">
+          <ngb-carousel>
+            <ng-template ngbSlide>
+              <img class="d-block w-100 img-fluid" src="{{slide.images[0]}}" alt="Random first slide">
+            </ng-template>
+            <ng-template ngbSlide>
+              <img class="d-block w-100 img-fluid" src="{{slide.images[1]}}" alt="Random second slide">
+            </ng-template>
+            <ng-template ngbSlide>
+              <img class="d-block w-100 img-fluid" src="{{slide.images[2]}}" alt="Random third slide">
+            </ng-template>
+            <ng-template ngbSlide>
+              <img class="d-block w-100 img-fluid" src="{{slide.images[3]}}" alt="Random fourth slide">
+            </ng-template>
+            <ng-template ngbSlide>
+              <img class="d-block w-100 img-fluid" src="{{slide.images[4]}}" alt="Random fifth slide">
+            </ng-template>
+          </ngb-carousel>
+        </div>
       </div>
     </div>
   </section>

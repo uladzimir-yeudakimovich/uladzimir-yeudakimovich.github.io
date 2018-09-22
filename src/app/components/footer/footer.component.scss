@@ -25,6 +25,10 @@ footer {
     z-index: 15;
   }
   .contacts {
+    h3, h4 {
+      display: flex;
+      justify-content: center;
+    }
     ul {
       padding: 0;
       li {

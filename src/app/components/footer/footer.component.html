@@ -1,19 +1,18 @@
 <footer>
-  <div class="container show-modal" *ngIf="this.show === false">
-    <div class="row item">
-      <div class="col-md-3"><h5>{{this.showMessage[0].name}}</h5></div>
-      <div class="col-md-3"><h5>{{this.showMessage[0].email}}</h5></div>
-      <div class="col-md-6">
-        <textarea class="form-control" rows="10" placeholder="{{this.showMessage[0].message}}" [(ngModel)]="this.showMessage[0].message"></textarea>
+  <div class="show-modal" *ngIf="this.show === false">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"><h5>{{this.showMessage[0].name}}</h5></div>
+        <div class="col-md-3"><h5>{{this.showMessage[0].email}}</h5></div>
+        <div class="col-md-6">
+          <textarea class="form-control" rows="10" placeholder="{{this.showMessage[0].message}}" [(ngModel)]="this.showMessage[0].message"></textarea>
+        </div>
       </div>
-    </div>
-    <div class="row item" style="margin-top: 30px;">
-      <div class="col-md-10"></div>
-      <div class="col-md-2">
+      <div class="row buttons">
         <button class="btn btn-danger" (click)="updateMessage()">Update</button>
         <button class="btn btn-primary" (click)="closeMessage()">Close</button>
       </div>
-    </div>
+    </div>   
   </div>
 
   <div class="container message">

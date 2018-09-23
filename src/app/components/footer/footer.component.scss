@@ -16,6 +16,8 @@ footer {
     font-size: 26px;
   }
   .show-modal {
+    width: 80%;
+    margin: 0 10%;
     padding: 50px;
     background-color: rgb(238, 245, 243);
     border: solid;
@@ -23,6 +25,10 @@ footer {
     position: fixed;
     top: 140px;
     z-index: 15;
+    .buttons {
+      margin: 30px 0 0;
+      justify-content: flex-end;
+    }
   }
   .contacts {
     h3, h4 {
@@ -84,5 +90,19 @@ footer {
       background-color: #0000FF;
     }
     button:hover {background-color: rgb(64, 64, 221)}
+  }
+}
+
+@media (min-width: 1360px) {
+  .show-modal {
+    width: 60% !important;
+    margin: 0 20% !important;
+  }
+}
+
+@media (min-width: 1760px) {
+  .show-modal {
+    width: 50% !important;
+    margin: 0 25% !important;
   }
 }

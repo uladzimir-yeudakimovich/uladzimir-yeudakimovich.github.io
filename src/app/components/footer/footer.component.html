@@ -28,8 +28,8 @@
           <div class="col-md-3"><p>{{later.name}}</p></div>
           <div class="col-md-3"><p>{{later.email}}</p></div>
           <div class="col-md-6">
-            <p style="margin: 10px 0 -10px;">{{later.message}}</p>
-            <p style="margin-top: -10px;"><i>{{later.message | translate}}</i></p>
+            <p style="margin: 10px 0 -10px;">&nbsp;{{later.message}}</p>
+            <p style="margin-top: -10px;"><i>&nbsp;{{later.message | translate}}</i></p>
           </div>
         </div>
       </div>
@@ -39,8 +39,7 @@
           <div class="col-md-3"><p>{{later.name}}</p></div>
           <div class="col-md-3"><p>{{later.email}}</p></div>
           <div class="col-md-5">
-            <p style="margin: 10px 0 -10px;">{{later.message}}</p>
-            <p style="margin-top: -10px;"><i>{{later.message | translate}}</i></p>
+            <p style="margin: 10px 0;">&nbsp;{{later.message}}</p>
           </div>
           <div>
             <span class="col-md-1 delete" (click)="delete($event)" id="{{this.localMessages.indexOf(later)}}">&times;</span>

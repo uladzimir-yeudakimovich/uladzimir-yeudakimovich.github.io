@@ -3,7 +3,7 @@
     {
       "position": "Front-end developer",
       "name": "Uladzimir Yeudakimovich",
-      "description": "A few words about me. I graduated from Rolling Scopes School in EPAM Systems with a specialization in front-end development. I work as front-end developer for OCS Innovation Company (OCSICO®). My main programming language is JavaScript. I use frameworks Angular 4+ and Bootstrap, Ajax technology, jQuery library, webpack collector, LESS and SASS preprocessors, Git version control system. I'm experienced in the Backbone and React frameworks.",
+      "description": "A few words about me. I graduated from Rolling Scopes School in EPAM Systems with a specialization in front-end development. I work as front-end developer for OCS Innovation Company (OCSICO®). My main programming language is JavaScript. I use frameworks Angular 6 and Bootstrap, Ajax technology, jQuery library, webpack collector, LESS and SASS preprocessors, Git version control system. I'm experienced in the Backbone and React frameworks.",
       "imageLaptop": "src/assets/images/logo_laptop.jpg",
       "imagePhone": "src/assets/images/logo_phone.jpg",
       "imageTablet": "src/assets/images/logo_tablet.jpg"

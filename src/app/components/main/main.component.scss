@@ -1,24 +1,36 @@
 main {
+
   h1, h3, a {
     display: flex;
     justify-content: center;
   }
+
   .my-works-right {
     flex-direction: row-reverse;
     justify-content: center;
     margin-top: 20px;
   }
-  .my-works {margin-top: 20px;}
+
+  .my-works {
+    margin-top: 20px;
+  }
+
   .img-fluid {
     max-width: 100%;
     height: auto;
   }
+
   .description {
+
     a {
       text-decoration: none;
       color: #0000FF;
     }
-    a:hover {color: rgb(64, 64, 221)}
+
+    a:hover {
+      color: rgb(64, 64, 221)
+    }
+    
     p {
       opacity: 0.8;
       text-align: justify;

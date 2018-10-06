@@ -14,7 +14,6 @@
       </div>
     </div>   
   </div>
-
   <div class="container message">
     <div class="container">
       <div class="row item">
@@ -22,7 +21,6 @@
         <div class="col-md-3"><h5>Email</h5></div>
         <div class="col-md-6"><h5>Messages</h5></div>
       </div>
-      
       <div *ngIf="this.messages.length !== 0">
         <div class="row item" *ngFor="let later of this.messages">
           <div class="col-md-3"><p>{{later.name}}</p></div>
@@ -33,7 +31,6 @@
           </div>
         </div>
       </div>
-      
       <div *ngIf="this.localMessages.length !== 0">
         <div class="row item" *ngFor="let later of this.localMessages" (click)="this.showDetails(this.localMessages.indexOf(later))">
           <div class="col-md-3"><p>{{later.name}}</p></div>
@@ -48,7 +45,6 @@
       </div>
     </div>
   </div>
-
   <div class="container">
     <div class="row" *ngIf="this.data[0] !== undefined">
       <section class="col-md-6 contacts">

@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class MessageService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   public getMessages() {
     return this.http.get("src/assets/message.json");
@@ -17,6 +17,6 @@ export class MessageService {
   }
 
   public getLocalMessages() {
-    return localStorage.getItem("messages") ? JSON.parse(localStorage.getItem("messages")) : {};
+    return localStorage.getItem("messages") ? JSON.parse(localStorage.getItem("messages")) : { };
   }
 }

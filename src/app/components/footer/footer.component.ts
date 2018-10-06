@@ -105,5 +105,4 @@ export class FooterComponent implements OnInit {
     this.showMessage = [];
     this.copyMessage = '';
   }
-
 }

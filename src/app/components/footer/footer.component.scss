@@ -2,43 +2,15 @@ footer {
   background-image: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
   margin-top: 15px;
 
-  .message {
-    padding-top: 15px;
-    margin-bottom: 20px;
-    background-image: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
-
-    .item {
-      background-color: rgb(248, 248, 153);
-      border-radius: 4px;
-      border-bottom: solid black;
-    }
-  }
-
-  .delete {
-    color: red;
-    font-size: 26px;
-  }
-
-  .show-modal {
-    width: 80%;
-    margin: 0 10%;
-    padding: 15px 0;
-    background-color: rgb(238, 245, 243);
-    border: solid;
-    border-radius: 5px;
-    position: fixed;
-    top: 80px;
-    z-index: 15;
-
-    .buttons {
-      margin: 10px 0 0;
-      justify-content: flex-end;
-    }
-  }
-
   .contacts {
 
-    h3, h4 {
+    h3 {
+      display: flex;
+      justify-content: center;
+      padding-top: 15px;
+    }
+
+    h4 {
       display: flex;
       justify-content: center;
     }
@@ -90,10 +62,48 @@ footer {
           background-image: url('../../../assets/images/social_icons/codewars.svg');
         }
 
-        .students-cap{
+        .students-cap {
           background-image: url('../../../assets/images/social_icons/students-cap.svg');
         }
       }
+    }
+  }
+
+  .message {
+    margin-bottom: 20px;
+    background-image: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
+
+    h4 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .item {
+      background-color: rgb(248, 248, 153);
+      border-radius: 4px;
+      border-bottom: solid black;
+    }
+  }
+
+  .delete {
+    color: red;
+    font-size: 26px;
+  }
+
+  .show-modal {
+    width: 80%;
+    margin: 0 10%;
+    padding: 15px 0;
+    background-color: rgb(238, 245, 243);
+    border: solid;
+    border-radius: 5px;
+    position: fixed;
+    top: 80px;
+    z-index: 15;
+
+    .buttons {
+      margin: 10px 0 0;
+      justify-content: flex-end;
     }
   }
   

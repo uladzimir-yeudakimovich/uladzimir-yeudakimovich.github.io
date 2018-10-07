@@ -1,4 +1,52 @@
 <footer>
+  <div class="show-modal" *ngIf="this.show === false">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"><h5>{{this.showMessage[0].name}}</h5></div>
+        <div class="col-md-3"><h5>{{this.showMessage[0].email}}</h5></div>
+        <div class="col-md-6">
+          <textarea class="form-control" rows="10" placeholder="{{this.showMessage[0].message}}" [(ngModel)]="this.showMessage[0].message"></textarea>
+        </div>
+      </div>
+      <div class="row buttons">
+        <button class="btn btn-danger" (click)="updateMessage()">Update</button>
+        <button class="btn btn-primary" (click)="closeMessage()">Close</button>
+      </div>
+    </div>   
+  </div>
+  <div class="container message">
+    <h4>Comments</h4>
+    <div class="container">
+      <div class="row item">
+        <div class="col-md-3"><h5>Name</h5></div>
+        <div class="col-md-3"><h5>Email</h5></div>
+        <div class="col-md-6"><h5>Messages</h5></div>
+      </div>
+      <div *ngIf="this.messages.length !== 0">
+        <div class="row item" *ngFor="let later of this.messages">
+          <div class="col-md-3"><p>{{later.name}}</p></div>
+          <div class="col-md-3"><p>{{later.email}}</p></div>
+          <div class="col-md-6">
+            <p style="margin: 10px 0 -10px;">&nbsp;{{later.message}}</p>
+            <p style="margin-top: -10px;"><i>&nbsp;{{later.message | translate}}</i></p>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="this.localMessages.length !== 0">
+        <div class="row item" *ngFor="let later of this.localMessages" (click)="this.showDetails(this.localMessages.indexOf(later))">
+          <div class="col-md-3"><p>{{later.name}}</p></div>
+          <div class="col-md-3"><p>{{later.email}}</p></div>
+          <div class="col-md-5">
+            <p style="margin: 10px 0;">&nbsp;{{later.message}}</p>
+          </div>
+          <div>
+            <span class="col-md-1 delete" (click)="delete($event)" id="{{this.localMessages.indexOf(later)}}">&times;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div class="container">
     <div class="row" *ngIf="this.data[0] !== undefined">
       <section class="col-md-6 contacts">
@@ -18,54 +66,6 @@
           <li><i class="students-cap"></i><a href="{{this.data[0].duolingoLink}}" target="_blank" rel="noopener">{{this.data[0].duolingo}}</a></li>
         </ul>
       </section>
-
-      <div class="show-modal" *ngIf="this.show === false">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3"><h5>{{this.showMessage[0].name}}</h5></div>
-            <div class="col-md-3"><h5>{{this.showMessage[0].email}}</h5></div>
-            <div class="col-md-6">
-              <textarea class="form-control" rows="10" placeholder="{{this.showMessage[0].message}}" [(ngModel)]="this.showMessage[0].message"></textarea>
-            </div>
-          </div>
-          <div class="row buttons">
-            <button class="btn btn-danger" (click)="updateMessage()">Update</button>
-            <button class="btn btn-primary" (click)="closeMessage()">Close</button>
-          </div>
-        </div>   
-      </div>
-      <div class="container message">
-        <h4>Comments</h4>
-        <div class="container">
-          <div class="row item">
-            <div class="col-md-3"><h5>Name</h5></div>
-            <div class="col-md-3"><h5>Email</h5></div>
-            <div class="col-md-6"><h5>Messages</h5></div>
-          </div>
-          <div *ngIf="this.messages.length !== 0">
-            <div class="row item" *ngFor="let later of this.messages">
-              <div class="col-md-3"><p>{{later.name}}</p></div>
-              <div class="col-md-3"><p>{{later.email}}</p></div>
-              <div class="col-md-6">
-                <p style="margin: 10px 0 -10px;">&nbsp;{{later.message}}</p>
-                <p style="margin-top: -10px;"><i>&nbsp;{{later.message | translate}}</i></p>
-              </div>
-            </div>
-          </div>
-          <div *ngIf="this.localMessages.length !== 0">
-            <div class="row item" *ngFor="let later of this.localMessages" (click)="this.showDetails(this.localMessages.indexOf(later))">
-              <div class="col-md-3"><p>{{later.name}}</p></div>
-              <div class="col-md-3"><p>{{later.email}}</p></div>
-              <div class="col-md-5">
-                <p style="margin: 10px 0;">&nbsp;{{later.message}}</p>
-              </div>
-              <div>
-                <span class="col-md-1 delete" (click)="delete($event)" id="{{this.localMessages.indexOf(later)}}">&times;</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <form class="col-md-6">
         <input name="text" aria-label="name" id="laterName" placeholder="Enter name *" [(ngModel)]="later.name">

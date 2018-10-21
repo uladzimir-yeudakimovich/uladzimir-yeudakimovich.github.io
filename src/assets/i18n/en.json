@@ -24,6 +24,11 @@
 			"name": "Name",
 			"email": "Email",
 			"messages": "Messages"
+		},
+		"form": {
+			"name": "Enter name *",
+			"email": "Enter email *",
+			"message": "Enter message *"
 		}
 	},
 

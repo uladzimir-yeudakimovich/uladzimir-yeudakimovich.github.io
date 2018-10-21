@@ -2,42 +2,41 @@
   <div class="show-modal" *ngIf="this.show === false">
     <div class="container">
       <div class="row">
-        <div class="col-md-3"><h5>{{this.showMessage[0].name}}</h5></div>
-        <div class="col-md-3"><h5>{{this.showMessage[0].email}}</h5></div>
+        <div class="col-md-3"><h5>{{ this.showMessage[0].name }}</h5></div>
+        <div class="col-md-3"><h5>{{ this.showMessage[0].email }}</h5></div>
         <div class="col-md-6">
           <textarea class="form-control" rows="10" placeholder="{{this.showMessage[0].message}}" [(ngModel)]="this.showMessage[0].message"></textarea>
         </div>
       </div>
       <div class="row buttons">
-        <button class="btn btn-danger" (click)="updateMessage()">Update</button>
-        <button class="btn btn-primary" (click)="closeMessage()">Close</button>
+        <button class="btn btn-danger" (click)="updateMessage()">{{ 'buttons.update' | translate }}</button>
+        <button class="btn btn-primary" (click)="closeMessage()">{{ 'buttons.close' | translate }}</button>
       </div>
     </div>   
   </div>
   <div class="container message">
-    <h4>Comments</h4>
+    <h4>{{ 'footer.message.comments' | translate }}</h4>
     <div class="container">
       <div class="row item">
-        <div class="col-md-3"><h5>Name</h5></div>
-        <div class="col-md-3"><h5>Email</h5></div>
-        <div class="col-md-6"><h5>Messages</h5></div>
+        <div class="col-md-3"><h5>{{ 'footer.message.name' | translate }}</h5></div>
+        <div class="col-md-3"><h5>{{ 'footer.message.email' | translate }}</h5></div>
+        <div class="col-md-6"><h5>{{ 'footer.message.messages' | translate }}</h5></div>
       </div>
       <div *ngIf="this.messages.length !== 0">
         <div class="row item" *ngFor="let later of this.messages">
-          <div class="col-md-3"><p>{{later.name}}</p></div>
-          <div class="col-md-3"><p>{{later.email}}</p></div>
+          <div class="col-md-3"><p>{{ later.name }}</p></div>
+          <div class="col-md-3"><p>{{ later.email }}</p></div>
           <div class="col-md-6">
-            <p style="margin: 10px 0 -10px;">&nbsp;{{later.message}}</p>
-            <p style="margin-top: -10px;"><i>&nbsp;{{later.message | translate}}</i></p>
+            <p>&nbsp;{{ later.message | translate }}</p>
           </div>
         </div>
       </div>
       <div *ngIf="this.localMessages.length !== 0">
         <div class="row item" *ngFor="let later of this.localMessages" (click)="this.showDetails(this.localMessages.indexOf(later))">
-          <div class="col-md-3"><p>{{later.name}}</p></div>
-          <div class="col-md-3"><p>{{later.email}}</p></div>
+          <div class="col-md-3"><p>{{ later.name }}</p></div>
+          <div class="col-md-3"><p>{{ later.email }}</p></div>
           <div class="col-md-5">
-            <p style="margin: 10px 0;">&nbsp;{{later.message}}</p>
+            <p style="margin: 10px 0;">&nbsp;{{ later.message }}</p>
           </div>
           <div>
             <span class="col-md-1 delete" (click)="delete($event)" id="{{this.localMessages.indexOf(later)}}">&times;</span>
@@ -48,22 +47,22 @@
   </div>
   
   <div class="container">
-    <div class="row" *ngIf="this.data[0] !== undefined">
+    <div class="row">
       <section class="col-md-6 contacts">
-        <h3>{{this.data[0].name}}</h3>
-        <p>&nbsp;{{this.data[0].description}}</p>
+        <h3>{{ 'footer.name' | translate }}</h3>
+        <p>&nbsp;{{ 'footer.description' | translate }}</p>
         <ul>
-          <li><i class="phone"></i><a href="tel:+375333344201">{{this.data[0].phone}}</a></li>
-          <li><i class="envelope"></i>&nbsp;<a href="mailto:uladzimir.yeudakimovich@gmail.com" style="margin-left: -4px;">{{this.data[0].email}}</a></li>
-          <li><i class="cloud"></i><a href="{{this.data[0].cvRussianLink}}" download>{{this.data[0].cvRussian}}</a></li>
-          <li><i class="cloud"></i><a href="{{this.data[0].cvEnglishLink}}" download>{{this.data[0].cvEnglish}}</a></li>
+          <li><i class="phone"></i><a href="tel:{{ 'footer.phone' | translate }}">{{ 'footer.phone' | translate }}</a></li>
+          <li><i class="envelope"></i>&nbsp;<a href="mailto:{{ 'footer.email' | translate }}" style="margin-left: -4px;">{{ 'footer.email' | translate }}</a></li>
+          <li><i class="cloud"></i><a href="src/assets/CV_Евдокимович Владимир.docx" download>{{ 'footer.cvRussian' | translate }}</a></li>
+          <li><i class="cloud"></i><a href="src/assets/CV_Uladzimir Yeudakimovich.docx" download>{{ 'footer.cvEnglish' | translate }}</a></li>
         </ul>
-        <h4>{{this.data[0].subname}}</h4>
+        <h4>{{ 'footer.subname' | translate }}</h4>
         <ul>
-          <li><i class="linkedin"></i><a href="{{this.data[0].linkedinLink}}" target="_blank" rel="noopener">{{this.data[0].linkedin}}</a></li>
-          <li><i class="github"></i><a href="{{this.data[0].githubLink}}" target="_blank" rel="noopener">{{this.data[0].github}}</a></li>
-          <li><i class="codewars"></i><a href="{{this.data[0].codewarsLink}}" target="_blank" rel="noopener">{{this.data[0].codewars}}</a></li>
-          <li><i class="students-cap"></i><a href="{{this.data[0].duolingoLink}}" target="_blank" rel="noopener">{{this.data[0].duolingo}}</a></li>
+          <li><i class="linkedin"></i><a href="https://www.linkedin.com/in/uladzimir-yeudakimovich" target="_blank" rel="noopener">{{ 'footer.linkedin' | translate }}</a></li>
+          <li><i class="github"></i><a href="https://github.com/uladzimir-yeudakimovich" target="_blank" rel="noopener">{{ 'footer.github' | translate }}</a></li>
+          <li><i class="codewars"></i><a href="https://www.codewars.com/users/uladzimir.yeudakimovich" target="_blank" rel="noopener">{{ 'footer.codewars' | translate }}</a></li>
+          <li><i class="students-cap"></i><a href="https://www.duolingo.com/91YN1" target="_blank" rel="noopener">{{ 'footer.duolingo' | translate }}</a></li>
         </ul>
       </section>
 
@@ -71,7 +70,7 @@
         <input name="text" aria-label="name" id="laterName" placeholder="Enter name *" [(ngModel)]="later.name">
         <input name="email" aria-label="email" id="laterEmail" placeholder="Enter email *" [(ngModel)]="later.email">
         <textarea name="message" aria-label="message" id="laterMessage" placeholder="Enter message *" [(ngModel)]="later.message"></textarea>
-        <button type="submit" class="btn btn-primary btn-block" (click)="setMessage()">Submit</button>
+        <button type="submit" class="btn btn-primary btn-block" (click)="setMessage()">{{ 'buttons.submit' | translate }}</button>
       </form>
     </div>
   </div>

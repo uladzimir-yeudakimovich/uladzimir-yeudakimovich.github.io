@@ -16,8 +16,8 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
     this.dataService.getData().subscribe(dataFromServer => { 
-      for (const key in dataFromServer['main']) {
-        this.data.push(dataFromServer['main'][key]);
+      for (const key in dataFromServer) {
+        this.data.push(dataFromServer[key]);
       }
     });
   }

@@ -1,8 +1,35 @@
 {
-    "Super work!!!": "Классная работа!!!",
-    "How much is this application?": "Сколько стоит такое приложение?",
-    "Front-end developer": "Front-end разработчик",
-    "Uladzimir Yeudakimovich": "Евдокимович Владимир",
-    "A few words about me. I graduated from Rolling Scopes School in EPAM Systems with a specialization in front-end development. I work as front-end developer for OCS Innovation Company (OCSICO®). My main programming language is JavaScript. I use frameworks Angular 6 and Bootstrap, Ajax technology, jQuery library, webpack collector, LESS and SASS preprocessors, Git version control system. I'm experienced in the Backbone and React frameworks.": "Несколько слов обо мне. Закончил Rolling Scopes School в EPAM Systems по специальности front-end разработка. Работаю программистом в OCS Innovation Company (OCSICO®). Основной язык программирования - JavaScript. В работе использую фреймворки Angular 6 и Bootstrap, технологию Ajax, библеатеку jQuery, сборщик webpack, препроцессоры LESS и SASS, систему управления версиями Git. Есть небольшой опыт работы с фреймворками Backbone и React.",
-    "Very good work!": "Очень хорошая работа!"
+	"title": "Мои работы",
+	
+	"header": {
+		"position": "Front-end разработчик",
+		"name": "Евдокимович Владимир",
+		"description": "Несколько слов обо мне. Закончил Rolling Scopes School в EPAM Systems по специальности front-end разработка. Работаю программистом в OCS Innovation Company (OCSICO®). Основной язык программирования - JavaScript. В работе использую фреймворки Angular 6 и Bootstrap, технологию Ajax, библеатеку jQuery, сборщик webpack, препроцессоры LESS и SASS, систему управления версиями Git. Есть небольшой опыт работы с фреймворками Backbone и React."
+	},
+	
+	"footer": {
+		"name": "Контактная информация",
+		"description": "Вы можете отправить мне для оценки приблизительное техническое задание или просто описание проекта своими словами.",
+		"phone": "+375 33 3344201",
+		"email": "uladzimir.yeudakimovich@gmail.com",
+		"cvRussian": "CV на русском",
+		"cvEnglish": "CV на английском",
+		"subname": "Ссылки на мои социальные сети:",
+		"linkedin": "Linkedin",
+		"github": "Github",
+		"codewars": "CodeWars",
+		"duolingo": "Duolingo",
+		"message": {
+			"comments": "Комментарии",
+			"name": "Имя",
+			"email": "Email",
+			"messages": "Сообщения"
+		}
+	},
+
+	"buttons": {
+		"update": "Обновить",
+		"close": "Закрыть",
+		"submit": "Отправить"
+	}
 }

@@ -1,0 +1,35 @@
+{
+	"title": "My works",
+	
+	"header": {
+		"position": "Front-end developer",
+		"name": "Uladzimir Yeudakimovich",
+		"description": "A few words about me. I graduated from Rolling Scopes School in EPAM Systems with a specialization in front-end development. I work as front-end developer for OCS Innovation Company (OCSICO®). My main programming language is JavaScript. I use frameworks Angular 6 and Bootstrap, Ajax technology, jQuery library, webpack collector, LESS and SASS preprocessors, Git version control system. I'm experienced in the Backbone and React frameworks."
+	},
+
+	"footer": {
+		"name": "Contact Information",
+		"description": "I'm open to new projects. You can send me for evaluation an approximate technical assignment or simply a description of the project in your own words.",
+		"phone": "+375 33 3344201",
+		"email": "uladzimir.yeudakimovich@gmail.com",
+		"cvRussian": "CV in russian",
+		"cvEnglish": "CV in english",
+		"subname": "Links to my social networks:",
+		"linkedin": "Linkedin",
+		"github": "Github",
+		"codewars": "CodeWars",
+		"duolingo": "Duolingo",
+		"message": {
+			"comments": "Comments",
+			"name": "Name",
+			"email": "Email",
+			"messages": "Messages"
+		}
+	},
+
+	"buttons": {
+		"update": "Update",
+		"close": "Close",
+		"submit": "Submit"
+	}
+}

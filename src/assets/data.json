@@ -1,100 +1,67 @@
-{
-  "header": [
-    {
-      "position": "Front-end developer",
-      "name": "Uladzimir Yeudakimovich",
-      "description": "A few words about me. I graduated from Rolling Scopes School in EPAM Systems with a specialization in front-end development. I work as front-end developer for OCS Innovation Company (OCSICO®). My main programming language is JavaScript. I use frameworks Angular 6 and Bootstrap, Ajax technology, jQuery library, webpack collector, LESS and SASS preprocessors, Git version control system. I'm experienced in the Backbone and React frameworks.",
-      "imageLaptop": "src/assets/images/logo_laptop.jpg",
-      "imagePhone": "src/assets/images/logo_phone.jpg",
-      "imageTablet": "src/assets/images/logo_tablet.jpg"
-    }
-  ],
-  "main": [
-    {
-      "name": "Application on angular.",
-      "link": "http://uladzimir-yeudakimovich.ml/angular-app/",
-      "click": "view application",
-      "description": "This application was written using frameworks Angular 6 and Bootstrap 4. I used such technologies as structural directives, pipes, services, routing and navigation, forms, ngModules, observables and RxJS, worked with API. With this application, you can download the required number of users from the server. Make a quick search for the right person by name.  Mark the right people.",
-      "images" : [
-        "src/assets/images/angular_task/angular_task1.jpg",
-        "src/assets/images/angular_task/angular_task2.jpg",
-        "src/assets/images/angular_task/angular_task3.jpg",
-        "src/assets/images/angular_task/angular_task4.jpg",
-        "src/assets/images/angular_task/angular_task5.jpg"
-      ]
-    },
-    {
-      "name": "Portfolio.",
-      "link": "http://uladzimir-yeudakimovich.ml/portfolio-js/",
-      "click": "view application",
-      "description": "It is my first portfolio. I created it on native JavaScript using HTML5 and CSS3. This application is bilingual.",
-      "images" : [
-        "src/assets/images/portfolio/portfolio1.jpg",
-        "src/assets/images/portfolio/portfolio2.jpg",
-        "src/assets/images/portfolio/portfolio3.jpg",
-        "src/assets/images/portfolio/portfolio4.jpg",
-        "src/assets/images/portfolio/portfolio5.jpg"
-      ]
-    },
-    {
-      "name": "Application on react.",
-      "link": "http://uladzimir-yeudakimovich.ml/react-app/",
-      "click": "view application",
-      "description": "Task Scheduler To-DO-List. The development language is JavaScript. It was written with the use of the React framework, with the connection of the Redux library.",
-      "images" : [
-        "src/assets/images/react/react1.jpg",
-        "src/assets/images/react/react2.jpg",
-        "src/assets/images/react/react3.jpg",
-        "src/assets/images/react/react4.jpg",
-        "src/assets/images/react/react5.jpg"
-      ]
-    },
-    {
-      "name": "Math-match-game.",
-      "link": "http://uladzimir-yeudakimovich.ml/match-match-game/",
-      "click": "play",
-      "description": "Game for the development of memory. It was written in HTML5, CSS3 and JavaScript.",
-      "images" : [
-        "src/assets/images/match/match1.jpg",
-        "src/assets/images/match/match2.jpg",
-        "src/assets/images/match/match3.jpg",
-        "src/assets/images/match/match4.jpg",
-        "src/assets/images/match/match5.jpg"
-      ]
-    },
-    {
-      "name": "The site of restaurant.",
-      "link": "http://uladzimir-yeudakimovich.ml/restaurant",
-      "click": "view site",
-      "description": "Online page of restaurant. It was written in HTML5 using CSS Grid Layout and CSS Flexbox.",
-      "images" : [
-        "src/assets/images/restaurant/restaurant1.jpg",
-        "src/assets/images/restaurant/restaurant2.jpg",
-        "src/assets/images/restaurant/restaurant3.jpg",
-        "src/assets/images/restaurant/restaurant4.jpg",
-        "src/assets/images/restaurant/restaurant5.jpg"
-      ]
-    }
-  ],
-  "footer": [
-    {
-      "name": "Contact Information",
-      "description": "I'm open to new projects. You can send me for evaluation an approximate technical assignment or simply a description of the project in your own words.",
-      "phone": "+375 33 3344201",
-      "email": "uladzimir.yeudakimovich@gmail.com",
-      "cvRussianLink": "src/assets/CV_Евдокимович Владимир.docx",
-      "cvRussian": "CV in russian",
-      "cvEnglishLink": "src/assets/CV_Uladzimir Yeudakimovich.docx",
-      "cvEnglish": "CV in english",
-      "subname": "Links to my social networks:",
-      "linkedinLink": "https://www.linkedin.com/in/uladzimir-yeudakimovich",
-      "linkedin": "Linkedin",
-      "githubLink": "https://github.com/uladzimir-yeudakimovich",
-      "github": "Github",
-      "codewarsLink": "https://www.codewars.com/users/uladzimir.yeudakimovich",
-      "codewars": "CodeWars",
-      "duolingoLink": "https://www.duolingo.com/91YN1",
-      "duolingo": "Duolingo"
-    }
-  ]
-}
+[
+  {
+    "name": "Application on angular.",
+    "link": "http://uladzimir-yeudakimovich.ml/angular-app/",
+    "click": "view application",
+    "description": "This application was written using frameworks Angular 6 and Bootstrap 4. I used such technologies as structural directives, pipes, services, routing and navigation, forms, ngModules, observables and RxJS, worked with API. With this application, you can download the required number of users from the server. Make a quick search for the right person by name.  Mark the right people.",
+    "images" : [
+      "src/assets/images/angular_task/angular_task1.jpg",
+      "src/assets/images/angular_task/angular_task2.jpg",
+      "src/assets/images/angular_task/angular_task3.jpg",
+      "src/assets/images/angular_task/angular_task4.jpg",
+      "src/assets/images/angular_task/angular_task5.jpg"
+    ]
+  },
+  {
+    "name": "Portfolio.",
+    "link": "http://uladzimir-yeudakimovich.ml/portfolio-js/",
+    "click": "view application",
+    "description": "It is my first portfolio. I created it on native JavaScript using HTML5 and CSS3. This application is bilingual.",
+    "images" : [
+      "src/assets/images/portfolio/portfolio1.jpg",
+      "src/assets/images/portfolio/portfolio2.jpg",
+      "src/assets/images/portfolio/portfolio3.jpg",
+      "src/assets/images/portfolio/portfolio4.jpg",
+      "src/assets/images/portfolio/portfolio5.jpg"
+    ]
+  },
+  {
+    "name": "Application on react.",
+    "link": "http://uladzimir-yeudakimovich.ml/react-app/",
+    "click": "view application",
+    "description": "Task Scheduler To-DO-List. The development language is JavaScript. It was written with the use of the React framework, with the connection of the Redux library.",
+    "images" : [
+      "src/assets/images/react/react1.jpg",
+      "src/assets/images/react/react2.jpg",
+      "src/assets/images/react/react3.jpg",
+      "src/assets/images/react/react4.jpg",
+      "src/assets/images/react/react5.jpg"
+    ]
+  },
+  {
+    "name": "Math-match-game.",
+    "link": "http://uladzimir-yeudakimovich.ml/match-match-game/",
+    "click": "play",
+    "description": "Game for the development of memory. It was written in HTML5, CSS3 and JavaScript.",
+    "images" : [
+      "src/assets/images/match/match1.jpg",
+      "src/assets/images/match/match2.jpg",
+      "src/assets/images/match/match3.jpg",
+      "src/assets/images/match/match4.jpg",
+      "src/assets/images/match/match5.jpg"
+    ]
+  },
+  {
+    "name": "The site of restaurant.",
+    "link": "http://uladzimir-yeudakimovich.ml/restaurant",
+    "click": "view site",
+    "description": "Online page of restaurant. It was written in HTML5 using CSS Grid Layout and CSS Flexbox.",
+    "images" : [
+      "src/assets/images/restaurant/restaurant1.jpg",
+      "src/assets/images/restaurant/restaurant2.jpg",
+      "src/assets/images/restaurant/restaurant3.jpg",
+      "src/assets/images/restaurant/restaurant4.jpg",
+      "src/assets/images/restaurant/restaurant5.jpg"
+    ]
+  }
+]

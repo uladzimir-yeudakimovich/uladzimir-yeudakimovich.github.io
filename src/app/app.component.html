@@ -1,3 +1,12 @@
+<div class="btn-group btn-group-toggle">
+    <label class="{{ english ? 'btn btn-primary' : 'btn btn-light' }}">
+      <input type="checkbox" [(ngModel)]="english">English
+    </label>
+    <label class="{{ english ? 'btn btn-light' : 'btn btn-primary' }}">
+      <input type="checkbox" [(ngModel)]="english">Russian
+    </label>
+</div>
+
 <app-header></app-header>
 <app-main></app-main>
 <app-footer></app-footer>

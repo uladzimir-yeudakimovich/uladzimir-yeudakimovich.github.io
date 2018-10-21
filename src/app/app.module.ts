@@ -11,9 +11,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-import { DataService } from './services/data.service';
-import { MessageService } from './services/message.service';
-
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './src/assets/i18n/', '.json');
 }
@@ -38,10 +35,7 @@ export function createTranslateLoader(http: HttpClient) {
     MainComponent,
     FooterComponent
   ],
-  providers: [
-    DataService,
-    MessageService
-  ],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

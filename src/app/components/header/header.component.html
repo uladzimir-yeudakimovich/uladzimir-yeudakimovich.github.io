@@ -1,33 +1,25 @@
 <header>
-  <div class="container language-en">
-    <div class="btn-group btn-group-toggle">
-        <label ngbButtonLabel class="{{english ? 'btn btn-primary' : 'btn btn-light'}}">
-          <input ngbButton type="checkbox" ngbButton [(ngModel)]="english">English
-        </label>
-        <label ngbButtonLabel class="{{english ? 'btn btn-light' : 'btn btn-primary'}}">
-          <input ngbButton type="checkbox" ngbButton [(ngModel)]="english">Russian
-        </label>
-    </div>
-    <div class="row" *ngIf="this.data[0] !== undefined">
+  <div class="container">
+    <div class="row">
       <div class="d-none d-lg-block col-lg-6 col-xl-5" style="padding: 0;">
         <figure>
-          <img class="img-fluid" src="{{this.data[0].imageLaptop}}" alt="logo_laptop" style="margin-bottom: -16px;">
+          <img class="img-fluid" src="src/assets/images/logo_laptop.jpg" alt="logo_laptop" style="margin-bottom: -16px;">
         </figure>
       </div>
       <article class="col-lg-6 col-xl-7 information">
-        <h3>{{this.english ? this.data[0].position : this.data[0].position | translate}}</h3>
-        <h1>{{this.english ? this.data[0].name : this.data[0].name | translate}}</h1>
+        <h3>{{ 'header.position' | translate }}</h3>
+        <h1>{{ 'header.name' | translate }}</h1>
         <div class="d-block d-md-none">
           <figure style="display: flex; justify-content: center; margin-top: 30px;">
-            <img class="rounded-circle" src="{{this.data[0].imagePhone}}" alt="logo_phone">
+            <img class="rounded-circle" src="src/assets/images/logo_phone.jpg" alt="logo_phone">
           </figure>
         </div>
         <div class="d-none d-md-block d-lg-none">
           <figure style="display: flex; justify-content: center; margin-top: 30px;">
-            <img class="rounded-circle" src="{{this.data[0].imageTablet}}" alt="logo_tablet">
+            <img class="rounded-circle" src="src/assets/images/logo_tablet.jpg" alt="logo_tablet">
           </figure>
         </div>
-        <p class="d-none d-lg-block d-block d-lg-none">&nbsp;{{this.english ? this.data[0].description : this.data[0].description | translate}}</p>
+        <p class="d-none d-lg-block d-block d-lg-none">&nbsp;{{ 'header.description' | translate }}</p>
       </article>
     </div>
   </div>

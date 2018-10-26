@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent implements OnInit {
 
-  public english: boolean = true;
+  public english = true;
 
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');

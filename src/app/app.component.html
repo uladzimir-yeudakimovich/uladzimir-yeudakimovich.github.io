@@ -1,9 +1,9 @@
 <div class="btn-group btn-group-toggle">
     <label class="{{ english ? 'btn btn-primary' : 'btn btn-light' }}">
-      <input type="checkbox" [(ngModel)]="english" (click)="switchLanguage('en')">English
+    	<input type="checkbox" (click)="switchLanguage('en')">English
     </label>
     <label class="{{ english ? 'btn btn-light' : 'btn btn-primary' }}">
-      <input type="checkbox" [(ngModel)]="english" (click)="switchLanguage('ru')">Russian
+    	<input type="checkbox" (click)="switchLanguage('ru')">Russian
     </label>
 </div>
 

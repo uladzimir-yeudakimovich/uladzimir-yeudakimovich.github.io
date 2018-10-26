@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MessageService } from '../../services/message.service';
 
 @Component({
@@ -7,24 +8,65 @@ import { MessageService } from '../../services/message.service';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  registerForm: FormGroup;
+  updateForm: FormGroup;
+  submitted = false;
 
   public messages = [];
-  public localMessages =[];
+  public localMessages = [];
   public model = [];
   public later = {
     name: '',
     email: '',
     message: ''
   };
-  public show: boolean = true;
+  public show = true;
   public showMessage = [];
   public copyMessage: string;
 
-  constructor(public messageService: MessageService) { }
-  
+  constructor(
+    private formBuilder: FormBuilder,
+    public messageService: MessageService
+  ) { }
+
   ngOnInit(): void {
+    this.createForm();
     this.getMessages();
-    this.getLocalMessages();         /*if you want to clean the localStorage, will comment out this line and push new message without validation*/
+    this.getLocalMessages(); /*if you want to clean the localStorage, will comment out this line and push new message without validation*/
+  }
+
+  createUpdateForm() {
+    this.updateForm = this.formBuilder.group({
+      updateMessage: [ this.showMessage[0].message ]
+    });
+  }
+
+  createForm() {
+    this.registerForm = this.formBuilder.group({
+      firstName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', [Validators.required, Validators.minLength(2)]]
+    });
+  }
+
+  get f() { return this.registerForm.controls; }
+
+  onSubmit() {
+    this.submitted = true;
+    this.later.name = this.registerForm.value.firstName;
+    this.later.email = this.registerForm.value.email;
+    this.later.message = this.registerForm.value.message;
+    if (this.registerForm.invalid) {
+      return;
+    }
+    this.model.push(this.later);
+    this.messageService.updateMessage({mess: this.model});
+    this.localMessages.push(this.later);
+    this.later = {
+      name: '',
+      email: '',
+      message: ''
+    };
   }
 
   getMessages() {
@@ -43,30 +85,6 @@ export class FooterComponent implements OnInit {
     this.localMessages.forEach((n) => this.model.push(n));        /*for localStorage*/
   }
 
-  setMessage() {
-    if (this.later.name === '') {
-      document.getElementById('laterName').style.border = 'solid red';
-    } else {document.getElementById('laterName').style.border = '';}
-    if (this.later.email === '') {
-      document.getElementById('laterEmail').style.border = 'solid red';
-    } else {document.getElementById('laterEmail').style.border = '';}
-    if (this.later.message === '') {
-      document.getElementById('laterMessage').style.border = 'solid red';
-    } else {
-      document.getElementById('laterMessage').style.border = '';
-    }
-    if (this.later.name !== '' && this.later.email !== '' && this.later.message !== '') {
-      this.model.push(this.later);
-      this.messageService.updateMessage({mess: this.model});
-      this.localMessages.push(this.later);
-      this.later = {
-        name: '',
-        email: '',
-        message: ''
-      };
-    }
-  }
-
   delete($event) {
     this.localMessages.splice($event.target['id'], 1);
     this.model.splice($event.target['id'], 1);
@@ -77,10 +95,12 @@ export class FooterComponent implements OnInit {
     this.show = false;
     this.showMessage.push(this.localMessages[e]);
     this.copyMessage = this.localMessages[e]['message'];
+    this.createUpdateForm();
   }
 
   updateMessage() {
     this.show = true;
+    this.model[0].message = this.updateForm.value.updateMessage;
     this.showMessage = [];
     this.copyMessage = '';
     this.messageService.updateMessage({mess: this.model});

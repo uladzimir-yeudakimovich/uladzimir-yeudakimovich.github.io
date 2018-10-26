@@ -4,9 +4,9 @@
       <div class="row">
         <div class="col-md-3"><h5>{{ this.showMessage[0].name }}</h5></div>
         <div class="col-md-3"><h5>{{ this.showMessage[0].email }}</h5></div>
-        <div class="col-md-6">
-          <textarea class="form-control" rows="10" placeholder="{{this.showMessage[0].message}}" [(ngModel)]="this.showMessage[0].message"></textarea>
-        </div>
+        <div [formGroup]="updateForm" class="col-md-6">
+          <textarea class="form-control" formControlName="updateMessage" rows="10"></textarea>
+		</div>
       </div>
       <div class="row buttons">
         <button class="btn btn-danger" (click)="updateMessage()">{{ 'buttons.update' | translate }}</button>
@@ -46,32 +46,51 @@
     </div>
   </div>
   
-  <div class="container">
-    <div class="row">
-      <section class="col-md-6 contacts">
-        <h3>{{ 'footer.name' | translate }}</h3>
-        <p>&nbsp;{{ 'footer.description' | translate }}</p>
-        <ul>
-          <li><i class="phone"></i><a href="tel:{{ 'footer.phone' | translate }}">{{ 'footer.phone' | translate }}</a></li>
-          <li><i class="envelope"></i>&nbsp;<a href="mailto:{{ 'footer.email' | translate }}" style="margin-left: -4px;">{{ 'footer.email' | translate }}</a></li>
-          <li><i class="cloud"></i><a href="src/assets/CV_Евдокимович Владимир.docx" download>{{ 'footer.cvRussian' | translate }}</a></li>
-          <li><i class="cloud"></i><a href="src/assets/CV_Uladzimir Yeudakimovich.docx" download>{{ 'footer.cvEnglish' | translate }}</a></li>
-        </ul>
-        <h4>{{ 'footer.subname' | translate }}</h4>
-        <ul>
-          <li><i class="linkedin"></i><a href="https://www.linkedin.com/in/uladzimir-yeudakimovich" target="_blank" rel="noopener">{{ 'footer.linkedin' | translate }}</a></li>
-          <li><i class="github"></i><a href="https://github.com/uladzimir-yeudakimovich" target="_blank" rel="noopener">{{ 'footer.github' | translate }}</a></li>
-          <li><i class="codewars"></i><a href="https://www.codewars.com/users/uladzimir.yeudakimovich" target="_blank" rel="noopener">{{ 'footer.codewars' | translate }}</a></li>
-          <li><i class="students-cap"></i><a href="https://www.duolingo.com/91YN1" target="_blank" rel="noopener">{{ 'footer.duolingo' | translate }}</a></li>
-        </ul>
-      </section>
+	<div class="container">
+		<div class="row">
+			<section class="col-md-6 contacts">
+				<h3>{{ 'footer.name' | translate }}</h3>
+				<p>&nbsp;{{ 'footer.description' | translate }}</p>
+				<ul>
+					<li><i class="phone"></i><a href="tel:{{ 'footer.phone' | translate }}">{{ 'footer.phone' | translate }}</a></li>
+					<li><i class="envelope"></i>&nbsp;<a href="mailto:{{ 'footer.email' | translate }}" style="margin-left: -4px;">{{ 'footer.email' | translate }}</a></li>
+					<li><i class="cloud"></i><a href="src/assets/CV_Евдокимович Владимир.docx" download>{{ 'footer.cvRussian' | translate }}</a></li>
+					<li><i class="cloud"></i><a href="src/assets/CV_Uladzimir Yeudakimovich.docx" download>{{ 'footer.cvEnglish' | translate }}</a></li>
+				</ul>
+				<h4>{{ 'footer.subname' | translate }}</h4>
+				<ul>
+					<li><i class="linkedin"></i><a href="https://www.linkedin.com/in/uladzimir-yeudakimovich" target="_blank" rel="noopener">{{ 'footer.linkedin' | translate }}</a></li>
+					<li><i class="github"></i><a href="https://github.com/uladzimir-yeudakimovich" target="_blank" rel="noopener">{{ 'footer.github' | translate }}</a></li>
+					<li><i class="codewars"></i><a href="https://www.codewars.com/users/uladzimir.yeudakimovich" target="_blank" rel="noopener">{{ 'footer.codewars' | translate }}</a></li>
+					<li><i class="students-cap"></i><a href="https://www.duolingo.com/91YN1" target="_blank" rel="noopener">{{ 'footer.duolingo' | translate }}</a></li>
+				</ul>
+			</section>
 
-      <form class="col-md-6">
-        <input name="text" aria-label="name" id="laterName" placeholder="{{ 'footer.form.name' | translate }}" [(ngModel)]="later.name">
-        <input name="email" aria-label="email" id="laterEmail" placeholder="{{ 'footer.form.email' | translate }}" [(ngModel)]="later.email">
-        <textarea name="message" aria-label="message" id="laterMessage" placeholder="{{ 'footer.form.message' | translate }}" [(ngModel)]="later.message"></textarea>
-        <button type="submit" class="btn btn-primary btn-block" (click)="setMessage()">{{ 'buttons.submit' | translate }}</button>
-      </form>
-    </div>
-  </div>
+			<form class="col-md-6 register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+				<div class="form-group">
+					<input class="form-control" type="text" formControlName="firstName" placeholder="{{ 'footer.form.name' | translate }}" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" aria-label="firstName"/>
+					<div class="invalid-feedback" *ngIf="submitted && f.firstName.errors">
+						<div *ngIf="f.firstName.errors.required">Name is required</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" formControlName="email" placeholder="{{ 'footer.form.email' | translate }}" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" aria-label="email"/>
+					<div class="invalid-feedback" *ngIf="submitted && f.email.errors">
+						<div *ngIf="f.email.errors.required">Email is required</div>
+						<div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" type="text" formControlName="message" placeholder="{{ 'footer.form.message' | translate }}" [ngClass]="{ 'is-invalid': submitted && f.message.errors }" aria-label="message"></textarea>
+					<div class="invalid-feedback" *ngIf="submitted && f.message.errors">
+						<div *ngIf="f.message.errors.required">Message is required</div>
+						<div *ngIf="f.message.errors.minlength">Message must be at least 2 characters</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<button [disabled]="loading" class="btn btn-primary">{{ 'buttons.submit' | translate }}</button>
+				</div>
+			</form>
+		</div>
+	</div>
 </footer> 

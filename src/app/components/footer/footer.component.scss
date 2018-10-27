@@ -1,4 +1,4 @@
-footer {
+.footer {
   background-image: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
   margin-top: 15px;
 
@@ -6,7 +6,7 @@ footer {
     margin-bottom: 20px;
     background-image: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
 
-    h4 {
+    .message-title {
       display: flex;
       justify-content: center;
       padding-top: 15px;
@@ -22,6 +22,7 @@ footer {
   .delete {
     color: red;
     font-size: 26px;
+    cursor: pointer;
   }
 
   .show-modal {
@@ -43,15 +44,15 @@ footer {
 
   .contacts {
 
-    h3, h4 {
+    .contacts-title {
       display: flex;
       justify-content: center;
     }
 
-    ul {
+    .contacts-items {
       padding: 0;
 
-      li {
+      .contacts-items__item {
         height: 20px;
         margin-top: 10px;
         list-style-type: none;
@@ -105,7 +106,7 @@ footer {
   .register-form {
     margin: auto;
 
-    input, textarea {
+    .form-control {
       border-radius: 4px;
       width: 100%;
       height: 48px;
@@ -113,30 +114,23 @@ footer {
       margin-bottom: 15px;
     }
 
-    textarea {
-      height: 100px;
+    .form-control__message {
+      height: 135px;
       padding-top: 10px;
     }
 
-    input:hover, textarea:hover {
+    .form-control:hover {
       border: 1px solid #286090;
     }
 
-    input[type=file] {
-      height: 0;
-      opacity: 0;
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    button {
+    .btn-primary {
       width: 100%;
       height: 49px;
       margin-bottom: 15px;
       background-color: #0000FF;
     }
     
-    button:hover {background-color: rgb(64, 64, 221)}
+    .btn-primary:hover {background-color: rgb(64, 64, 221)}
   }
 }
 

@@ -1,94 +1,102 @@
-<footer>
-  <div class="show-modal" *ngIf="this.show === false">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3"><h5>{{ this.showMessage[0].name }}</h5></div>
-        <div class="col-md-3"><h5>{{ this.showMessage[0].email }}</h5></div>
-        <div [formGroup]="updateForm" class="col-md-6">
-          <textarea class="form-control" formControlName="updateMessage" rows="10"></textarea>
+<footer class="footer">
+	<div class="show-modal" *ngIf="showMessageDetales">
+		<div class="container">
+			<div class="row" [formGroup]="updateMessageForm">
+				<h5 class="col-md-3">{{ this.showMessage[0].name }}</h5>
+				<h5 class="col-md-3">{{ this.showMessage[0].email }}</h5>
+				<textarea class="col-md-6 form-control" formControlName="updateMessage" rows="10"></textarea>
+			</div>
+			<div class="row buttons">
+				<button class="btn btn-danger" (click)="updateMessage()">{{ 'buttons.update' | translate }}</button>
+				<button class="btn btn-primary" (click)="closeMessage()">{{ 'buttons.close' | translate }}</button>
+			</div>
+		</div>   
+	</div>
+
+	<div class="container message">
+		<h4 class="message-title">{{ 'footer.message.comments' | translate }}</h4>
+		<div class="container">
+			<div class="row item">
+				<h5 class="col-md-3">{{ 'footer.message.name' | translate }}</h5>
+				<h5 class="col-md-3">{{ 'footer.message.email' | translate }}</h5>
+				<h5 class="col-md-6">{{ 'footer.message.messages' | translate }}</h5>
+			</div>
+			<div *ngIf="messagesFromServer">
+				<div class="row item" *ngFor="let later of messagesFromServer">
+					<p class="col-md-3">{{ later.name }}</p>
+					<p class="col-md-3">{{ later.email }}</p>
+					<p class="col-md-6">&nbsp;{{ later.message | translate }}</p>
+				</div>
+			</div>
+			<div *ngIf="messagesFromLocalStorage">
+				<div class="row item" *ngFor="let later of messagesFromLocalStorage" (click)="showDetails(messagesFromLocalStorage.indexOf(later))">
+					<p class="col-md-3">{{ later.name }}</p>
+					<p class="col-md-3">{{ later.email }}</p>
+					<p class="col-md-5" style="margin: 10px 0;">&nbsp;{{ later.message }}</p>
+					<span class="col-md-1 delete" (click)="delete($event)" id="{{ messagesFromLocalStorage.indexOf(later) }}">&times;</span>
+				</div>
+			</div>
 		</div>
-      </div>
-      <div class="row buttons">
-        <button class="btn btn-danger" (click)="updateMessage()">{{ 'buttons.update' | translate }}</button>
-        <button class="btn btn-primary" (click)="closeMessage()">{{ 'buttons.close' | translate }}</button>
-      </div>
-    </div>   
-  </div>
-  <div class="container message">
-    <h4>{{ 'footer.message.comments' | translate }}</h4>
-    <div class="container">
-      <div class="row item">
-        <div class="col-md-3"><h5>{{ 'footer.message.name' | translate }}</h5></div>
-        <div class="col-md-3"><h5>{{ 'footer.message.email' | translate }}</h5></div>
-        <div class="col-md-6"><h5>{{ 'footer.message.messages' | translate }}</h5></div>
-      </div>
-      <div *ngIf="this.messages.length !== 0">
-        <div class="row item" *ngFor="let later of this.messages">
-          <div class="col-md-3"><p>{{ later.name }}</p></div>
-          <div class="col-md-3"><p>{{ later.email }}</p></div>
-          <div class="col-md-6">
-            <p>&nbsp;{{ later.message | translate }}</p>
-          </div>
-        </div>
-      </div>
-      <div *ngIf="this.localMessages.length !== 0">
-        <div class="row item" *ngFor="let later of this.localMessages" (click)="this.showDetails(this.localMessages.indexOf(later))">
-          <div class="col-md-3"><p>{{ later.name }}</p></div>
-          <div class="col-md-3"><p>{{ later.email }}</p></div>
-          <div class="col-md-5">
-            <p style="margin: 10px 0;">&nbsp;{{ later.message }}</p>
-          </div>
-          <div>
-            <span class="col-md-1 delete" (click)="delete($event)" id="{{this.localMessages.indexOf(later)}}">&times;</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	</div>
   
 	<div class="container">
 		<div class="row">
 			<section class="col-md-6 contacts">
-				<h3>{{ 'footer.name' | translate }}</h3>
+				<h3 class="contacts-title">{{ 'footer.name' | translate }}</h3>
 				<p>&nbsp;{{ 'footer.description' | translate }}</p>
-				<ul>
-					<li><i class="phone"></i><a href="tel:{{ 'footer.phone' | translate }}">{{ 'footer.phone' | translate }}</a></li>
-					<li><i class="envelope"></i>&nbsp;<a href="mailto:{{ 'footer.email' | translate }}" style="margin-left: -4px;">{{ 'footer.email' | translate }}</a></li>
-					<li><i class="cloud"></i><a href="src/assets/CV_Евдокимович Владимир.docx" download>{{ 'footer.cvRussian' | translate }}</a></li>
-					<li><i class="cloud"></i><a href="src/assets/CV_Uladzimir Yeudakimovich.docx" download>{{ 'footer.cvEnglish' | translate }}</a></li>
+				<ul class="contacts-items">
+					<li class="contacts-items__item"><i class="phone"></i><a href="tel:{{ 'footer.phone' | translate }}">{{ 'footer.phone' | translate }}</a></li>
+					<li class="contacts-items__item"><i class="envelope"></i>&nbsp;<a href="mailto:{{ 'footer.email' | translate }}" style="margin-left: -4px;">{{ 'footer.email' | translate }}</a></li>
+					<li class="contacts-items__item"><i class="cloud"></i><a href="src/assets/CV_Евдокимович Владимир.docx" download>{{ 'footer.cvRussian' | translate }}</a></li>
+					<li class="contacts-items__item"><i class="cloud"></i><a href="src/assets/CV_Uladzimir Yeudakimovich.docx" download>{{ 'footer.cvEnglish' | translate }}</a></li>
 				</ul>
-				<h4>{{ 'footer.subname' | translate }}</h4>
-				<ul>
-					<li><i class="linkedin"></i><a href="https://www.linkedin.com/in/uladzimir-yeudakimovich" target="_blank" rel="noopener">{{ 'footer.linkedin' | translate }}</a></li>
-					<li><i class="github"></i><a href="https://github.com/uladzimir-yeudakimovich" target="_blank" rel="noopener">{{ 'footer.github' | translate }}</a></li>
-					<li><i class="codewars"></i><a href="https://www.codewars.com/users/uladzimir.yeudakimovich" target="_blank" rel="noopener">{{ 'footer.codewars' | translate }}</a></li>
-					<li><i class="students-cap"></i><a href="https://www.duolingo.com/91YN1" target="_blank" rel="noopener">{{ 'footer.duolingo' | translate }}</a></li>
+				<h4 class="contacts-title">{{ 'footer.subname' | translate }}</h4>
+				<ul class="contacts-items">
+					<li class="contacts-items__item"><i class="linkedin"></i><a href="https://www.linkedin.com/in/uladzimir-yeudakimovich" target="_blank" rel="noopener">{{ 'footer.linkedin' | translate }}</a></li>
+					<li class="contacts-items__item"><i class="github"></i><a href="https://github.com/uladzimir-yeudakimovich" target="_blank" rel="noopener">{{ 'footer.github' | translate }}</a></li>
+					<li class="contacts-items__item"><i class="codewars"></i><a href="https://www.codewars.com/users/uladzimir.yeudakimovich" target="_blank" rel="noopener">{{ 'footer.codewars' | translate }}</a></li>
+					<li class="contacts-items__item"><i class="students-cap"></i><a href="https://www.duolingo.com/91YN1" target="_blank" rel="noopener">{{ 'footer.duolingo' | translate }}</a></li>
 				</ul>
 			</section>
 
-			<form class="col-md-6 register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+			<form class="col-md-6 register-form" [formGroup]="createMessageForm" (ngSubmit)="onSubmit()">
 				<div class="form-group">
-					<input class="form-control" type="text" formControlName="firstName" placeholder="{{ 'footer.form.name' | translate }}" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" aria-label="firstName"/>
+					<input class="form-control"
+						   type="text"
+						   formControlName="firstName"
+						   placeholder="{{ 'footer.form.name' | translate }}"
+						   [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
+						   aria-label="firstName"/>
 					<div class="invalid-feedback" *ngIf="submitted && f.firstName.errors">
 						<div *ngIf="f.firstName.errors.required">Name is required</div>
 					</div>
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="text" formControlName="email" placeholder="{{ 'footer.form.email' | translate }}" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" aria-label="email"/>
+					<input class="form-control"
+						   type="text" formControlName="email"
+						   placeholder="{{ 'footer.form.email' | translate }}"
+						   [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+						   aria-label="email"/>
 					<div class="invalid-feedback" *ngIf="submitted && f.email.errors">
 						<div *ngIf="f.email.errors.required">Email is required</div>
 						<div *ngIf="f.email.errors.email">Email must be a valid email address</div>
 					</div>
 				</div>
 				<div class="form-group">
-					<textarea class="form-control" type="text" formControlName="message" placeholder="{{ 'footer.form.message' | translate }}" [ngClass]="{ 'is-invalid': submitted && f.message.errors }" aria-label="message"></textarea>
+					<textarea class="form-control form-control__message"
+							  type="text"
+							  formControlName="message"
+							  placeholder="{{ 'footer.form.message' | translate }}"
+							  [ngClass]="{ 'is-invalid': submitted && f.message.errors }"
+							  aria-label="message">
+					</textarea>
 					<div class="invalid-feedback" *ngIf="submitted && f.message.errors">
 						<div *ngIf="f.message.errors.required">Message is required</div>
 						<div *ngIf="f.message.errors.minlength">Message must be at least 2 characters</div>
 					</div>
 				</div>
 				<div class="form-group">
-					<button [disabled]="loading" class="btn btn-primary">{{ 'buttons.submit' | translate }}</button>
+					<button class="btn btn-primary">{{ 'buttons.submit' | translate }}</button>
 				</div>
 			</form>
 		</div>

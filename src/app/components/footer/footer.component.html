@@ -68,7 +68,7 @@
 						   [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
 						   aria-label="firstName"/>
 					<div class="invalid-feedback" *ngIf="submitted && f.firstName.errors">
-						<div *ngIf="f.firstName.errors.required">Name is required</div>
+						<div *ngIf="f.firstName.errors.required">{{ 'footer.required.name' | translate }}</div>
 					</div>
 				</div>
 				<div class="form-group">
@@ -78,8 +78,8 @@
 						   [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
 						   aria-label="email"/>
 					<div class="invalid-feedback" *ngIf="submitted && f.email.errors">
-						<div *ngIf="f.email.errors.required">Email is required</div>
-						<div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+						<div *ngIf="f.email.errors.required">{{ 'footer.required.email' | translate }}</div>
+						<div *ngIf="f.email.errors.email">{{ 'footer.required.validEmail' | translate }}</div>
 					</div>
 				</div>
 				<div class="form-group">
@@ -91,8 +91,8 @@
 							  aria-label="message">
 					</textarea>
 					<div class="invalid-feedback" *ngIf="submitted && f.message.errors">
-						<div *ngIf="f.message.errors.required">Message is required</div>
-						<div *ngIf="f.message.errors.minlength">Message must be at least 2 characters</div>
+						<div *ngIf="f.message.errors.required">{{ 'footer.required.message' | translate }}</div>
+						<div *ngIf="f.message.errors.minlength">{{ 'footer.required.validMessage' | translate }}</div>
 					</div>
 				</div>
 				<div class="form-group">

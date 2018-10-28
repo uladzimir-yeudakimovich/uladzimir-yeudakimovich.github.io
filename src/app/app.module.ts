@@ -36,6 +36,6 @@ export function createTranslateLoader(http: HttpClient) {
     FooterComponent
   ],
   providers: [ ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

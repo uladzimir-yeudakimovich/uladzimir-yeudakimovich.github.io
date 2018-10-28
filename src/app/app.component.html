@@ -1,11 +1,13 @@
-<div class="btn-group btn-group-toggle">
-    <label class="{{ english ? 'btn btn-primary' : 'btn btn-light' }}">
-    	<input type="checkbox" (click)="switchLanguage('en')">English
-    </label>
-    <label class="{{ english ? 'btn btn-light' : 'btn btn-primary' }}">
-    	<input type="checkbox" (click)="switchLanguage('ru')">Russian
-    </label>
-</div>
+<form [formGroup]="radioGroupForm">
+    <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" formControlName="model">
+        <label ngbButtonLabel class="{{ radioGroupForm.value.model ? 'btn btn-primary' : 'btn btn-light' }}">
+            <input ngbButton type="radio" [value]="true" (click)="switchLanguage('en')">English
+        </label>
+        <label ngbButtonLabel class="{{ radioGroupForm.value.model ? 'btn btn-light' : 'btn btn-primary' }}">
+            <input ngbButton type="radio" [value]="false" (click)="switchLanguage('ru')">Russian
+        </label>
+    </div>
+</form>
 
 <app-header></app-header>
 <app-main></app-main>

@@ -15,6 +15,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import { RemoveSpaces } from './pipes/remove-spaces';
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './src/assets/i18n/', '.json');
 }
@@ -41,7 +43,9 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     HeaderComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+
+    RemoveSpaces
   ],
   providers: [ ],
   bootstrap: [ AppComponent ]

@@ -42,63 +42,26 @@
     }
   }
 
-  .footer__contacts {
+  .contacts_title {
+    display: flex;
+    justify-content: center;
+  }
 
-    .footer__contacts_title {
-      display: flex;
-      justify-content: center;
-    }
+  .contacts_items {
+    padding: 0;
 
-    .footer__contacts_items {
-      padding: 0;
+    .contact-item {
+      margin-top: 10px;
+      list-style-type: none;
 
-      .icon-item {
-        height: 20px;
-        margin-top: 10px;
-        list-style-type: none;
-
-        .icon-link {
-          text-decoration: none;
-          color: #0000FF;
-          padding: 10px 12px;
-        }
-        
-        .icon-link:hover {
-          color: rgb(64, 64, 221)
-        }
-
-        .phone, .envelope, .cloud, .linkedin, .github, .codewars, .students-cap {
-          background-image: url('../../../assets/images/social_icons/phone.svg');
-          background-size: 15px 15px;
-          background-position: 0 0;
-          width: 15px;
-          height: 15px;
-          display: inline-block;
-        }
-
-        .envelope {
-          background-image: url('../../../assets/images/social_icons/envelope.svg');
-        }
-
-        .cloud {
-          background-image: url('../../../assets/images/social_icons/cloud.svg');
-        }
-
-        .linkedin {
-          background-image: url('../../../assets/images/social_icons/linkedin.svg');
-        }
-
-        .github {
-          background-image: url('../../../assets/images/social_icons/github.svg'); 
-        }
-
-        .codewars {
-          background-image: url('../../../assets/images/social_icons/codewars.svg');
-        }
-
-        .students-cap {
-          background-image: url('../../../assets/images/social_icons/students-cap.svg');
-        }
+      .contact-link {
+        text-decoration: none;
+        color: #0000FF;
+        padding: 10px 12px;
+      }
+      
+      .contact-link:hover {
+        color: rgb(64, 64, 221)
       }
     }
   }

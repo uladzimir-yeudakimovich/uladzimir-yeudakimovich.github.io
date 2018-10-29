@@ -1,25 +1,25 @@
-<header>
+<header class="header">
   <div class="container">
     <div class="row">
-      <div class="d-none d-lg-block col-lg-6 col-xl-5" style="padding: 0;">
+      <div class="d-none d-lg-block col-lg-6 col-xl-5 header__laptop">
         <figure>
-          <img class="img-fluid" src="src/assets/images/logo_laptop.jpg" alt="logo_laptop" style="margin-bottom: -16px;">
+          <img class="img-fluid" src="src/assets/images/logo_laptop.jpg" alt="logo_laptop">
         </figure>
       </div>
-      <article class="col-lg-6 col-xl-7 information">
-        <h3>{{ 'header.position' | translate }}</h3>
-        <h1>{{ 'header.name' | translate }}</h1>
+      <article class="col-lg-6 col-xl-7">
+        <h3 class="header__subname">{{ 'header.position' | translate }}</h3>
+        <h1 class="header__name">{{ 'header.name' | translate }}</h1>
         <div class="d-block d-md-none">
-          <figure style="display: flex; justify-content: center; margin-top: 30px;">
+          <figure class="header__phone">
             <img class="rounded-circle" src="src/assets/images/logo_phone.jpg" alt="logo_phone">
           </figure>
         </div>
         <div class="d-none d-md-block d-lg-none">
-          <figure style="display: flex; justify-content: center; margin-top: 30px;">
+          <figure class="header__tablet">
             <img class="rounded-circle" src="src/assets/images/logo_tablet.jpg" alt="logo_tablet">
           </figure>
         </div>
-        <p class="d-none d-lg-block d-block d-lg-none">&nbsp;{{ 'header.description' | translate }}</p>
+        <p class="d-none d-lg-block d-block d-lg-none header__descriptin">&nbsp;{{ 'header.description' | translate }}</p>
       </article>
     </div>
   </div>

@@ -1,24 +1,41 @@
-header {
+.header {
   background-color: #3a3842;
   color: white;
+}
 
-  .information {
+.header__laptop {
+  padding: 0;
 
-    h3 {
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    h1{
-      font-size: 2.2rem;
-      text-align: center;
-      margin: 30px 0 0 30px;
-    }
-    
-    p {
-      margin: 30px auto;
-      text-align: justify;
-      line-height: 1.4;
-    }
+  .img-fluid {
+    margin-bottom: -16px;
   }
+}
+
+.header__phone {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.header__subname {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.header__name {
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 30px 0 0 30px;
+}
+
+.header__descriptin {
+  margin: 30px auto;
+  text-align: justify;
+  line-height: 1.4;
+}
+
+.header__tablet {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }

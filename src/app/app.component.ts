@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent implements OnInit {
 
-  public radioGroupForm: FormGroup;
+  radioGroupForm: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,

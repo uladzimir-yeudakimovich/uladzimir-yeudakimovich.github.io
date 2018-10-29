@@ -2,30 +2,30 @@
   background-image: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
   margin-top: 15px;
 
-  .message {
+  .footer__message {
     margin-bottom: 20px;
     background-image: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
 
-    .message-title {
+    .footer__message_title {
       display: flex;
       justify-content: center;
       padding-top: 15px;
     }
 
-    .item {
+    .footer__message_items {
       background-color: rgb(248, 248, 153);
       border-radius: 4px;
       border-bottom: solid black;
     }
   }
 
-  .delete {
+  .footer__message_delete {
     color: red;
     font-size: 26px;
     cursor: pointer;
   }
 
-  .show-modal {
+  .footer__show-modal {
     width: 80%;
     margin: 0 10%;
     padding: 15px 0;
@@ -36,34 +36,34 @@
     top: 80px;
     z-index: 15;
 
-    .buttons {
+    .footer__show-modal_buttons {
       margin: 10px 0 0;
       justify-content: flex-end;
     }
   }
 
-  .contacts {
+  .footer__contacts {
 
-    .contacts-title {
+    .footer__contacts_title {
       display: flex;
       justify-content: center;
     }
 
-    .contacts-items {
+    .footer__contacts_items {
       padding: 0;
 
-      .contacts-items__item {
+      .icon-item {
         height: 20px;
         margin-top: 10px;
         list-style-type: none;
 
-        a {
+        .icon-link {
           text-decoration: none;
           color: #0000FF;
           padding: 10px 12px;
         }
         
-        a:hover {
+        .icon-link:hover {
           color: rgb(64, 64, 221)
         }
 
@@ -103,7 +103,7 @@
     }
   }
   
-  .register-form {
+  .footer__register-form {
     margin: auto;
 
     .form-control {
@@ -114,7 +114,7 @@
       margin-bottom: 15px;
     }
 
-    .form-control__message {
+    .form-control_message {
       height: 135px;
       padding-top: 10px;
     }

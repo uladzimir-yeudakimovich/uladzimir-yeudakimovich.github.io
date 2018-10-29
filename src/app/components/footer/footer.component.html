@@ -1,39 +1,39 @@
 <footer class="footer">
-	<div class="show-modal" *ngIf="showMessageDetales">
+	<div class="footer__show-modal" *ngIf="showMessageDetales">
 		<div class="container">
 			<div class="row" [formGroup]="updateMessageForm">
 				<h5 class="col-md-3">{{ this.showMessage[0].name }}</h5>
 				<h5 class="col-md-3">{{ this.showMessage[0].email }}</h5>
 				<textarea class="col-md-6 form-control" formControlName="updateMessage" rows="10"></textarea>
 			</div>
-			<div class="row buttons">
+			<div class="row footer__show-modal_buttons">
 				<button class="btn btn-danger" (click)="updateMessage()">{{ 'buttons.update' | translate }}</button>
 				<button class="btn btn-primary" (click)="closeMessage()">{{ 'buttons.close' | translate }}</button>
 			</div>
 		</div>   
 	</div>
 
-	<div class="container message">
-		<h4 class="message-title">{{ 'footer.message.comments' | translate }}</h4>
+	<div class="container footer__message">
+		<h4 class="footer__message_title">{{ 'footer.message.comments' | translate }}</h4>
 		<div class="container">
-			<div class="row item">
+			<div class="row footer__message_items">
 				<h5 class="col-md-3">{{ 'footer.message.name' | translate }}</h5>
 				<h5 class="col-md-3">{{ 'footer.message.email' | translate }}</h5>
 				<h5 class="col-md-6">{{ 'footer.message.messages' | translate }}</h5>
 			</div>
 			<div *ngIf="messagesFromServer">
-				<div class="row item" *ngFor="let later of messagesFromServer">
+				<div class="row footer__message_items" *ngFor="let later of messagesFromServer">
 					<p class="col-md-3">{{ later.name }}</p>
 					<p class="col-md-3">{{ later.email }}</p>
 					<p class="col-md-6">&nbsp;{{ later.message | translate }}</p>
 				</div>
 			</div>
 			<div *ngIf="messagesFromLocalStorage">
-				<div class="row item" *ngFor="let later of messagesFromLocalStorage" (click)="showDetails(messagesFromLocalStorage.indexOf(later))">
+				<div class="row footer__message_items" *ngFor="let later of messagesFromLocalStorage" (click)="showDetails(messagesFromLocalStorage.indexOf(later))">
 					<p class="col-md-3">{{ later.name }}</p>
 					<p class="col-md-3">{{ later.email }}</p>
 					<p class="col-md-5" style="margin: 10px 0;">&nbsp;{{ later.message }}</p>
-					<span class="col-md-1 delete" (click)="delete($event)" id="{{ messagesFromLocalStorage.indexOf(later) }}">&times;</span>
+					<span class="col-md-1 footer__message_delete" (click)="delete($event)" id="{{ messagesFromLocalStorage.indexOf(later) }}">&times;</span>
 				</div>
 			</div>
 		</div>
@@ -41,25 +41,25 @@
   
 	<div class="container">
 		<div class="row">
-			<section class="col-md-6 contacts">
-				<h3 class="contacts-title">{{ 'footer.name' | translate }}</h3>
+			<section class="col-md-6 footer__contacts">
+				<h3 class="footer__contacts_title">{{ 'footer.name' | translate }}</h3>
 				<p>&nbsp;{{ 'footer.description' | translate }}</p>
-				<ul class="contacts-items">
-					<li class="contacts-items__item"><i class="phone"></i><a href="tel:{{ 'footer.phone' | translate }}">{{ 'footer.phone' | translate }}</a></li>
-					<li class="contacts-items__item"><i class="envelope"></i>&nbsp;<a href="mailto:{{ 'footer.email' | translate }}" style="margin-left: -4px;">{{ 'footer.email' | translate }}</a></li>
-					<li class="contacts-items__item"><i class="cloud"></i><a href="src/assets/CV_Евдокимович Владимир.docx" download>{{ 'footer.cvRussian' | translate }}</a></li>
-					<li class="contacts-items__item"><i class="cloud"></i><a href="src/assets/CV_Uladzimir Yeudakimovich.docx" download>{{ 'footer.cvEnglish' | translate }}</a></li>
+				<ul class="footer__contacts_items">
+					<li class="footer__contacts_items icon-item"><i class="phone"></i><a class="icon-link" href="tel:{{ 'footer.phone' | translate }}">{{ 'footer.phone' | translate }}</a></li>
+					<li class="footer__contacts_items icon-item"><i class="envelope"></i>&nbsp;<a class="icon-link" href="mailto:{{ 'footer.email' | translate }}" style="margin-left: -4px;">{{ 'footer.email' | translate }}</a></li>
+					<li class="footer__contacts_items icon-item"><i class="cloud"></i><a class="icon-link" href="src/assets/CV_Евдокимович Владимир.docx" download>{{ 'footer.cvRussian' | translate }}</a></li>
+					<li class="footer__contacts_items icon-item"><i class="cloud"></i><a class="icon-link" href="src/assets/CV_Uladzimir Yeudakimovich.docx" download>{{ 'footer.cvEnglish' | translate }}</a></li>
 				</ul>
-				<h4 class="contacts-title">{{ 'footer.subname' | translate }}</h4>
-				<ul class="contacts-items">
-					<li class="contacts-items__item"><i class="linkedin"></i><a href="https://www.linkedin.com/in/uladzimir-yeudakimovich" target="_blank" rel="noopener">{{ 'footer.linkedin' | translate }}</a></li>
-					<li class="contacts-items__item"><i class="github"></i><a href="https://github.com/uladzimir-yeudakimovich" target="_blank" rel="noopener">{{ 'footer.github' | translate }}</a></li>
-					<li class="contacts-items__item"><i class="codewars"></i><a href="https://www.codewars.com/users/uladzimir.yeudakimovich" target="_blank" rel="noopener">{{ 'footer.codewars' | translate }}</a></li>
-					<li class="contacts-items__item"><i class="students-cap"></i><a href="https://www.duolingo.com/91YN1" target="_blank" rel="noopener">{{ 'footer.duolingo' | translate }}</a></li>
+				<h4 class="footer__contacts_title">{{ 'footer.subname' | translate }}</h4>
+				<ul class="footer__contacts_items">
+					<li class="footer__contacts_items icon-item"><i class="linkedin"></i><a class="icon-link" href="https://www.linkedin.com/in/uladzimir-yeudakimovich" target="_blank" rel="noopener">{{ 'footer.linkedin' | translate }}</a></li>
+					<li class="footer__contacts_items icon-item"><i class="github"></i><a class="icon-link" href="https://github.com/uladzimir-yeudakimovich" target="_blank" rel="noopener">{{ 'footer.github' | translate }}</a></li>
+					<li class="footer__contacts_items icon-item"><i class="codewars"></i><a class="icon-link" href="https://www.codewars.com/users/uladzimir.yeudakimovich" target="_blank" rel="noopener">{{ 'footer.codewars' | translate }}</a></li>
+					<li class="footer__contacts_items icon-item"><i class="students-cap"></i><a class="icon-link" href="https://www.duolingo.com/91YN1" target="_blank" rel="noopener">{{ 'footer.duolingo' | translate }}</a></li>
 				</ul>
 			</section>
 
-			<form class="col-md-6 register-form" [formGroup]="createMessageForm" (ngSubmit)="onSubmit()">
+			<form class="col-md-6 footer__register-form" [formGroup]="createMessageForm" (ngSubmit)="onSubmit()">
 				<div class="form-group">
 					<input class="form-control"
 						   type="text"
@@ -83,7 +83,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<textarea class="form-control form-control__message"
+					<textarea class="form-control form-control_message"
 							  type="text"
 							  formControlName="message"
 							  placeholder="{{ 'footer.form.message' | translate }}"

@@ -11,12 +11,12 @@ export class FooterComponent implements OnInit {
   createMessageForm: FormGroup;
   updateMessageForm: FormGroup;
   submitted = false;
-  messagesFromServer = [];
-  messagesFromLocalStorage = [];
-  model = [];
-  newLater = {};
+  messagesFromServer = [ ];
+  messagesFromLocalStorage = [ ];
+  model = [ ];
+  newLater = { };
   showMessageDetales = false;
-  showMessage = [];
+  showMessage = [ ];
   copyMessage: string;
 
   constructor(
@@ -32,23 +32,23 @@ export class FooterComponent implements OnInit {
 
   createForm() {
     this.createMessageForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', [Validators.required, Validators.minLength(2)]]
+      firstName: [ '', Validators.required ],
+      email: [ '', [ Validators.required, Validators.email ] ],
+      message: [ '', [ Validators.required, Validators.minLength(2) ] ]
     });
   }
 
   getMessages() {
     return this.messageService.getMessages().subscribe(dataFromServer => {
       for (const key in dataFromServer['mess']) {
-        this.messagesFromServer.push(dataFromServer['mess'][key]);
+        if (true) { this.messagesFromServer.push(dataFromServer['mess'][key]); }
       }
     });
   }
 
   getLocalMessages() {
     for (const key in this.messageService.getLocalMessages()['mess']) {
-      this.messagesFromLocalStorage.push(this.messageService.getLocalMessages()['mess'][key]);
+      if (true) { this.messagesFromLocalStorage.push(this.messageService.getLocalMessages() ['mess'][key]); }
     }
     // this.messages.forEach((n) => this.model.push(n));              /*for server*/
     this.messagesFromLocalStorage.forEach((n) => this.model.push(n)); /*for localStorage*/
@@ -65,7 +65,7 @@ export class FooterComponent implements OnInit {
       name: this.createMessageForm.value.firstName,
       email: this.createMessageForm.value.email,
       message: this.createMessageForm.value.message
-    }
+    };
     this.model.push(this.newLater);
     this.messageService.updateMessage({mess: this.model});
     this.messagesFromLocalStorage.push(this.newLater);
@@ -75,7 +75,7 @@ export class FooterComponent implements OnInit {
   delete($event) {
     this.messagesFromLocalStorage.splice($event.target['id'], 1);
     this.model.splice($event.target['id'], 1);
-    this.messageService.updateMessage({mess: this.model});
+    this.messageService.updateMessage({ mess: this.model });
   }
 
   showDetails(e) {
@@ -94,15 +94,15 @@ export class FooterComponent implements OnInit {
   updateMessage() {
     this.showMessageDetales = false;
     this.showMessage[0].message = this.updateMessageForm.value.updateMessage;
-    this.showMessage = [];
+    this.showMessage = [ ];
     this.copyMessage = '';
-    this.messageService.updateMessage({mess: this.model});
+    this.messageService.updateMessage({ mess: this.model });
   }
 
   closeMessage() {
     this.showMessageDetales = false;
     this.showMessage[0].message = this.copyMessage;
-    this.showMessage = [];
+    this.showMessage = [ ];
     this.copyMessage = '';
   }
 }

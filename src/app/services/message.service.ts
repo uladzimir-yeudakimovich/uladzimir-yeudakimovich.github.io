@@ -8,17 +8,18 @@ export class MessageService {
 
   constructor(private http: HttpClient) { }
 
-  public getMessages() {
-    return this.http.get("src/assets/message.json");
+  getMessages() {
+    return this.http.get('src/assets/message.json');
   }
 
-  public updateMessage(messages) {
-    let body = JSON.stringify(messages);
-    // return this.http.put("src/assets/message.json", body);       /*for server*/
-    return localStorage.setItem("messages", body);              /*for localStorage*/
+  updateMessage(messages) {
+    const body = JSON.stringify(messages);
+    // return this.http.put("src/assets/message.json", body);   /*for server*/
+    return localStorage.setItem('messages', body);              /*for localStorage*/
   }
 
-  public getLocalMessages() {
-    return localStorage.getItem("messages") ? JSON.parse(localStorage.getItem("messages")) : { };
+  getLocalMessages() {
+    return localStorage.getItem('messages') ? JSON.parse(localStorage.getItem('messages')) : { };
   }
+
 }

@@ -4,7 +4,7 @@
 	"header": {
 		"position": "Front-end разработчик",
 		"name": "Евдокимович Владимир",
-		"description": "Несколько слов обо мне. Закончил Rolling Scopes School в EPAM Systems по специальности front-end разработка. Работаю программистом в OCS Innovation Company (OCSICO®). Основной язык программирования - JavaScript. В работе использую фреймворки Angular 6 и Bootstrap, технологию Ajax, библеатеку jQuery, сборщик webpack, препроцессоры LESS и SASS, систему управления версиями Git. Есть небольшой опыт работы с фреймворками Backbone и React."
+		"description": "Несколько слов обо мне. Закончил Rolling Scopes School в EPAM Systems по специальности front-end разработка. Работаю программистом в OCS Innovation Company (OCSICO®). Работаю со следующими фреймворками Angular, AngularJS, Angular Material и Bootstrap, технологию Ajax, библеатеку jQuery, сборщик webpack, препроцессоры LESS и SASS, систему управления версиями Git. Есть небольшой опыт работы с фреймворком React."
 	},
 	
 	"footer": {

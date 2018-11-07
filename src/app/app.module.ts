@@ -18,7 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RemoveSpaces } from './pipes/remove-spaces';
 
 export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, './src/assets/i18n/', '.json');
 }
 
 @NgModule({

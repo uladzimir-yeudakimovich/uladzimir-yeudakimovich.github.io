@@ -6,10 +6,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
+  private url: string = 'assets/data.json';
+
   constructor(private http: HttpClient) { }
 
-  public getData() {
-    return this.http.get('src/assets/data.json');
+  getData() {
+    return this.http.get(this.url);
   }
 
 }

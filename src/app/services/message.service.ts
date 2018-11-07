@@ -6,16 +6,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MessageService {
 
+  private url: string = 'assets/message.json';
+
   constructor(private http: HttpClient) { }
 
   getMessages() {
-    return this.http.get('src/assets/message.json');
+    return this.http.get(this.url);
   }
 
   updateMessage(messages) {
     const body = JSON.stringify(messages);
-    // return this.http.put("src/assets/message.json", body);   /*for server*/
-    return localStorage.setItem('messages', body);              /*for localStorage*/
+    // return this.http.put("assets/message.json", body);   /*for server*/
+    return localStorage.setItem('messages', body);          /*for localStorage*/
   }
 
   getLocalMessages() {

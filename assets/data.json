@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Application on angular.",
+    "link": "http://uladzimir-yeudakimovich.ml/angular-app/",
+    "click": "view application",
+    "description": "This application was written using frameworks Angular 6 and Bootstrap 4. I used such technologies as structural directives, pipes, services, routing and navigation, forms, ngModules, observables and RxJS, worked with API. With this application, you can download the required number of users from the server. Make a quick search for the right person by name.  Mark the right people.",
+    "images" : [
+      "assets/images/angular_task/angular_task1.jpg",
+      "assets/images/angular_task/angular_task2.jpg",
+      "assets/images/angular_task/angular_task3.jpg",
+      "assets/images/angular_task/angular_task4.jpg",
+      "assets/images/angular_task/angular_task5.jpg"
+    ]
+  },
+  {
+    "name": "Portfolio.",
+    "link": "http://uladzimir-yeudakimovich.ml/portfolio-js/",
+    "click": "view application",
+    "description": "It is my first portfolio. I created it on native JavaScript using HTML5 and CSS3. This application is bilingual.",
+    "images" : [
+      "assets/images/portfolio/portfolio1.jpg",
+      "assets/images/portfolio/portfolio2.jpg",
+      "assets/images/portfolio/portfolio3.jpg",
+      "assets/images/portfolio/portfolio4.jpg",
+      "assets/images/portfolio/portfolio5.jpg"
+    ]
+  },
+  {
+    "name": "Application on react.",
+    "link": "http://uladzimir-yeudakimovich.ml/react-app/",
+    "click": "view application",
+    "description": "Task Scheduler To-DO-List. The development language is JavaScript. It was written with the use of the React framework, with the connection of the Redux library.",
+    "images" : [
+      "assets/images/react/react1.jpg",
+      "assets/images/react/react2.jpg",
+      "assets/images/react/react3.jpg",
+      "assets/images/react/react4.jpg",
+      "assets/images/react/react5.jpg"
+    ]
+  },
+  {
+    "name": "Math-match-game.",
+    "link": "http://uladzimir-yeudakimovich.ml/match-match-game/",
+    "click": "play",
+    "description": "Game for the development of memory. It was written in HTML5, CSS3 and JavaScript.",
+    "images" : [
+      "assets/images/match/match1.jpg",
+      "assets/images/match/match2.jpg",
+      "assets/images/match/match3.jpg",
+      "assets/images/match/match4.jpg",
+      "assets/images/match/match5.jpg"
+    ]
+  },
+  {
+    "name": "The site of restaurant.",
+    "link": "http://uladzimir-yeudakimovich.ml/restaurant",
+    "click": "view site",
+    "description": "Online page of restaurant. It was written in HTML5 using CSS Grid Layout and CSS Flexbox.",
+    "images" : [
+      "assets/images/restaurant/restaurant1.jpg",
+      "assets/images/restaurant/restaurant2.jpg",
+      "assets/images/restaurant/restaurant3.jpg",
+      "assets/images/restaurant/restaurant4.jpg",
+      "assets/images/restaurant/restaurant5.jpg"
+    ]
+  }
+]

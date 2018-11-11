@@ -1,0 +1,64 @@
+{
+	"title": "Мои работы",
+	
+	"header": {
+		"position": "Инженер программист",
+		"name": "Евдокимович Владимир",
+		"description": "Несколько слов обо мне. Закончил Rolling Scopes School в EPAM Systems по специальности front-end разработка. Работаю инженером программистом в OCS Innovation Company (OCSICO®). Работаю со следующими фреймворками Angular, AngularJS, Angular Material и Bootstrap, технологию Ajax, библеатеку jQuery, сборщик webpack, препроцессоры LESS и SASS, систему управления версиями Git. Есть небольшой опыт работы с фреймворком React."
+	},
+	
+	"footer": {
+		"name": "Контактная информация",
+		"description": "Вы можете отправить мне для оценки приблизительное техническое задание или просто описание проекта своими словами.",
+		"phone": "+375 33 3344201",
+		"email": "uladzimir.yeudakimovich@gmail.com",
+		"cvRussian": "резюме на русском",
+		"cvEnglish": "резюме на английском",
+		"subname": "Ссылки на мои социальные сети:",
+		"linkedin": "Linkedin",
+		"github": "Github",
+		"codewars": "CodeWars",
+		"duolingo": "Duolingo",
+		"message": {
+			"comments": "Комментарии",
+			"name": "Имя",
+			"email": "Email",
+			"messages": "Сообщения"
+		},
+		"form": {
+			"name": "Введите имя *",
+			"email": "Введите email *",
+			"message": "Введите сообщение *"
+		},
+		"required": {
+			"name": "Имя обязательно",
+			"email": "Email обязателен",
+			"validEmail": "Email должен иметь действительный адрес",
+			"message": "Сообщение обязательно",
+			"validMessage": "Сообщение должноиметь минимум 2 знака"
+		}
+	},
+
+	"buttons": {
+		"update": "Обновить",
+		"close": "Закрыть",
+		"submit": "Отправить"
+	},
+	
+	"view application": "посмотреть приложение",
+	"play": "играть",
+	"view site": "посмотреть сайт",
+
+	"Application on angular.": "Приложение на angular.",
+	"This application was written using frameworks Angular 6 and Bootstrap 4. I used such technologies as structural directives, pipes, services, routing and navigation, forms, ngModules, observables and RxJS, worked with API. With this application, you can download the required number of users from the server. Make a quick search for the right person by name.  Mark the right people.": "Это приложение было написано с использованием фреймворков Angular 6 и Bootstrap 4. Я использовал такие технологии, как директивы, пайпы, сервисы, маршрутизацию и навигацию, формы, ng-модули, наблюдатели и RxJS, работающие с API. С помощью этого приложения вы можете скачать требуемое количество пользователей с сервера. Сделайте быстрый поиск подходящего человека по имени. Отметить нужных людей.",
+	"Portfolio.": "Портфолио.",
+	"It is my first portfolio. I created it on native JavaScript using HTML5 and CSS3. This application is bilingual.": "Это мое первое портфолио. Я создал его на чистом JavaScript, используя HTML5 и CSS3. Это приложение двуязычное.",
+	"Application on react.": "Приложение на react.",
+	"Task Scheduler To-DO-List. The development language is JavaScript. It was written with the use of the React framework, with the connection of the Redux library.": "Планировщик заданий To-DO-List. Язык разработки - JavaScript. Был написан с использованием фреймворка React, с подключением библиотеки Redux.",
+	"Game for the development of memory. It was written in HTML5, CSS3 and JavaScript.": "Игра для развития памяти. Разработана с использованием HTML5, CSS3 и JavaScript.",
+	"The site of restaurant.": "Сайт ресторана.",
+	"Online page of restaurant. It was written in HTML5 using CSS Grid Layout and CSS Flexbox.": "Интернет-страница ресторана. Разработана с использованием HTML5 и CSS Grid Layout и CSS Flexbox.",
+
+	"Super work!!!": "Классная работа!!!",
+	"How much is this application?": "Сколько стоит это приложение?"
+}

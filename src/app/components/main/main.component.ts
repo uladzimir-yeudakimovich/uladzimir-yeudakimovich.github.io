@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 
 @Component({
@@ -7,18 +7,13 @@ import { DataService } from '../../services/data.service';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  public data = [];
-  public english: boolean;
+  data: any;
 
-  @Output() valueChange = new EventEmitter();
-
-  constructor(public dataService: DataService) {}
+  constructor(public dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getData().subscribe(dataFromServer => { 
-      for (const key in dataFromServer) {
-        this.data.push(dataFromServer[key]);
-      }
+    this.dataService.getData().subscribe(dataFromServer => {
+      this.data = dataFromServer;
     });
   }
 }

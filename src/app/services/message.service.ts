@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MessageService {
 
-  private url: string = 'src/assets/message.json';
+  private url: string = 'assets/message.json';
 
   constructor(private http: HttpClient) { }
 

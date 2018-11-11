@@ -4,7 +4,7 @@
 	"header": {
 		"position": "Инженер программист",
 		"name": "Евдокимович Владимир",
-		"description": "Несколько слов обо мне. Закончил Rolling Scopes School в EPAM Systems по специальности front-end разработка. Работаю инженером программистом в OCS Innovation Company (OCSICO®). Работаю со следующими фреймворками Angular, AngularJS, Angular Material и Bootstrap, технологию Ajax, библеатеку jQuery, сборщик webpack, препроцессоры LESS и SASS, систему управления версиями Git. Есть небольшой опыт работы с фреймворком React."
+		"description": "Несколько слов обо мне. Закончил Rolling Scopes School в EPAM Systems по специальности front-end разработка. Работаю инженером программистом в OCS Innovation Company (OCSICO®). Работаю со следующими фреймворками Angular, Angular Material и Bootstrap, технологией Ajax, библеатекой jQuery, сборщиком webpack, препроцессорами LESS и SASS, системой управления версиями Git. Есть небольшой опыт работы с фреймворками AngularJS и React."
 	},
 	
 	"footer": {

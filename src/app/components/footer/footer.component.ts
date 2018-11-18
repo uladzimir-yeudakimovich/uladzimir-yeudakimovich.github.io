@@ -51,8 +51,8 @@ export class FooterComponent implements OnInit {
   }
 
   onSubmit() {
-    this.submitted = true;
     if (this.createMessageForm.invalid) {
+      this.submitted = true;
       return;
     }
     this.messagesFromLocalStorage.push(this.createMessageForm.value);

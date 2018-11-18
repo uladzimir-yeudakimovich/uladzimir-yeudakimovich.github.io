@@ -16,8 +16,8 @@ export class MessageService {
 
   updateMessage(messages) {
     const body = JSON.stringify(messages);
-    // return this.http.put("assets/message.json", body);   /*for server*/
-    return localStorage.setItem('messages', body);          /*for localStorage*/
+    // return this.http.put(this.url, body);        /*for server*/
+    return localStorage.setItem('messages', body);  /*for localStorage*/
   }
 
   getLocalMessages() {

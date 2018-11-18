@@ -40,14 +40,13 @@ export class FooterComponent implements OnInit {
 
   getMessages() {
     return this.messageService.getMessages().subscribe(dataFromServer => {
-      for (const key in dataFromServer['mess']) {
-        if (true) { this.messagesFromServer.push(dataFromServer['mess'][key]); }
-      }
+      this.messagesFromServer = dataFromServer['mess'];
     });
   }
 
   getLocalMessages() {
-    this.messagesFromLocalStorage = this.messageService.getLocalMessages()['mess'];
+    let messages = this.messageService.getLocalMessages()['mess'];
+    this.messagesFromLocalStorage = messages ? messages : [];
   }
 
   onSubmit() {

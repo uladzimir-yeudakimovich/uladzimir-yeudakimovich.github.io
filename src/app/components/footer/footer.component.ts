@@ -35,7 +35,6 @@ export class FooterComponent implements OnInit {
       message: [ '', [ Validators.required, Validators.minLength(2) ] ]
     });
   }
-  
   get f() { return this.createMessageForm.controls; }
 
   getMessages() {
@@ -45,7 +44,7 @@ export class FooterComponent implements OnInit {
   }
 
   getLocalMessages() {
-    let messages = this.messageService.getLocalMessages()['mess'];
+    const messages = this.messageService.getLocalMessages()['mess'];
     this.messagesFromLocalStorage = messages ? messages : [];
   }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { MessageService } from '../../services/message.service';
 
 @Component({
@@ -8,9 +8,7 @@ import { MessageService } from '../../services/message.service';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  createMessageForm: FormGroup;
   updateMessageForm: FormGroup;
-  submitted = false;
   showMessageDetales = false;
   messagesFromServer = [];
   messagesFromLocalStorage = [];
@@ -23,19 +21,9 @@ export class FooterComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.createForm();
     this.getMessages();
     this.getLocalMessages();
   }
-
-  createForm() {
-    this.createMessageForm = this.formBuilder.group({
-      name: [ '', Validators.required ],
-      email: [ '', [ Validators.required, Validators.email ] ],
-      message: [ '', [ Validators.required, Validators.minLength(2) ] ]
-    });
-  }
-  get f() { return this.createMessageForm.controls; }
 
   getMessages() {
     return this.messageService.getMessages().subscribe(dataFromServer => {
@@ -46,16 +34,6 @@ export class FooterComponent implements OnInit {
   getLocalMessages() {
     const messages = this.messageService.getLocalMessages()['mess'];
     this.messagesFromLocalStorage = messages ? messages : [];
-  }
-
-  onSubmit() {
-    if (this.createMessageForm.invalid) {
-      this.submitted = true;
-      return;
-    }
-    this.messagesFromLocalStorage.push(this.createMessageForm.value);
-    this.messageService.updateMessage({ mess: this.messagesFromLocalStorage });
-    this.createForm();
   }
 
   delete($event) {

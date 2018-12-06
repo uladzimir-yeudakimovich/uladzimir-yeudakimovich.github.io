@@ -16,6 +16,8 @@ import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import { RemoveSpaces } from './pipes/remove-spaces';
+import { ContactsComponent } from './components/footer/contacts/contacts.component';
+import { RegisterFormComponent } from './components/footer/register-form/register-form.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -45,7 +47,11 @@ export function createTranslateLoader(http: HttpClient) {
     MainComponent,
     FooterComponent,
 
-    RemoveSpaces
+    RemoveSpaces,
+
+    ContactsComponent,
+
+    RegisterFormComponent
   ],
   providers: [ ],
   bootstrap: [ AppComponent ]

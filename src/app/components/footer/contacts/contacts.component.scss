@@ -1,0 +1,23 @@
+.contacts_title {
+  display: flex;
+  justify-content: center;
+}
+
+.contacts_items {
+  padding: 0;
+}
+
+.contact-item {
+  margin-top: 10px;
+  list-style-type: none;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #0000FF;
+  padding: 10px 0 10px 12px;
+}
+
+.contact-link:hover {
+  color: rgb(64, 64, 221)
+}

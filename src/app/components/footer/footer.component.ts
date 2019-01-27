@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { MessageService } from '../../services/message.service';
 
 @Component({
@@ -8,15 +7,14 @@ import { MessageService } from '../../services/message.service';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  updateMessageForm: FormGroup;
   showMessageDetales = false;
   messagesFromServer = [];
   messagesFromLocalStorage = [];
-  showMessage = [];
+  showMessage: object;
   copyMessage: string;
+  index: number;
 
   constructor(
-    private formBuilder: FormBuilder,
     public messageService: MessageService
   ) { }
 
@@ -36,36 +34,27 @@ export class FooterComponent implements OnInit {
     this.messagesFromLocalStorage = messages ? messages : [];
   }
 
-  delete($event) {
-    this.messagesFromLocalStorage.splice($event.target['id'], 1);
-    this.messageService.updateMessage({ mess: this.messagesFromLocalStorage });
-  }
-
   showDetails(e) {
-    this.showMessageDetales = true;
-    this.showMessage.push(this.messagesFromLocalStorage[e]);
-    this.copyMessage = this.messagesFromLocalStorage[e]['message'];
-    this.createUpdateForm(e);
+    if (e.target.nodeName !== 'SPAN') {
+      this.index = e.target.nodeName === 'DIV' ? e.target.id : e.target.parentElement.id;
+      this.showMessageDetales = true;
+      this.showMessage = this.messagesFromLocalStorage[this.index];
+      this.copyMessage = this.messagesFromLocalStorage[this.index]['message'];
+    }
   }
 
-  createUpdateForm(e) {
-    this.updateMessageForm = this.formBuilder.group({
-      updateMessage: [ this.messagesFromLocalStorage[e]['message'] ]
-    });
+  delete(e) {
+    console.log(e.target.parentElement.id);
+    this.messageService.updateMessage({ mess: this.messagesFromLocalStorage.splice(e.target.parentElement.id, 1) });
   }
 
   updateMessage() {
     this.showMessageDetales = false;
-    this.showMessage[0].message = this.updateMessageForm.value.updateMessage;
-    this.showMessage = [ ];
-    this.copyMessage = '';
     this.messageService.updateMessage({ mess: this.messagesFromLocalStorage });
   }
 
   closeMessage() {
     this.showMessageDetales = false;
-    this.showMessage[0].message = this.copyMessage;
-    this.showMessage = [ ];
-    this.copyMessage = '';
+    this.messagesFromLocalStorage[this.index]['message'] = this.copyMessage;
   }
 }

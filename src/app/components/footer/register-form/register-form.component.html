@@ -4,21 +4,21 @@
          type="text"
          formControlName="name"
          placeholder="{{ 'footer.form.name' | translate }}"
-         [ngClass]="{ 'is-invalid': submitted && f.name.errors }"
+         [ngClass]="{ 'is-invalid': submitted && isRequired.name.errors }"
          aria-label="name"/>
-    <div class="invalid-feedback" *ngIf="submitted && f.name.errors">
-      <div *ngIf="f.name.errors.required">{{ 'footer.required.name' | translate }}</div>
+    <div class="invalid-feedback" *ngIf="submitted && isRequired.name.errors">
+      <div *ngIf="isRequired.name.errors.required">{{ 'footer.required.name' | translate }}</div>
     </div>
   </div>
   <div class="form-group">
     <input class="form-control"
          type="text" formControlName="email"
          placeholder="{{ 'footer.form.email' | translate }}"
-         [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+         [ngClass]="{ 'is-invalid': submitted && isRequired.email.errors }"
          aria-label="email"/>
-    <div class="invalid-feedback" *ngIf="submitted && f.email.errors">
-      <div *ngIf="f.email.errors.required">{{ 'footer.required.email' | translate }}</div>
-      <div *ngIf="f.email.errors.email">{{ 'footer.required.validEmail' | translate }}</div>
+    <div class="invalid-feedback" *ngIf="submitted && isRequired.email.errors">
+      <div *ngIf="isRequired.email.errors.required">{{ 'footer.required.email' | translate }}</div>
+      <div *ngIf="isRequired.email.errors.email">{{ 'footer.required.validEmail' | translate }}</div>
     </div>
   </div>
   <div class="form-group">
@@ -26,12 +26,12 @@
           type="text"
           formControlName="message"
           placeholder="{{ 'footer.form.message' | translate }}"
-          [ngClass]="{ 'is-invalid': submitted && f.message.errors }"
+          [ngClass]="{ 'is-invalid': submitted && isRequired.message.errors }"
           aria-label="message">
     </textarea>
-    <div class="invalid-feedback" *ngIf="submitted && f.message.errors">
-      <div *ngIf="f.message.errors.required">{{ 'footer.required.message' | translate }}</div>
-      <div *ngIf="f.message.errors.minlength">{{ 'footer.required.validMessage' | translate }}</div>
+    <div class="invalid-feedback" *ngIf="submitted && isRequired.message.errors">
+      <div *ngIf="isRequired.message.errors.required">{{ 'footer.required.message' | translate }}</div>
+      <div *ngIf="isRequired.message.errors.minlength">{{ 'footer.required.validMessage' | translate }}</div>
     </div>
   </div>
   <div class="form-group">

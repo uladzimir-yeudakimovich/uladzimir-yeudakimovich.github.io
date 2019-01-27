@@ -1,10 +1,10 @@
 <footer class="footer">
 	<div class="footer__show-modal" *ngIf="showMessageDetales">
 		<div class="container">
-			<div class="row" [formGroup]="updateMessageForm">
-				<h5 class="col-md-3">{{ this.showMessage[0].name }}</h5>
-				<h5 class="col-md-3">{{ this.showMessage[0].email }}</h5>
-				<textarea class="col-md-6 form-control" formControlName="updateMessage" rows="10"></textarea>
+			<div class="row">
+				<h5 class="col-md-3">{{ showMessage.name }}</h5>
+				<h5 class="col-md-3">{{ showMessage.email }}</h5>
+				<textarea class="col-md-6 form-control" [(ngModel)]="showMessage.message" rows="10"></textarea>
 			</div>
 			<div class="row footer__show-modal_buttons">
 				<button class="btn btn-danger" (click)="updateMessage()">{{ 'buttons.update' | translate }}</button>
@@ -29,11 +29,11 @@
 				</div>
 			</div>
 			<div *ngIf="messagesFromLocalStorage">
-				<div class="row footer__message_items" *ngFor="let later of messagesFromLocalStorage" (click)="showDetails(messagesFromLocalStorage.indexOf(later))">
+				<div class="row footer__message_items" *ngFor="let later of messagesFromLocalStorage; let i = index" id="{{ i }}" (click)="showDetails($event)">
 					<p class="col-md-3">{{ later.name }}</p>
 					<p class="col-md-3">{{ later.email }}</p>
 					<p class="col-md-5" style="margin: 10px 0;">&nbsp;{{ later.message }}</p>
-					<span class="col-md-1 footer__message_delete" (click)="delete($event)" id="{{ messagesFromLocalStorage.indexOf(later) }}">&times;</span>
+					<span class="col-md-1 footer__message_delete" (click)="delete($event)">&times;</span>
 				</div>
 			</div>
 		</div>

@@ -29,7 +29,8 @@ export class RegisterFormComponent implements OnInit {
       message: [ '', [ Validators.required, Validators.minLength(2) ] ]
     });
   }
-  get f() { return this.createMessageForm.controls; }
+
+  get isRequired() { return this.createMessageForm.controls; }
 
   getLocalMessages() {
     const messages = this.messageService.getLocalMessages()['mess'];
@@ -43,6 +44,7 @@ export class RegisterFormComponent implements OnInit {
     }
     this.messagesFromLocalStorage.push(this.createMessageForm.value);
     this.messageService.updateMessage({ mess: this.messagesFromLocalStorage });
+    this.submitted = false;
     this.createForm();
   }
 

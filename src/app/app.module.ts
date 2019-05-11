@@ -17,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import { RemoveSpaces } from './pipes/remove-spaces';
 import { ContactsComponent } from './components/footer/contacts/contacts.component';
+import { MessagesComponent } from './components/footer/messages/messages.component';
 import { RegisterFormComponent } from './components/footer/register-form/register-form.component';
 
 export function createTranslateLoader(http: HttpClient) {
@@ -51,7 +52,7 @@ export function createTranslateLoader(http: HttpClient) {
     RemoveSpaces,
 
     ContactsComponent,
-
+    MessagesComponent,
     RegisterFormComponent
   ],
   providers: [ ],

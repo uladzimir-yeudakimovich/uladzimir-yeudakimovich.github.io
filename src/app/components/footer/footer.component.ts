@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from '../../services/message.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,53 +7,34 @@ import { MessageService } from '../../services/message.service';
 })
 export class FooterComponent implements OnInit {
   showMessageDetales = false;
-  messagesFromServer = [];
-  messagesFromLocalStorage = [];
   showMessage: object;
   copyMessage: string;
   index: number;
 
-  constructor(
-    public messageService: MessageService
-  ) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.getMessages();
-    this.getLocalMessages();
-  }
+  ngOnInit(): void { }
 
-  getMessages() {
-    return this.messageService.getMessages().subscribe(dataFromServer => {
-      this.messagesFromServer = dataFromServer['mess'];
-    });
-  }
+  // showDetails(e) {
+  //   if (e.target.nodeName !== 'SPAN') {
+  //     this.index = e.target.nodeName === 'DIV' ? e.target.id : e.target.parentElement.id;
+  //     this.showMessageDetales = true;
+  //     this.showMessage = this.messagesFromLocalStorage[this.index];
+  //     this.copyMessage = this.messagesFromLocalStorage[this.index]['message'];
+  //   }
+  // }
 
-  getLocalMessages() {
-    const messages = this.messageService.getLocalMessages()['mess'];
-    this.messagesFromLocalStorage = messages ? messages : [];
-  }
+  // delete(e) {
+  //   this.messageService.updateMessage({ mess: this.messagesFromLocalStorage.splice(e.target.parentElement.id, 1) });
+  // }
 
-  showDetails(e) {
-    if (e.target.nodeName !== 'SPAN') {
-      this.index = e.target.nodeName === 'DIV' ? e.target.id : e.target.parentElement.id;
-      this.showMessageDetales = true;
-      this.showMessage = this.messagesFromLocalStorage[this.index];
-      this.copyMessage = this.messagesFromLocalStorage[this.index]['message'];
-    }
-  }
+  // updateMessage() {
+  //   this.showMessageDetales = false;
+  //   this.messageService.updateMessage({ mess: this.messagesFromLocalStorage });
+  // }
 
-  delete(e) {
-    console.log(e.target.parentElement.id);
-    this.messageService.updateMessage({ mess: this.messagesFromLocalStorage.splice(e.target.parentElement.id, 1) });
-  }
-
-  updateMessage() {
-    this.showMessageDetales = false;
-    this.messageService.updateMessage({ mess: this.messagesFromLocalStorage });
-  }
-
-  closeMessage() {
-    this.showMessageDetales = false;
-    this.messagesFromLocalStorage[this.index]['message'] = this.copyMessage;
-  }
+  // closeMessage() {
+  //   this.showMessageDetales = false;
+  //   this.messagesFromLocalStorage[this.index]['message'] = this.copyMessage;
+  // }
 }

@@ -10,7 +10,6 @@ import { MessageService } from '../../../services/message.service';
 export class RegisterFormComponent implements OnInit {
   createMessageForm: FormGroup;
   submitted = false;
-  messagesFromLocalStorage = [];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -19,7 +18,6 @@ export class RegisterFormComponent implements OnInit {
 
   ngOnInit() {
     this.createForm();
-    this.getLocalMessages();
   }
 
   createForm() {
@@ -32,18 +30,12 @@ export class RegisterFormComponent implements OnInit {
 
   get isRequired() { return this.createMessageForm.controls; }
 
-  getLocalMessages() {
-    const messages = this.messageService.getLocalMessages()['mess'];
-    this.messagesFromLocalStorage = messages ? messages : [];
-  }
-
   onSubmit() {
     if (this.createMessageForm.invalid) {
       this.submitted = true;
       return;
     }
-    this.messagesFromLocalStorage.push(this.createMessageForm.value);
-    this.messageService.updateMessage({ mess: this.messagesFromLocalStorage });
+    this.messageService.sendMessage({ mess: this.createMessageForm.value });
     this.submitted = false;
     this.createForm();
   }

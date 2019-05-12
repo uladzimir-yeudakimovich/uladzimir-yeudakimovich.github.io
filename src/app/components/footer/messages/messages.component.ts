@@ -7,8 +7,12 @@ import { MessageService } from '../../../services/message.service';
   styleUrls: ['./messages.component.scss']
 })
 export class MessagesComponent implements OnInit {
-    messagesFromServer = [];
-    messagesFromLocalStorage = [];
+  messagesFromServer: Array<object>;
+  messagesFromLocalStorage: Array<object>;
+  showMessageDetales = false;
+  showMessage: object;
+  copyMessage: string;
+  index: number;
 
   constructor(
     public messageService: MessageService
@@ -28,5 +32,29 @@ export class MessagesComponent implements OnInit {
   getLocalMessages() {
     const messages = this.messageService.getLocalMessages()['mess'];
     this.messagesFromLocalStorage = messages ? messages : [];
+  }
+
+  delete(e) {
+    this.messagesFromLocalStorage.splice(e.target.parentElement.id, 1);
+    this.messageService.updateMessage({ mess: this.messagesFromLocalStorage });
+  }
+
+  showDetails(e) {
+    if (e.target.nodeName !== 'SPAN') {
+      this.index = e.target.nodeName === 'DIV' ? e.target.id : e.target.parentElement.id;
+      this.showMessageDetales = true;
+      this.showMessage = this.messagesFromLocalStorage[this.index];
+      this.copyMessage = this.messagesFromLocalStorage[this.index]['message'];
+    }
+  }
+
+  updateMessage() {
+    this.showMessageDetales = false;
+    this.messageService.updateMessage({ mess: this.messagesFromLocalStorage });
+  }
+
+  closeMessage() {
+    this.showMessageDetales = false;
+    this.messagesFromLocalStorage[this.index]['message'] = this.copyMessage;
   }
 }

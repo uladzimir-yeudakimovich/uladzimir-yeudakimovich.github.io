@@ -1,3 +1,17 @@
+<div class="footer__show-modal" *ngIf="showMessageDetales">
+    <div class="container">
+        <div class="row">
+            <h5 class="col-md-3">{{ showMessage.name }}</h5>
+            <h5 class="col-md-3">{{ showMessage.email }}</h5>
+            <textarea class="col-md-6 form-control" [(ngModel)]="showMessage.message" rows="10"></textarea>
+        </div>
+        <div class="row footer__show-modal_buttons">
+            <button class="btn btn-danger" (click)="updateMessage()">{{ 'buttons.update' | translate }}</button>
+            <button class="btn btn-primary" (click)="closeMessage()">{{ 'buttons.close' | translate }}</button>
+        </div>
+    </div>   
+</div>
+
 <div class="container footer__message">
     <h4 class="footer__message_title">{{ 'footer.message.comments' | translate }}</h4>
     <div class="container">

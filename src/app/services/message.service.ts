@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class MessageService {
 
   private url: string = 'assets/message.json';
+  messagesFromLocalStorage: Array<object>;
 
   constructor(private http: HttpClient) { }
 
@@ -22,6 +23,10 @@ export class MessageService {
 
   getLocalMessages() {
     return localStorage.getItem('messages') ? JSON.parse(localStorage.getItem('messages')) : { };
+  }
+
+  sendMessage(messages) {
+    console.log(messages);
   }
 
 }

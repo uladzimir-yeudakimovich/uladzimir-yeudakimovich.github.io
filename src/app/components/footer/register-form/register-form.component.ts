@@ -35,7 +35,7 @@ export class RegisterFormComponent implements OnInit {
       this.submitted = true;
       return;
     }
-    this.messageService.sendMessage({ mess: this.createMessageForm.value });
+    this.messageService.sendMessage(this.createMessageForm.value);
     this.submitted = false;
     this.createForm();
   }

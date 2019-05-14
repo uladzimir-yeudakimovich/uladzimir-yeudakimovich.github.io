@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class MessageService {
 
   private url: string = 'assets/message.json';
-  messagesFromLocalStorage: Array<object>;
+  messagesFromLocalStorage = [];
 
   constructor(private http: HttpClient) { }
 
@@ -26,7 +26,16 @@ export class MessageService {
   }
 
   sendMessage(messages) {
-    console.log(messages);
+    if (localStorage.getItem('messages')) {
+      this.messagesFromLocalStorage = JSON.parse(localStorage.getItem('messages'))['mess'];
+      this.messagesFromLocalStorage.push(messages);
+      const body = JSON.stringify({ mess: this.messagesFromLocalStorage });
+      return localStorage.setItem('messages', body);
+    }
+    else {
+      const body = JSON.stringify({ mess: [messages] });
+      return localStorage.setItem('messages', body);
+    }
   }
 
 }

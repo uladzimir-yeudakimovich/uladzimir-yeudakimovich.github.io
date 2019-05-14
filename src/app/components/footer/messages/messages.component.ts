@@ -30,8 +30,8 @@ export class MessagesComponent implements OnInit {
   }
 
   getLocalMessages() {
-    const messages = this.messageService.getLocalMessages()['mess'];
-    this.messagesFromLocalStorage = messages ? messages : [];
+    this.messageService.getLocalMessages();
+    this.messagesFromLocalStorage = this.messageService.messagesFromLocalStorage;
   }
 
   delete(e) {

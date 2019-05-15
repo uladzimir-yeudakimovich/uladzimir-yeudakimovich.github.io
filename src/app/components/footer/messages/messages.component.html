@@ -28,11 +28,11 @@
             </div>
         </div>
         <div *ngIf="messagesFromLocalStorage">
-            <div class="row footer__message_items" *ngFor="let later of messagesFromLocalStorage; let i = index" id="{{ i }}" (click)="showDetails($event)">
+            <div class="row footer__message_items" *ngFor="let later of messagesFromLocalStorage; let i = index" (click)="showDetails(i)">
                 <p class="col-md-3">{{ later.name }}</p>
                 <p class="col-md-3">{{ later.email }}</p>
                 <p class="col-md-5" style="margin: 10px 0;">&nbsp;{{ later.message }}</p>
-                <span class="col-md-1 footer__message_delete" (click)="delete($event)">&times;</span>
+                <span class="col-md-1 footer__message_delete" (click)="delete(i)">&times;</span>
             </div>
         </div>
     </div>

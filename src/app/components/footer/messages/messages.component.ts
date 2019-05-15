@@ -34,18 +34,16 @@ export class MessagesComponent implements OnInit {
     this.messagesFromLocalStorage = this.messageService.messagesFromLocalStorage;
   }
 
-  delete(e) {
-    this.messagesFromLocalStorage.splice(e.target.parentElement.id, 1);
+  delete(index) {
+    this.messagesFromLocalStorage.splice(index, 1);
     this.messageService.updateMessage({ mess: this.messagesFromLocalStorage });
   }
 
-  showDetails(e) {
-    if (e.target.nodeName !== 'SPAN') {
-      this.index = e.target.nodeName === 'DIV' ? e.target.id : e.target.parentElement.id;
-      this.showMessageDetales = true;
-      this.showMessage = this.messagesFromLocalStorage[this.index];
-      this.copyMessage = this.messagesFromLocalStorage[this.index]['message'];
-    }
+  showDetails(index) {
+    this.index = index;
+    this.showMessageDetales = true;
+    this.showMessage = this.messagesFromLocalStorage[index];
+    this.copyMessage = this.messagesFromLocalStorage[index]['message'];
   }
 
   updateMessage() {

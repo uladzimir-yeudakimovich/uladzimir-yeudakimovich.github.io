@@ -4,7 +4,7 @@
 	"header": {
 		"position": "Инженер программист",
 		"name": "Евдокимович Владимир",
-		"description": "Несколько слов обо мне. Закончил Rolling Scopes School в EPAM Systems по специальности front-end разработка. Работаю инженером программистом с марта 2017г. Работаю со следующими фреймворками Angular, Angular Material и Bootstrap, архитектурой REST, системой управления версиями Git. Есть небольшой опыт работы с фреймворкоми React, React Native, Vue и AngularJS."
+		"description": "Несколько слов обо мне. Закончил Rolling Scopes School в EPAM Systems по специальности front-end разработка. Работаю инженером программистом с марта 2017г. Работаю со следующими фреймворками Angular, AngularJS, Angular Material и Bootstrap, архитектурой REST, системой управления версиями Git. Есть небольшой опыт работы с фреймворкоми React, React Native и Vue."
 	},
 	
 	"footer": {

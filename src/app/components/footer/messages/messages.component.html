@@ -1,9 +1,11 @@
 <div class="footer__show-modal" *ngIf="showMessageDetales">
     <div class="container">
         <div class="row">
-            <h5 class="col-md-3">{{ showMessage.name }}</h5>
-            <h5 class="col-md-3">{{ showMessage.email }}</h5>
-            <textarea class="col-md-6 form-control" [(ngModel)]="showMessage.message" rows="10"></textarea>
+            <div class="col-md-4">
+                <h5>{{ showMessage.name }}</h5>
+                <p>{{ showMessage.email }}</p>
+            </div>
+            <textarea class="col-md-8 footer__show-modal_textarea" [(ngModel)]="showMessage.message" rows="10"></textarea>
         </div>
         <div class="row footer__show-modal_buttons">
             <button class="btn btn-danger" (click)="updateMessage()">{{ 'buttons.update' | translate }}</button>
@@ -31,7 +33,7 @@
             <div class="row footer__message_items" *ngFor="let later of messagesFromLocalStorage; let i = index" (click)="showDetails(i)">
                 <p class="col-md-3">{{ later.name }}</p>
                 <p class="col-md-3">{{ later.email }}</p>
-                <p class="col-md-5" style="margin: 10px 0;">&nbsp;{{ later.message }}</p>
+                <p class="col-md-5">&nbsp;{{ later.message }}</p>
                 <span class="col-md-1 footer__message_delete" (click)="delete(i)">&times;</span>
             </div>
         </div>

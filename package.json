@@ -1,6 +1,6 @@
 {
   "name": "angular-scss",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "scripts": {
     "build": "ng build --prod --build-optimizer",
     "e2e": "ng e2e",

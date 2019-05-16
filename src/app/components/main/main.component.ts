@@ -7,6 +7,7 @@ import { DataService } from '../../services/data.service';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+
   data: any;
 
   constructor(public dataService: DataService) { }

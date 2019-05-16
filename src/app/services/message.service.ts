@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class MessageService {
 
   private url: string = 'assets/message.json';
-  messagesFromLocalStorage = [];
+  messagesFromLocalStorage: Array<object> = [];
 
   constructor(private http: HttpClient) { }
 

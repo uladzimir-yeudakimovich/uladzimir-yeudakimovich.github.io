@@ -1,3 +1,5 @@
+@import "../../styles/colors.scss";
+
 .main__title {
   display: flex;
   justify-content: center;
@@ -27,11 +29,11 @@
   display: flex;
   justify-content: center;
   text-decoration: none;
-  color: #0000FF;
+  color: $link-color;
 }
 
 .main__my-work_slide-link:hover {
-  color: rgb(64, 64, 221)
+  color: $hover-link-color
 }
 
 .main__my-work_description {

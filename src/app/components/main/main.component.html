@@ -1,6 +1,6 @@
 <main>
 	<h1 class="main__title">{{ 'title' | translate }}</h1>
-	<div class="container" *ngFor="let slide of this.data let e=even;">
+	<div class="container" *ngFor="let slide of this.data, let e=even;">
 		<div class="row {{ e ? 'main__my-works-left' : 'main__my-works-right' }}">
 			<article class="col-xl-6">
 			<div>

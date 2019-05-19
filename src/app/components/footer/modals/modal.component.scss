@@ -1,0 +1,42 @@
+@import "../../../styles/colors.scss";
+
+.show-modal {
+  width: 80%;
+  margin: 0 10%;
+  padding: 15px 0;
+  background-color: $modale-background;
+  border: solid;
+  border-radius: 5px;
+  position: fixed;
+  top: 80px;
+  z-index: 15;
+}
+
+.show-modal__textarea {
+  margin-left: -15px;
+}
+
+.show-modal__buttons {
+  margin: 10px 0 0;
+  justify-content: flex-end;
+}
+
+@media (min-width: 1360px) {
+  .show-modal {
+    width: 60%;
+    margin: 0 20%;
+  }
+}
+
+@media (min-width: 1760px) {
+  .show-modal {
+    width: 50%;
+    margin: 0 25%;
+  }
+}
+
+@media (max-width: 768) {
+  .show-modal__textarea {
+    margin: 15px !important;
+  }
+}

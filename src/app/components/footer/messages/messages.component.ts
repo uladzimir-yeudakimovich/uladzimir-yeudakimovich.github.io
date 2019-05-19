@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { MessageService } from '../../../services/message.service';
 
 @Component({
@@ -7,12 +7,11 @@ import { MessageService } from '../../../services/message.service';
   styleUrls: ['./messages.component.scss']
 })
 export class MessagesComponent implements OnInit {
+
   messagesFromServer: Array<object>;
   messagesFromLocalStorage: Array<object>;
-  showMessageDetales = false;
-  showMessage: object;
-  copyMessage: string;
-  index: number;
+  messageToModal: object;
+  @Output() clickChange;
 
   constructor(
     public messageService: MessageService
@@ -35,24 +34,11 @@ export class MessagesComponent implements OnInit {
   }
 
   delete(index) {
-    this.messagesFromLocalStorage.splice(index, 1);
-    this.messageService.updateMessage({ mess: this.messagesFromLocalStorage });
+    this.messageService.updateMessage(index);
   }
 
   showDetails(index) {
-    this.index = index;
-    this.showMessageDetales = true;
-    this.showMessage = this.messagesFromLocalStorage[index];
-    this.copyMessage = this.messagesFromLocalStorage[index]['message'];
-  }
-
-  updateMessage() {
-    this.showMessageDetales = false;
-    this.messageService.updateMessage({ mess: this.messagesFromLocalStorage });
-  }
-
-  closeMessage() {
-    this.showMessageDetales = false;
-    this.messagesFromLocalStorage[this.index]['message'] = this.copyMessage;
+    this.messageToModal = this.messagesFromLocalStorage[index];
+    this.messageToModal['index'] = index;
   }
 }

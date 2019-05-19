@@ -1,9 +1,5 @@
 @import "../../../styles/colors.scss";
 
-h5, p {
-  margin: 10px 0;
-}
-
 .footer__message {
   margin-bottom: 20px;
 }
@@ -12,6 +8,10 @@ h5, p {
   display: flex;
   justify-content: center;
   padding-top: 15px;
+}
+
+h5, p {
+	margin: 10px 0;
 }
 
 .footer__message_items {
@@ -24,39 +24,4 @@ h5, p {
   color: $delete-message-color;
   font-size: 26px;
   cursor: pointer;
-}
-
-.footer__show-modal {
-  width: 80%;
-  margin: 0 10%;
-  padding: 15px 0;
-  background-color: $modale-background;
-  border: solid;
-  border-radius: 5px;
-  position: fixed;
-  top: 80px;
-  z-index: 15;
-}
-
-.footer__show-modal_textarea {
-  margin-left: -15px;
-}
-
-.footer__show-modal_buttons {
-  margin: 10px 0 0;
-  justify-content: flex-end;
-}
-
-@media (min-width: 1360px) {
-  .footer__show-modal {
-    width: 60%;
-    margin: 0 20%;
-  }
-}
-
-@media (min-width: 1760px) {
-  .footer__show-modal {
-    width: 50%;
-    margin: 0 25%;
-  }
 }

@@ -22,12 +22,14 @@ export class MessageService {
   }
 
   updateMessage(messages) {
-    const body = JSON.stringify(messages);
-    return localStorage.setItem('messages', body);
-  }
+    if (Number.isInteger(messages)) {
+      this.messagesFromLocalStorage.splice(messages, 1);
+    } else if (messages.index) {
+      this.messagesFromLocalStorage[messages.index]['message'] = messages['message'];
+    } else {
+      this.messagesFromLocalStorage.push(messages);
+    }
 
-  sendMessage(messages) {
-    this.messagesFromLocalStorage.push(messages);
     const body = JSON.stringify({ mess: this.messagesFromLocalStorage });
     return localStorage.setItem('messages', body);
   }

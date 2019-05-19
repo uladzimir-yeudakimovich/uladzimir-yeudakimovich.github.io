@@ -1,0 +1,15 @@
+<div class="show-modal" *ngIf="showMessage">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>{{ showMessage.name }}</h5>
+                <p>{{ showMessage.email }}</p>
+            </div>
+            <textarea class="col-md-8 show-modal__textarea" [(ngModel)]="showMessage.message" rows="10"></textarea>
+        </div>
+        <div class="row show-modal__buttons">
+            <button class="btn btn-danger" (click)="updateMessage()">{{ 'buttons.update' | translate }}</button>
+            <button class="btn btn-primary" (click)="closeMessage()">{{ 'buttons.close' | translate }}</button>
+        </div>
+    </div>   
+</div>

@@ -26,6 +26,12 @@ export class MessagesComponent implements OnInit {
     return this.messageService.getMessages().subscribe(dataFromServer => {
       this.messagesFromServer = dataFromServer['mess'];
     });
+
+    // TODO: where node server is running
+
+    // return this.messageService.getMessagesFromServer().subscribe(dataFromServer => {
+    //   this.messagesFromServer = dataFromServer['mess'];
+    // });
   }
 
   getLocalMessages() {

@@ -6,10 +6,21 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MessageService {
 
+  // TODO: 4000 port where node server is running
+  private uri: string = 'http://localhost:4000';
+
   private url: string = 'assets/message.json';
   messagesFromLocalStorage: Array<object> = [];
 
   constructor(private http: HttpClient) { }
+
+  getMessagesFromServer() {
+    return this.http.get(this.uri);
+  }
+
+  saveMessagesToServer(data) {
+    return this.http.post(this.uri, data);
+  }
 
   getMessages() {
     return this.http.get(this.url);

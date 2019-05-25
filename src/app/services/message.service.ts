@@ -35,7 +35,7 @@ export class MessageService {
   updateMessage(messages) {
     if (Number.isInteger(messages)) {
       this.messagesFromLocalStorage.splice(messages, 1);
-    } else if (messages.index) {
+    } else if (messages.index + 1) {
       this.messagesFromLocalStorage[messages.index]['message'] = messages['message'];
     } else {
       this.messagesFromLocalStorage.push(messages);

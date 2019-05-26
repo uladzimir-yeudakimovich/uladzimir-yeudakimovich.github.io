@@ -2,11 +2,13 @@
 
 .header {
   background-color: $header-background;
+  background-image: url(/assets/images/social_icons/bg-contours.svg);
   color: $header-text-color;
 }
 
 .header__laptop {
   padding: 0;
+  margin: auto;
 
   .img-fluid {
     margin-bottom: -16px;
@@ -40,4 +42,9 @@
   display: flex;
   justify-content: center;
   margin-top: 30px;
+}
+
+.technology_level {
+  display: flex;
+  justify-content: space-between;
 }

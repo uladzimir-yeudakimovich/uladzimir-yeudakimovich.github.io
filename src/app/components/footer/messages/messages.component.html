@@ -3,21 +3,18 @@
     <div class="container">
         <div class="row footer__message_items">
             <h5 class="col-md-3">{{ 'footer.message.name' | translate }}</h5>
-            <h5 class="col-md-3">{{ 'footer.message.email' | translate }}</h5>
-            <h5 class="col-md-6">{{ 'footer.message.messages' | translate }}</h5>
+            <h5 class="col-md-8">{{ 'footer.message.messages' | translate }}</h5>
         </div>
         <div *ngIf="messagesFromServer">
             <div class="row footer__message_items" *ngFor="let later of messagesFromServer">
                 <p class="col-md-3">{{ later.name }}</p>
-                <p class="col-md-3">{{ later.email }}</p>
-                <p class="col-md-6">&nbsp;{{ later.message | translate }}</p>
+                <p class="col-md-8">&nbsp;{{ later.message | translate }}</p>
             </div>
         </div>
         <div *ngIf="messagesFromLocalStorage">
             <div class="row footer__message_items" *ngFor="let later of messagesFromLocalStorage; let i = index" (click)="showDetails(i)">
                 <p class="col-md-3">{{ later.name }}</p>
-                <p class="col-md-3">{{ later.email }}</p>
-                <p class="col-md-5">&nbsp;{{ later.message }}</p>
+                <p class="col-md-8 footer__message_description">&nbsp;{{ later.message }}</p>
                 <span class="col-1 footer__message_delete" (click)="delete(i)">&times;</span>
             </div>
         </div>

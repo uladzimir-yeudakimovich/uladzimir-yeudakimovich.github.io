@@ -39,10 +39,10 @@
     ]
   },
   {
-    "name": "Site of hotel.",
+    "name": "Hotel website.",
     "link": "https://www.abamahotelresort.com/en/",
-    "click": "view application",
-    "description": "This site is written using the Beckbone framework. My project responsibilities included supporting and improving this application and rewriting components to Angular 4 using Bootstrap 4 and working with the API. REST.",
+    "click": "view website",
+    "description": "This website is written using the Beckbone framework. My project responsibilities included supporting and improving this application and rewriting components to Angular 4 using Bootstrap 4 and working with the API. REST.",
     "images" : [
       "assets/images/hotel/hotel1.jpg",
       "assets/images/hotel/hotel2.jpg",

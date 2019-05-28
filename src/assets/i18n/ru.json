@@ -1,5 +1,5 @@
 {
-	"title": "Мои работы",
+	"title": "Проекты",
 	
 	"header": {
 		"position": "Инженер программист",
@@ -70,12 +70,13 @@
 	},
 	
 	"view application": "посмотреть приложение",
+	"view website": "посмотреть сайт",
 
 	"lifebox is a storage service where you can save your photos, videos, music and files. You can reach these files by phone, tablet or PC at any point where you have access to the internet. Easily share these files once connected to the internet. This application was written using frameworks AngularJS. My responsibilities on the project included supporting and improving the application, adding new feature, backend interaction.": "lifebox - это хранилище, которое позволяет вам сохранять свои изображения, видео, музыку и файлы, к которым вы можете получить доступ с телефона, планшета или компьютера в любом месте, где есть доступ в интернет, и которыми вы можете легко обмениваться. Приложение написано с использованием фреймворка AngularJS. В мои обязанности в рамках проекта входила поддержка и улучшение приложения, добавление нового функционала, взаимодействие с бекендом.",
 	"Modern software device to work in the full range of retail. I worked independently on the project. The application is written on Angular 7 using Angular Material and flex-layout. REST. My responsibilities within the project included architecture, authorization, routing and navigation, creating components, working with API and Canvas.": "Современное программное устройство для работы в полном спектре ритейла. На проетке работал самостоятельно. Приложение написано на Angular 7 с использованием Angular Material и flex-layout. REST. В мои обязанности в рамках проекта входили архитектура, авторизация, маршрутизация и навигация, создание компонентов, работа с API и Canvas.",
 	"The plugin is written on Angular 6 with Angular Material and flex-layout. REST. My project responsibilities included routing and navigation, creating components and working with API.": "Плагин написан на Angular 6 с Angular Material и flex-layout. REST. В мои обязанности в рамках проекта входили маршрутизация и навигация, создание компонентов и работа с API.",
 	"Site of hotel.": "Сайт отеля.",
-	"This site is written using the Beckbone framework. My project responsibilities included supporting and improving this application and rewriting components to Angular 4 using Bootstrap 4 and working with the API. REST.": "Этот сайт написан с помощью фреймворка Beckbone. В мои обязанности по проекту входило поддержка и улучшение данного приложения и переписывание компонентов на Angular 4 с использованием Bootstrap 4 и работа с API. REST.",
+	"This website is written using the Beckbone framework. My project responsibilities included supporting and improving this application and rewriting components to Angular 4 using Bootstrap 4 and working with the API. REST.": "Этот сайт написан с помощью фреймворка Beckbone. В мои обязанности по проекту входило поддержка и улучшение данного приложения и переписывание компонентов на Angular 4 с использованием Bootstrap 4 и работа с API. REST.",
 	 
 	"Software Engineer with experience of creation single page application using frameworks such as Angular, Angular Material, Bootstrap and various libraries, support application written using AngularJS.": "Разработчик интерфейсов с опытом создания веб приложений с использованием фреймворков Angular, Angular Material, Bootstrap и различных библиотек, поддержки приложений, написанных с помощью AngularJS.",
 	"Responsible and highly trustworthy with analytical, problem solving and troubleshooting capability. Results oriented and customer focused, with excellent relationship management skills.": "Ответственный, надежный, способный самостоятельно решать проблемы и устранять неполадки.  Ориентированный на результат и клиента, с отличными навыками взаимодействия.",

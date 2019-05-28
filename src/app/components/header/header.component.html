@@ -1,98 +1,88 @@
 <header class="header">
-  <div class="container">
-    <div class="row">
-      <div class="d-none d-lg-block col-lg-6 col-xl-5 header__laptop">
-        <figure>
-          <img class="img-fluid" src="assets/images/logo_laptop.jpg" alt="logo_laptop">
-        </figure>
-      </div>
-      <article class="col-lg-6 col-xl-7">
-        <h3 class="header__subname">{{ 'header.position' | translate }}</h3>
-        <h1 class="header__name">{{ 'header.name' | translate }}</h1>
-        <div class="d-block d-md-none">
-          <figure class="header__phone">
-            <img class="rounded-circle" src="assets/images/logo_phone.jpg" alt="logo_phone">
-          </figure>
-        </div>
-        <div class="d-none d-md-block d-lg-none">
-          <figure class="header__tablet">
-            <img class="rounded-circle" src="assets/images/logo_tablet.jpg" alt="logo_tablet">
-          </figure>
-        </div>
-        <div class="d-none d-lg-block d-block d-lg-none header__descriptin">
-          <h4 class="header__descriptin-title">{{ 'header.education.title' | translate }}</h4>
-          <ul>
-            <li>{{ 'header.education.harvard' | translate }}</li>
-            <li>{{ 'header.education.rolling' | translate }}</li>
-            <li>{{ 'header.education.udemy' | translate }}</li>
-          </ul>
-          <h4 class="header__descriptin-title">{{ 'header.experience.title' | translate }}</h4>
-          <ul>
-            <li>{{ 'header.experience.freelance' | translate }}</li>
-            <li>{{ 'header.experience.generalov' | translate }}</li>
-            <li>{{ 'header.experience.ocsico' | translate }}</li>
-            <li>{{ 'header.experience.imlab' | translate }}</li>
-            <li>{{ 'header.experience.lifetech' | translate }}</li>
-          </ul>
-          <h4 class="header__descriptin-title">{{ 'header.technology.title' | translate }}</h4>
-          <ul>
-            <li class="technology_level">
-              {{ 'header.technology.js' | translate }}
-              <div>
-                <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
-              </div>
-            </li>
-            <li class="technology_level">
-              {{ 'header.technology.html' | translate }}
-              <div>
-                <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
-              </div>
-            </li>
-            <li class="technology_level">
-              {{ 'header.technology.css' | translate }}
-              <div>
-                <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
-              </div>
-            </li>
-            <li class="technology_level">
-              {{ 'header.technology.angular' | translate }}
-              <div>
-                <span *ngFor="let i of [1,2,3,4]" inlineSVG="assets/images/social_icons/star.svg"></span>
-              </div>
-            </li>
-            <li class="technology_level">
-              {{ 'header.technology.angularjs' | translate }}
-              <div>
-                <span *ngFor="let i of [1,2,3,4]" inlineSVG="assets/images/social_icons/star.svg"></span>
-              </div>
-            </li>
-            <li class="technology_level">
-              {{ 'header.technology.angularmat' | translate }}
-              <div>
-                <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
-              </div>
-            </li>
-            <li class="technology_level">
-              {{ 'header.technology.bootstrap' | translate }}
-              <div>
-                <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
-              </div>
-            </li>
-            <li class="technology_level">
-              {{ 'header.technology.webpack' | translate }}
-              <div>
-                <span *ngFor="let i of [1,2,3,4]" inlineSVG="assets/images/social_icons/star.svg"></span>
-              </div>
-            </li>
-            <li class="technology_level">
-              {{ 'header.technology.git' | translate }}
-              <div>
-                <span *ngFor="let i of [1,2,3,4]" inlineSVG="assets/images/social_icons/star.svg"></span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </article>
+  <figure class="container header__laptop">
+    <img class="rectangle" src="assets/images/logo_laptop.jpg" alt="logo_laptop">
+  </figure>
+  <article class="container">
+    <h3 class="header__subname">{{ 'header.position' | translate }}</h3>
+    <h1 class="header__name">{{ 'header.name' | translate }}</h1>
+    <figure class="header__phone">
+      <img class="circle" src="assets/images/logo_phone.jpg" alt="logo_phone">
+    </figure>
+    <figure class="header__tablet">
+      <img class="circle" src="assets/images/logo_tablet.jpg" alt="logo_tablet">
+    </figure>
+    <div class="header__descriptin">
+      <h4 class="header__descriptin-title">{{ 'header.education.title' | translate }}</h4>
+      <ul>
+        <li>{{ 'header.education.harvard' | translate }}</li>
+        <li>{{ 'header.education.rolling' | translate }}</li>
+        <li>{{ 'header.education.udemy' | translate }}</li>
+      </ul>
+      <h4 class="header__descriptin-title">{{ 'header.experience.title' | translate }}</h4>
+      <ul>
+        <li>{{ 'header.experience.freelance' | translate }}</li>
+        <li>{{ 'header.experience.generalov' | translate }}</li>
+        <li>{{ 'header.experience.ocsico' | translate }}</li>
+        <li>{{ 'header.experience.imlab' | translate }}</li>
+        <li>{{ 'header.experience.lifetech' | translate }}</li>
+      </ul>
+      <h4 class="header__descriptin-title">{{ 'header.technology.title' | translate }}</h4>
+      <ul>
+        <li class="technology_level">
+          {{ 'header.technology.js' | translate }}
+          <div>
+            <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
+          </div>
+        </li>
+        <li class="technology_level">
+          {{ 'header.technology.html' | translate }}
+          <div>
+            <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
+          </div>
+        </li>
+        <li class="technology_level">
+          {{ 'header.technology.css' | translate }}
+          <div>
+            <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
+          </div>
+        </li>
+        <li class="technology_level">
+          {{ 'header.technology.angular' | translate }}
+          <div>
+            <span *ngFor="let i of [1,2,3,4]" inlineSVG="assets/images/social_icons/star.svg"></span>
+          </div>
+        </li>
+        <li class="technology_level">
+          {{ 'header.technology.angularjs' | translate }}
+          <div>
+            <span *ngFor="let i of [1,2,3,4]" inlineSVG="assets/images/social_icons/star.svg"></span>
+          </div>
+        </li>
+        <li class="technology_level">
+          {{ 'header.technology.angularmat' | translate }}
+          <div>
+            <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
+          </div>
+        </li>
+        <li class="technology_level">
+          {{ 'header.technology.bootstrap' | translate }}
+          <div>
+            <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
+          </div>
+        </li>
+        <li class="technology_level">
+          {{ 'header.technology.webpack' | translate }}
+          <div>
+            <span *ngFor="let i of [1,2,3,4]" inlineSVG="assets/images/social_icons/star.svg"></span>
+          </div>
+        </li>
+        <li class="technology_level">
+          {{ 'header.technology.git' | translate }}
+          <div>
+            <span *ngFor="let i of [1,2,3,4]" inlineSVG="assets/images/social_icons/star.svg"></span>
+          </div>
+        </li>
+      </ul>
     </div>
-  </div>
+  </article>
 </header>

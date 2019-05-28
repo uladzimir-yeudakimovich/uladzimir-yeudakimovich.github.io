@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,22 +8,18 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent implements OnInit {
 
-  radioGroupForm: FormGroup;
+  isEnglish: boolean = true;
 
   constructor(
-    private formBuilder: FormBuilder,
     private translate: TranslateService
   ) {
     translate.setDefaultLang('en');
   }
 
-  ngOnInit() {
-    this.radioGroupForm = this.formBuilder.group({
-      'model': true
-    });
-  }
+  ngOnInit() { }
 
   switchLanguage(language: string) {
+    this.isEnglish = !this.isEnglish;
     this.translate.use(language);
   }
 

@@ -1,22 +1,22 @@
 @import "../../styles/colors.scss";
 
 .header {
+  display: flex;
   background-color: $header-background;
   background-image: url(/assets/images/social_icons/bg-contours.svg);
   color: $header-text-color;
 }
 
-.header__laptop {
-  padding: 0;
-  margin: auto;
+.container {
+  width: 50%;
+}
 
-  .img-fluid {
-    margin-bottom: -16px;
-  }
+.header__laptop {
+  margin: 0;
 }
 
 .header__phone {
-  display: flex;
+  display: none;
   justify-content: center;
   margin-top: 30px;
 }
@@ -33,13 +33,14 @@
 }
 
 .header__descriptin {
-  margin: 30px auto;
+  margin: 15px auto;
+  padding: 15px;
   text-align: justify;
   line-height: 1.4;
 }
 
 .header__tablet {
-  display: flex;
+  display: none;
   justify-content: center;
   margin-top: 30px;
 }
@@ -51,4 +52,45 @@
 .technology_level {
   display: flex;
   justify-content: space-between;
+}
+
+.rectangle {
+  width: 100%;
+  height: 100%;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+@media (max-width: 992px) {
+  .header {
+    margin-top: -19px;
+  }
+
+  .container {
+    width: 100%;
+  }
+  
+  .header__laptop {
+    display: none;
+  }
+
+  .header__tablet {
+    display: flex;
+  }
+
+  .header__subname {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__tablet {
+    display: none;
+  }
+
+  .header__phone {
+    display: flex;
+  }
 }

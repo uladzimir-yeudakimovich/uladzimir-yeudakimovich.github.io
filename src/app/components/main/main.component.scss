@@ -1,5 +1,9 @@
 @import "../../styles/colors.scss";
 
+.main {
+  padding: 0 15px;
+}
+
 .main__title {
   margin-top: 30px;
   display: flex;
@@ -7,18 +11,21 @@
 }
 
 .main__my-works-right {
-  flex-direction: row-reverse;
-  justify-content: center;
+  display: flex;
   margin-top: 20px;
 }
 
 .main__my-works-left {
+  display: flex;
   margin-top: 20px;
+  flex-direction: row-reverse;
+  justify-content: center;
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
+.main__container {
+  width: 48%;
+  margin: 8px 1%;
+  display: inline-block;
 }
 
 .main__my-work_slide-name {
@@ -40,4 +47,28 @@
 .main__my-work_description {
   opacity: 0.8;
   text-align: justify;
+}
+
+.main__my-work_img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .main__my-works {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .main__my-works-right {
+    display: block;
+    margin-top: 20px;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  
+  .main__container {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
 }

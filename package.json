@@ -37,6 +37,7 @@
     "jquery": "^3.4.0",
     "karma-cli": "^1.0.1",
     "ng-inline-svg": "^8.1.0",
+    "ngx-owl-carousel-o": "^1.1.5",
     "parsejson": "0.0.3",
     "popper.js": "^1.14.3",
     "rxjs": "^6.3.3",

@@ -1,12 +1,10 @@
 <div class="show-modal" *ngIf="showMessage">
-    <div class="container">
-        <div class="row">
-            <h5 class="col-md-4 swow-name">{{ showMessage.name }}</h5>
-            <textarea class="col-md-8 show-modal__textarea" [(ngModel)]="showMessage.message" rows="10"></textarea>
-        </div>
-        <div class="row show-modal__buttons">
-            <button class="btn btn-danger" (click)="updateMessage()">{{ 'buttons.update' | translate }}</button>
-            <button class="btn btn-primary" (click)="closeMessage()">{{ 'buttons.close' | translate }}</button>
+    <div class="show-modal_items">
+        <h5 class="swow-name">{{ showMessage.name }}</h5>
+        <textarea class="show-modal__textarea" [(ngModel)]="showMessage.message" rows="10"></textarea>
+        <div class="show-modal__buttons">
+            <button class="btn btn-danupdateger" (click)="updateMessage()">{{ 'buttons.update' | translate }}</button>
+            <button class="btn btn-close" (click)="closeMessage()">{{ 'buttons.close' | translate }}</button>
         </div>
     </div>   
 </div>

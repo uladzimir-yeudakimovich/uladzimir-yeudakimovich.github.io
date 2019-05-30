@@ -11,31 +11,11 @@ export class MainComponent implements OnInit {
 
   data: any;
   customOptions: OwlOptions = {
+    items: 1,
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    navSpeed: 700,
-    navText: ['', ''],
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 4
-      },
-      1140: {
-        items: 5
-      }
-    },
-    nav: true
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true
   }
 
   constructor(public dataService: DataService) { }

@@ -10,9 +10,11 @@
 				<p class="main__my-work_description">&nbsp;{{ slide.description | translate }}</p>
 			</article>
 			<owl-carousel-o [options]="customOptions" class="main__container" *ngIf="data">
-				<ng-template *ngFor="let img of slide.images; let i=index">
-					<img class="main__my-work_img" src="{{ img }}" alt="Random {{ i + 1 }} slide">
-				</ng-template>
+				<ng-container *ngFor="let img of slide.images; let i=index">
+					<ng-template carouselSlide>
+						<img class="main__my-work_img" src="{{ img }}" alt="Random {{ i + 1 }} slide">
+					</ng-template>
+				</ng-container>
 			</owl-carousel-o>
 		</div>
 	</div>

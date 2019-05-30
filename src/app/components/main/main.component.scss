@@ -23,9 +23,9 @@
 }
 
 .main__container {
-  width: 48%;
-  margin: 8px 1%;
-  display: inline-block;
+  width: 48% !important;
+  margin: 8px 1% !important;
+  display: inline-block !important;
 }
 
 .main__my-work_slide-name {
@@ -50,11 +50,11 @@
 }
 
 .main__my-work_img {
-  width: 100%;
+  width: 100% !important;
 }
 
 @media (max-width: 768px) {
-  .main__my-works {
+  .main__my-works-left {
     display: block;
     margin-top: 20px;
   }
@@ -67,8 +67,8 @@
   }
   
   .main__container {
-    width: 100%;
-    margin: 0;
-    display: block;
+    width: 100% !important;
+    margin: 0 !important;
+    display: block !important;
   }
 }

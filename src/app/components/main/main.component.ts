@@ -14,7 +14,7 @@ export class MainComponent implements OnInit {
     items: 1,
     loop: true,
     autoplay: true,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 5000,
     autoplayHoverPause: true
   }
 

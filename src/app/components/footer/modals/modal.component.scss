@@ -14,17 +14,13 @@
   z-index: 15;
 }
 
-.show-modal_items {
-  display: flex;
-}
-
 .swow-name {
-  width: 25%;
+  margin-top: 0;
   text-align: center;
 }
 
 .show-modal__textarea {
-  margin-left: -15px;
+  padding: 10px;
 }
 
 .show-modal__buttons {
@@ -32,8 +28,30 @@
   justify-content: flex-end;
 }
 
-.btn-update {
+.btn {
+  width: 100px;
+	height: 40px;
+	font-size: 16px;
+	font-weight: 900;
+  border-radius: 4px;
+  background-color: $link-color;
+	color: $header-text-color;
+	border: none;
+  float: right;
+  cursor: pointer;
+}
+
+.btn-close {
   margin-right: 10px;
+  background-color: $delete-message-color;
+}
+
+.btn-close:hover {
+  background-color: $hover-buttob-color;
+}
+
+.btn-update:hover {
+  background-color: $hover-link-color;
 }
 
 @media (min-width: 1360px) {
@@ -47,11 +65,5 @@
   .show-modal {
     width: 50%;
     margin: 0 25%;
-  }
-}
-
-@media (max-width: 768px) {
-  .show-modal__textarea {
-    margin: 15px;
   }
 }

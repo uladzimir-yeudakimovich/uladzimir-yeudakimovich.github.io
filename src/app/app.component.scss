@@ -1,9 +1,10 @@
 @import "./styles/colors.scss";
 
 .languages {
-	position: absolute;
+	position: fixed;
 	top: 10px;
 	left: calc(50% - 100px);
+	z-index: 20;
 }
 
 .change-language {
@@ -23,4 +24,5 @@
 .change-language_active {
 	background-color: $header-text-color;
 	color: $link-color;
+	border: 1px solid;
 }

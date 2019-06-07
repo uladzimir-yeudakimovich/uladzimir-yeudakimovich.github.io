@@ -43,11 +43,9 @@ h5, p {
 }
 
 .message_delete {
-  padding-right: 10px;
+  width: 10%;
   color: $delete-message-color;
-  line-height: 16px;
   font-size: 26px;
-  float: right;
   cursor: pointer;
 }
 
@@ -57,6 +55,7 @@ h5, p {
 
 @media (max-width: 560px) {
   .message_delete {
-    padding: 0;
+    position: absolute;
+    margin: -5px 0 0 -10px;
   }
 }

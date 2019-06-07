@@ -1,13 +1,18 @@
 @import "../../../styles/colors.scss";
 
-.footer__message_title {
+.messages {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.message_title {
   display: flex;
   justify-content: center;
   padding-top: 15px;
   margin: 0;
 }
 
-.footer__message_items {
+.message_items {
   padding: 10px 0;
   border-radius: 4px;
   border-bottom: solid $message-border-color;
@@ -32,12 +37,12 @@ h5, p {
 	margin: 0;
 }
 
-.footer__message_description:hover {
+.message_description:hover {
   font-weight: 600;
   cursor: pointer;
 }
 
-.footer__message_delete {
+.message_delete {
   padding-right: 10px;
   color: $delete-message-color;
   line-height: 16px;
@@ -46,12 +51,12 @@ h5, p {
   cursor: pointer;
 }
 
-.footer__message_delete:hover {
+.message_delete:hover {
   font-weight: 700;
 }
 
 @media (max-width: 560px) {
-  .footer__message_delete {
+  .message_delete {
     padding: 0;
   }
 }

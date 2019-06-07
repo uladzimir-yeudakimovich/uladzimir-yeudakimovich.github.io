@@ -2,17 +2,16 @@
 
 .header {
   display: flex;
+  justify-content: center;
   background-color: $header-background;
   background-image: url(/assets/images/social_icons/bg-contours.svg);
   color: $header-text-color;
 }
 
 .container {
+  max-width: 600px;
   width: 50%;
-}
-
-.header__laptop {
-  margin: auto;
+  margin: auto 0;
 }
 
 .header__phone {

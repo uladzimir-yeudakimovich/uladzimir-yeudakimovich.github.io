@@ -7,13 +7,20 @@
   padding: 15px calc(15px + 1%);
 }
 
+.footer_information {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   width: 50%;
   display: inline-block;
+  max-width: 600px;
 }
 
 @media (max-width: 768px) {  
   .container {
     width: 100%;
+    max-width: 1200px;
   }
 }

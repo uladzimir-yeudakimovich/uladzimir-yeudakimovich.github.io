@@ -16,7 +16,7 @@
     "name": "iKassa.",
     "link": "https://ikassa.by/",
     "click": "view application",
-    "description": "Modern software device to work in the full range of retail. I worked independently on the project. The application is written on Angular 7 using Angular Material and flex-layout. REST. My responsibilities within the project included architecture, authorization, routing and navigation, creating components, working with API and Canvas.",
+    "description": "Modern software device to work in the full range of retail. I worked on creating a web application. The application is written on Angular 7 using Angular Material and flex-layout. REST. My responsibilities within the project included architecture, authorization, routing and navigation, creating components, working with API and Canvas.",
     "images" : [
       "assets/images/ikassa/ikassa1.jpg",
       "assets/images/ikassa/ikassa2.jpg",

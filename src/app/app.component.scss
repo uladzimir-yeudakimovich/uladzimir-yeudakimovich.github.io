@@ -2,9 +2,14 @@
 
 .languages {
 	position: fixed;
-	top: 10px;
-	left: calc(50% - 100px);
-	z-index: 20;
+    height: 50px;
+    width: 100%;
+	background-color: $header-background;
+	background-image: url(/assets/images/social_icons/bg-contours.svg);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .change-language {

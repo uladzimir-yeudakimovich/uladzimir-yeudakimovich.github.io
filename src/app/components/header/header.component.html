@@ -11,14 +11,14 @@
     <figure class="header__tablet">
       <img class="circle" src="assets/images/logo_tablet.jpg" alt="logo_tablet">
     </figure>
-    <div class="header__descriptin">
-      <h4 class="header__descriptin-title">{{ 'header.education.title' | translate }}</h4>
+    <div class="header__description">
+      <h4 class="header__description-title">{{ 'header.education.title' | translate }}</h4>
       <ul>
         <li>{{ 'header.education.harvard' | translate }}</li>
         <li>{{ 'header.education.rolling' | translate }}</li>
         <li>{{ 'header.education.udemy' | translate }}</li>
       </ul>
-      <h4 class="header__descriptin-title">{{ 'header.experience.title' | translate }}</h4>
+      <h4 class="header__description-title">{{ 'header.experience.title' | translate }}</h4>
       <ul>
         <li>{{ 'header.experience.freelance' | translate }}</li>
         <li>{{ 'header.experience.generalov' | translate }}</li>
@@ -26,60 +26,11 @@
         <li>{{ 'header.experience.imlab' | translate }}</li>
         <li>{{ 'header.experience.lifetech' | translate }}</li>
       </ul>
-      <h4 class="header__descriptin-title">{{ 'header.technology.title' | translate }}</h4>
-      <ul>
-        <li class="technology_level">
-          {{ 'header.technology.js' | translate }}
+      <h4 class="header__description-title">{{ 'header.technology.title' | translate }}</h4>
+      <ul *ngFor="let my of data">
+        <li class="technology_level">{{ my.technology }}
           <div>
-            <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
-          </div>
-        </li>
-        <li class="technology_level">
-          {{ 'header.technology.html' | translate }}
-          <div>
-            <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
-          </div>
-        </li>
-        <li class="technology_level">
-          {{ 'header.technology.css' | translate }}
-          <div>
-            <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
-          </div>
-        </li>
-        <li class="technology_level">
-          {{ 'header.technology.angular' | translate }}
-          <div>
-            <span *ngFor="let i of [1,2,3,4]" inlineSVG="assets/images/social_icons/star.svg"></span>
-          </div>
-        </li>
-        <li class="technology_level">
-          {{ 'header.technology.angularjs' | translate }}
-          <div>
-            <span *ngFor="let i of [1,2,3,4]" inlineSVG="assets/images/social_icons/star.svg"></span>
-          </div>
-        </li>
-        <li class="technology_level">
-          {{ 'header.technology.angularmat' | translate }}
-          <div>
-            <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
-          </div>
-        </li>
-        <li class="technology_level">
-          {{ 'header.technology.bootstrap' | translate }}
-          <div>
-            <span *ngFor="let i of [1,2,3,4,5]" inlineSVG="assets/images/social_icons/star.svg"></span>
-          </div>
-        </li>
-        <li class="technology_level">
-          {{ 'header.technology.webpack' | translate }}
-          <div>
-            <span *ngFor="let i of [1,2,3,4]" inlineSVG="assets/images/social_icons/star.svg"></span>
-          </div>
-        </li>
-        <li class="technology_level">
-          {{ 'header.technology.git' | translate }}
-          <div>
-            <span *ngFor="let i of [1,2,3,4]" inlineSVG="assets/images/social_icons/star.svg"></span>
+            <span *ngFor="let i of my.level" inlineSVG="assets/images/social_icons/star.svg"></span>
           </div>
         </li>
       </ul>

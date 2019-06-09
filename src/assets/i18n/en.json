@@ -19,16 +19,7 @@
 			"lifetech": "February 2019 – Present, Software Engineer, lifetech (Turkcell Group), Minsk"
 		},
 		"technology": {
-			"title": "Technology",
-			"js": "JavaScript",
-			"html": "HTML5",
-			"css": "CSS3",
-			"angular": "Angular",
-			"angularjs": "AngularJS",
-			"angularmat": "Angular Material",
-			"bootstrap": "Bootstrap",
-			"webpack": "Webpack",
-			"git": "Git"
+			"title": "Technology"
 		}
 	},
 

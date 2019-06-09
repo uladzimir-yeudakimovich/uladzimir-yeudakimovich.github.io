@@ -11,8 +11,10 @@
 
 .contact-item {
   display: flex;
+  align-items: center;
   margin-top: 10px;
   list-style-type: none;
+  font-size: 1.5rem;
 }
 
 .contact-link {
@@ -20,8 +22,7 @@
   color: $link-color;
   font-weight: 600;
   padding-left: 12px;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.2rem;
 }
 
 .contact-link:hover {

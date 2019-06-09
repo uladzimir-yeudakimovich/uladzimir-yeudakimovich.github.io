@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-import { InlineSVGModule } from 'ng-inline-svg';
 import { RemoveSpaces } from '../../pipes/remove-spaces';
 
 import { ContactsComponent } from './contacts/contacts.component';
@@ -17,7 +16,6 @@ import { RegisterFormComponent } from './register-form/register-form.component';
     TranslateModule,
     FormsModule,
     ReactiveFormsModule,
-    InlineSVGModule.forRoot(),
 	],
 	exports: [
 		FooterComponent

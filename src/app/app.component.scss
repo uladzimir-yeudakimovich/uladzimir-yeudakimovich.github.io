@@ -31,3 +31,9 @@
 	color: $link-color;
 	border: 3px solid;
 }
+
+@media (max-width: 768px) {
+  .languages {
+    padding-top: 30px;
+  }
+}

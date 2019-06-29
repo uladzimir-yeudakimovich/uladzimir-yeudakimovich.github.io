@@ -2,14 +2,14 @@
 
 .languages {
 	position: fixed;
-  height: 50px;
-  width: 100%;
+	height: 50px;
+	width: 100%;
 	background-color: $header-background;
 	background-image: url(assets/images/social_icons/bg-contours.svg);
-  z-index: 20;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	z-index: 20;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .change-language {
@@ -29,11 +29,10 @@
 .change-language_active {
 	background-color: $header-text-color;
 	color: $link-color;
-	border: 3px solid;
 }
 
 @media (max-width: 768px) {
-  .languages {
-    padding-top: 30px;
-  }
+	.languages {
+		padding-top: 20px;
+	}
 }

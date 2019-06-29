@@ -14,7 +14,7 @@
   align-items: center;
   margin-top: 10px;
   list-style-type: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .contact-link {
@@ -22,6 +22,9 @@
   color: $link-color;
   padding-left: 12px;
   font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .contact-link:hover {

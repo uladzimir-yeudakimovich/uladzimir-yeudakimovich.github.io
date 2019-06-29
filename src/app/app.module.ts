@@ -6,6 +6,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -30,7 +31,7 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     CarouselModule,
     BrowserAnimationsModule,
-
+    MaterialModule,
     FooterModule,
   ],
   declarations: [

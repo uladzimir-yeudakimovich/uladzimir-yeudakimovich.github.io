@@ -32,7 +32,13 @@ const filesToCache = [
   '/assets/icons/apple-icon-114x114.png',
   '/assets/icons/apple-icon-152x152.png',
   '/assets/icons/apple-icon-180x180.png',
+  '/assets/icons/android-icon-36x36.png',
+  '/assets/icons/android-icon-48x48.png',
+  '/assets/icons/android-icon-72x72.png',
+  '/assets/icons/android-icon-96x96.png',
+  '/assets/icons/android-icon-144x144.png',
   '/assets/icons/android-icon-192x192.png',
+  '/assets/icons/android-icon-512x512.png',
   '/assets/icons/favicon-16x16.png',
   '/assets/icons/favicon-32x32.png',
   '/assets/icons/favicon-96x96.png'

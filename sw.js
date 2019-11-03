@@ -1,4 +1,4 @@
-const cacheName = 'V1';
+const cacheName = 'V2';
 
 const filesToCache = [
   '/',
@@ -78,3 +78,5 @@ self.addEventListener('fetch', function(event) {
     })
   );
 });
+
+document.addEventListener('touchstart', onTouchStart, {passive: true});

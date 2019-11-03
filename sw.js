@@ -78,5 +78,3 @@ self.addEventListener('fetch', function(event) {
     })
   );
 });
-
-self.addEventListener('touchstart', onTouchStart, {passive: true});

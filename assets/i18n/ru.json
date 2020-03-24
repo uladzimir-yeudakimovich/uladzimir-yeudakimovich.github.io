@@ -12,7 +12,7 @@
 		},
 		"experience": {
 			"title": "Опыт работы",
-			"freelance": "Сентябрь 2017 – Август 2018, Программист, фрилансер, Минск",
+			"freelance": "Сентыбрь 2017 – Август 2018, Программист, фрилансер, Минск",
 			"ocsico": "Август 2018 – Февраль 2019, Программист, OCS Innovation Company (OCSICO®), Минск",
 			"lifetech": "Февраль 2019 – по настоящее время, Программист, lifetech (Turkcell Group), Минск"
 		},
@@ -23,15 +23,9 @@
 	
 	"footer": {
 		"name": "Контактная информация",
-		"phone": "+375 33 3344201",
-		"email": "uladzimir.yeudakimovich@gmail.com",
 		"cvRussian": "резюме на русском",
 		"cvEnglish": "резюме на английском",
 		"subname": "Ссылки на мои социальные сети:",
-		"linkedin": "Linkedin",
-		"github": "Github",
-		"codewars": "CodeWars",
-		"duolingo": "Duolingo",
 		"message": {
 			"comments": "Комментарии",
 			"name": "Имя",

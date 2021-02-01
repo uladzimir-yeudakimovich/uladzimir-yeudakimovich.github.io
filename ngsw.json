@@ -1,20 +1,23 @@
 {
   "configVersion": 1,
-  "timestamp": 1587678254884,
+  "timestamp": 1612218354791,
   "index": "https://uladzimir-yeudakimovich.github.io/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
       "urls": [
         "https://uladzimir-yeudakimovich.github.io/index.html",
-        "https://uladzimir-yeudakimovich.github.io/main.c91b2b925205db031067.js",
+        "https://uladzimir-yeudakimovich.github.io/main.af48dcf0ffe063389b9b.js",
         "https://uladzimir-yeudakimovich.github.io/manifest.webmanifest",
-        "https://uladzimir-yeudakimovich.github.io/polyfills-es5.b5d78aece19435ae6705.js",
-        "https://uladzimir-yeudakimovich.github.io/polyfills.8d27ff2e8a66b432c36e.js",
-        "https://uladzimir-yeudakimovich.github.io/runtime.458556a34b891ea32398.js",
-        "https://uladzimir-yeudakimovich.github.io/styles.daf736fc41e4a6df7bac.css"
+        "https://uladzimir-yeudakimovich.github.io/polyfills-es5.1ec63db3a30d1e6ca3a2.js",
+        "https://uladzimir-yeudakimovich.github.io/polyfills.3f3b13838f9fe9d9f7a1.js",
+        "https://uladzimir-yeudakimovich.github.io/runtime.7b63b9fd40098a2e8207.js",
+        "https://uladzimir-yeudakimovich.github.io/styles.17f66868bfd429551caa.css"
       ],
       "patterns": []
     },
@@ -22,11 +25,12 @@
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
       "urls": [
         "https://uladzimir-yeudakimovich.github.io/assets/CV_Uladzimir Yeudakimovich.docx",
         "https://uladzimir-yeudakimovich.github.io/assets/CV_Uladzimir Yeudakimovich.pdf",
-        "https://uladzimir-yeudakimovich.github.io/assets/CV_Евдокимович Владимир.docx",
-        "https://uladzimir-yeudakimovich.github.io/assets/CV_Евдокимович Владимир.pdf",
         "https://uladzimir-yeudakimovich.github.io/assets/fonts/my-icon.eot",
         "https://uladzimir-yeudakimovich.github.io/assets/fonts/my-icon.ttf",
         "https://uladzimir-yeudakimovich.github.io/assets/fonts/my-icon.woff",
@@ -91,12 +95,11 @@
         "https://uladzimir-yeudakimovich.github.io/assets/images/social_icons/phone.svg",
         "https://uladzimir-yeudakimovich.github.io/assets/images/social_icons/star.svg",
         "https://uladzimir-yeudakimovich.github.io/assets/images/social_icons/students-cap.svg",
-        "https://uladzimir-yeudakimovich.github.io/bg-contours.f89ce989b6d6a109daf5.svg",
-        "https://uladzimir-yeudakimovich.github.io/my-icon.09647c0e1ba297a95b32.woff2",
-        "https://uladzimir-yeudakimovich.github.io/my-icon.18da3dcfdb7a2266c4f6.ttf",
-        "https://uladzimir-yeudakimovich.github.io/my-icon.207211e70a4e5b6c0b8f.eot",
-        "https://uladzimir-yeudakimovich.github.io/my-icon.39a503a6ab068cb86bfb.woff",
-        "https://uladzimir-yeudakimovich.github.io/owl.video.play.4a37f8008959c75f619b.png"
+        "https://uladzimir-yeudakimovich.github.io/my-icon.08300ef9c9caeb915856.woff2",
+        "https://uladzimir-yeudakimovich.github.io/my-icon.4009b22aa795fec675a6.ttf",
+        "https://uladzimir-yeudakimovich.github.io/my-icon.417ba9ecb2be6999f326.eot",
+        "https://uladzimir-yeudakimovich.github.io/my-icon.deca98b023b75b7c7459.woff",
+        "https://uladzimir-yeudakimovich.github.io/owl.video.play.7f01b07148f205f6e825.png"
       ],
       "patterns": []
     }
@@ -113,21 +116,22 @@
       "maxSize": 100,
       "maxAge": 2592000000,
       "timeoutMs": 10000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
       "version": 1
     }
   ],
   "hashTable": {
-    "https://uladzimir-yeudakimovich.github.io/assets/CV_Uladzimir Yeudakimovich.docx": "4072ba085f6decde9433a9da0071120672b7f8af",
-    "https://uladzimir-yeudakimovich.github.io/assets/CV_Uladzimir Yeudakimovich.pdf": "cd1b5ba30cc74cc79122ee46c41afaa5b9ca3f7c",
-    "https://uladzimir-yeudakimovich.github.io/assets/CV_Евдокимович Владимир.docx": "97c5a5dbc0a91c95291663d279b9ba11be3c62ba",
-    "https://uladzimir-yeudakimovich.github.io/assets/CV_Евдокимович Владимир.pdf": "4c3ad3fcf1b6b5cd51368f14ecf42eba58509b9a",
+    "https://uladzimir-yeudakimovich.github.io/assets/CV_Uladzimir Yeudakimovich.docx": "807f7241a61bf4e067b009ff88ea5695a097dfd1",
+    "https://uladzimir-yeudakimovich.github.io/assets/CV_Uladzimir Yeudakimovich.pdf": "98601bcfca82b15d8f509f257a4543e2aa259e4a",
     "https://uladzimir-yeudakimovich.github.io/assets/fonts/my-icon.eot": "0a3c43820afd909d7e7ea54cf40bbc347d5ca081",
     "https://uladzimir-yeudakimovich.github.io/assets/fonts/my-icon.ttf": "a484bf23925ce3f4c6070c438396bdaa2e467ed9",
     "https://uladzimir-yeudakimovich.github.io/assets/fonts/my-icon.woff": "0465ca380fa0f564fd6a0eab9f7aeaf5d1798715",
     "https://uladzimir-yeudakimovich.github.io/assets/fonts/my-icon.woff2": "b7c9d73dc83fa3411ab88e1b7f3c2975dc174e76",
     "https://uladzimir-yeudakimovich.github.io/assets/fonts/my.svg": "a1e3c2fba981918368bf8f6025c850c54f7fae1b",
-    "https://uladzimir-yeudakimovich.github.io/assets/i18n/en.json": "20255595a304cc374e7645264965bd15c4c4ef28",
-    "https://uladzimir-yeudakimovich.github.io/assets/i18n/ru.json": "ae5b0d4a7885aa59a5eb679acf54655174a62715",
+    "https://uladzimir-yeudakimovich.github.io/assets/i18n/en.json": "92a1185306fff9d0bff919a9d3cf49de5d071cdf",
+    "https://uladzimir-yeudakimovich.github.io/assets/i18n/ru.json": "adacb8715efbf496c5dae53bea1c73f46b31245b",
     "https://uladzimir-yeudakimovich.github.io/assets/icons/android-icon-144x144.png": "129e16086a0a24a4e18d0bc90b26767dd7311dd1",
     "https://uladzimir-yeudakimovich.github.io/assets/icons/android-icon-192x192.png": "c41cc0e1ed6f86b2b71c2afe9149f64d5dd0ea8b",
     "https://uladzimir-yeudakimovich.github.io/assets/icons/android-icon-36x36.png": "8ac0bf26115e9215e887f036fb8519ad2c1096b6",
@@ -185,19 +189,18 @@
     "https://uladzimir-yeudakimovich.github.io/assets/images/social_icons/phone.svg": "894c4a499c1f5f92b661ab07a643b54efa5badbd",
     "https://uladzimir-yeudakimovich.github.io/assets/images/social_icons/star.svg": "b4b6d477e3d28553fe5ca1e63db6c8c515a363d0",
     "https://uladzimir-yeudakimovich.github.io/assets/images/social_icons/students-cap.svg": "f698f613c8e4f29f99259f94ea145abf0e538b02",
-    "https://uladzimir-yeudakimovich.github.io/bg-contours.f89ce989b6d6a109daf5.svg": "443386333d0c36b84674122423b680854f1ecec3",
-    "https://uladzimir-yeudakimovich.github.io/index.html": "dc8c39c9e9bb95126cce1a6653f89949be89353f",
-    "https://uladzimir-yeudakimovich.github.io/main.c91b2b925205db031067.js": "52efbcaad1d6b3d8d50e187eb1945d066989c473",
+    "https://uladzimir-yeudakimovich.github.io/index.html": "2e64b121a69d8dcc2a48277750febbcf29ed1b15",
+    "https://uladzimir-yeudakimovich.github.io/main.af48dcf0ffe063389b9b.js": "0de0c4120a156297174635faa52e6bc830470167",
     "https://uladzimir-yeudakimovich.github.io/manifest.webmanifest": "67ce0c0ec20b27ac44fadb6cc1d5b3d27b621a4a",
-    "https://uladzimir-yeudakimovich.github.io/my-icon.09647c0e1ba297a95b32.woff2": "b7c9d73dc83fa3411ab88e1b7f3c2975dc174e76",
-    "https://uladzimir-yeudakimovich.github.io/my-icon.18da3dcfdb7a2266c4f6.ttf": "a484bf23925ce3f4c6070c438396bdaa2e467ed9",
-    "https://uladzimir-yeudakimovich.github.io/my-icon.207211e70a4e5b6c0b8f.eot": "0a3c43820afd909d7e7ea54cf40bbc347d5ca081",
-    "https://uladzimir-yeudakimovich.github.io/my-icon.39a503a6ab068cb86bfb.woff": "0465ca380fa0f564fd6a0eab9f7aeaf5d1798715",
-    "https://uladzimir-yeudakimovich.github.io/owl.video.play.4a37f8008959c75f619b.png": "c0d64356ec2758cb280d183b4829c923e5ff61e5",
-    "https://uladzimir-yeudakimovich.github.io/polyfills-es5.b5d78aece19435ae6705.js": "80b4ff3b713084c8d2cd992e8098d7b52376fe34",
-    "https://uladzimir-yeudakimovich.github.io/polyfills.8d27ff2e8a66b432c36e.js": "a25059346e7fc7cb4e41c6f1419f0e33ba0d1dbb",
-    "https://uladzimir-yeudakimovich.github.io/runtime.458556a34b891ea32398.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "https://uladzimir-yeudakimovich.github.io/styles.daf736fc41e4a6df7bac.css": "dded4526300f1e86e2b5edac2d7c337594f33f35"
+    "https://uladzimir-yeudakimovich.github.io/my-icon.08300ef9c9caeb915856.woff2": "b7c9d73dc83fa3411ab88e1b7f3c2975dc174e76",
+    "https://uladzimir-yeudakimovich.github.io/my-icon.4009b22aa795fec675a6.ttf": "a484bf23925ce3f4c6070c438396bdaa2e467ed9",
+    "https://uladzimir-yeudakimovich.github.io/my-icon.417ba9ecb2be6999f326.eot": "0a3c43820afd909d7e7ea54cf40bbc347d5ca081",
+    "https://uladzimir-yeudakimovich.github.io/my-icon.deca98b023b75b7c7459.woff": "0465ca380fa0f564fd6a0eab9f7aeaf5d1798715",
+    "https://uladzimir-yeudakimovich.github.io/owl.video.play.7f01b07148f205f6e825.png": "c0d64356ec2758cb280d183b4829c923e5ff61e5",
+    "https://uladzimir-yeudakimovich.github.io/polyfills-es5.1ec63db3a30d1e6ca3a2.js": "03fe59dde5a2b5c92b2a4556a28426d8d9f989f5",
+    "https://uladzimir-yeudakimovich.github.io/polyfills.3f3b13838f9fe9d9f7a1.js": "79588a4c6bca69b447fbdcd51aab9d9a7cba5d12",
+    "https://uladzimir-yeudakimovich.github.io/runtime.7b63b9fd40098a2e8207.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "https://uladzimir-yeudakimovich.github.io/styles.17f66868bfd429551caa.css": "1f0ea78754070e0d9a679e8f4d1b29e8a8713950"
   },
   "navigationUrls": [
     {
@@ -216,5 +219,6 @@
       "positive": false,
       "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
     }
-  ]
+  ],
+  "navigationRequestStrategy": "performance"
 }

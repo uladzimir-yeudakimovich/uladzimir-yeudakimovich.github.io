@@ -1,1 +1,1 @@
-# <a href="https://uladzimir-yeudakimovich.github.io/">My website</a>
+# <a href="https://uladzimir-yeudakimovich.github.io/">My app</a>
